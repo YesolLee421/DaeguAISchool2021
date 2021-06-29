@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"  content="Web Tutorial">
+    <meta name="keywords"  content="html, css, tutorial, web">
+    <meta name="author"  content="Yesol Lee">
+    <title>HTML, CSS, Tutorial</title>
+    <link rel="shortcut icon" type="image/icon" sizes="32x32" 
+          href="./icon/Google-favicon-2015.png">
+</head>
+
+<body>
+    <!-- a, img 태그 소개 -->
+
+    
+    <a href="https://www.naver.com/" target="_self">네이버</a>
+
+    <img src="apple.png" alt="사과 이미지">
+    <img width="150px" height="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Apple_Computer_Logo_rainbow.svg/800px-Apple_Computer_Logo_rainbow.svg.png" alt="회사 애플 무지개로고">
+    
+    <h1>기업명 또는 서비스명</h1>
+    <h2>Title</h2>
+    <h3>Title</h3>
+    <h4>Title</h4>
+    <h5>Title</h5>
+    <h6>Title</h6>
+
+    <h1>
+        <a href="https://www.naver.com/" target="_self">
+            <img src="icon/naver-favicon.ico" alt="네이버로고">Naver
+        </a>
+    </h1>
+    <h2>My Website</h2>
+
+    <h3>Service</h3>
+    <h4>Service 부제</h4>
+
+    <h3>Portfolio</h3>
+    <h3>About</h3>    
+
+
+
+
+    <p>Hi Hello            안녕?</p>
+
+    <p>
+    <span>동해물</span>과 백두산이 마르고 닳도록
+    </p>
+    <p><mark>사과</mark>는 나무에 열리는 열매이다.</p>
+    <p>데카르트는<mark>나는 생각한다, 고로 존재한다.</mark>라고 말했다.</p>
+
+
+
+
+    <ol>
+        <li>메뉴1</li>
+        <li>메뉴1</li>
+        <li>메뉴1</li>
+    </ol>
+
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴1</li>
+        <li>메뉴1</li>
+    </ul>
+
+    <ul>
+        <li><a href="#">영화</a></li>
+        <li><a href="https://section.cafe.naver.com/">
+            <img src="icon/naver-favicon.ico" alt="네이버로고">카페</a></li>
+    </ul>
+
+
+    <ul>
+        <!--
+            ol, ul태그 안에 요소는 반드시 li가 나와야 한다.
+        -->
+    </ul>
+
+
+    <button type='button'>클릭</button>
+    <button type='submit'>확인</button>
+
+
+    <!--비디오
+        - default: src, controls
+        - 자동재생: autoplay ->chrome 제약-> muted
+        - 반복재생: loop
+        - 크기:width="", height=""
+    -->
+
+
+    <video src="sample.mp4" controls autoplay muted
+            loop width="400px" height="300px"></video>
+
+
+    <!--
+        iframe
+        - html 파일 안에 새로운 페이지 생성
+        - 보안 이슈때문에 주로 youtube 영상 가져올 때만 사용됨
+        - 실제 역할은 더 많음
+    -->
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XA2YEHn-A8Q" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+
+
+
+        <!--오디오
+        - default: src, controls
+        - 자동재생 불가능: 크롬에서 막음
+        - 반복재생: loop
+        - 크기 변동 불가
+    -->
+    <audio src="sample_audio.mp3" controls loop></audio>
+
+    <!--
+        - 메인페이지(landing page)는 항상 index.html
+    -->
+
+
+
+    
+
+
+
+</body>
+
+</html>

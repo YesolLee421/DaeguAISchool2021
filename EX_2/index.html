@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>2회차 HTML 강의</title>
+    <style>
+        tr, td, th{
+            border: solid 1px #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <!--label: 입력칸의 제목이나 이름-->
+
+    <form method="POST">
+        <label for="input_name">이름</label>
+        <input type="text" name="name" id="input_name" placeholder="이름을 입력하세요" 
+        required minlength="2" maxlength="8">
+
+        <label for="mail">이메일</label>
+        <input type="email" placeholder="이메일을 입력하세요" id="mail" required>
+
+        <label for="pw">비밀번호</label>
+        <input type="password" id="pw" placeholder="최소 6글자 최대 12글자 입력" 
+        required minlength="6" maxlength="12">
+
+        <label for="num">숫자</label>
+        <input type="number" id="num" placeholder="숫자만 입력" min="10" max="40" step="5"> 
+
+        <label for="upload">파일 업로드</label>
+        <input type="file" id="upload" accept="image/png, image/jpg, image/gif">
+    
+        <button type="submit">제출</button>
+    
+    </form>
+
+
+    <!--input: name, value는 서버에 보내는 값-->
+
+    <label for="n1">한국</label>
+    <input type="checkbox" id="n1" name="country" value="한국">
+    <label for="n2">일본</label>
+    <input type="checkbox" id="n2" name="country" value="일본">
+    <label for="n3">중국</label>
+    <input type="checkbox" id="n3" name="country" value="중국">
+
+
+
+    <label for="n1">한국</label>
+    <input type="radio" id="n1" name="country" value="한국" checked>
+    <label for="n2">일본</label>
+    <input type="radio" id="n2" name="country" value="일본">
+    <label for="n3">중국</label>
+    <input type="radio" id="n3" name="country" value="중국">
+
+
+
+    <label for="content">문의내용</label>
+    <textarea name="" id="content" placeholder="자기소개 입력" cols="30" rows="10"></textarea>
+
+
+    <!-- select-option: 드롭다운    -->
+    <label for="job">직업 선택</label>
+    <select name="job" id="job">
+        <option disabled selected value="">Choose your job.</option>
+        <option value="student">student</option>
+        <option value="business man">business man</option>
+        <option value="etc">etc</option>
+        
+    </select>
+
+
+    <!--table-->        
+    
+    <table>
+        <caption>상품정보</caption>
+        <thead>
+            <tr>
+                <th>상품</th>
+                <th>색상</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>아이패드 프로16</td>
+                <td>그레이</td>
+                <td>2000000</td>
+            </tr>
+            <tr>
+                <td rowspan="2">맥북프로15</td>
+                <td>그레이</td>
+                <td>300000</td>
+            </tr>
+            <tr>
+                <td>옐로우</td>
+                <td>50000</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">총 가격</td>
+                <td>2350000</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+
+    <!--공간 만들기: 상단 header, 본문 main, 하단 footer
+        <main> role="main" 익스플로러는 main태그 role 알려줘야 함
+        <section>->내부에 title 필요 <h> 태그
+        <article>: 내부에 <h> 제목, <p>내용
+        <aside> main내용과 관련성이 좀 떨어지는 내용
+        <footer> 
+    -->
+    <header>
+        <h1><a href="#"><img src="" alt=""></a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main role="main">
+        <section>
+            <h2>Service</h2>
+        </section>
+    
+        <section>
+            <h2>Portfolio</h2>
+        </section>
+        <article>
+            <h2>article title</h2>
+            <p>article contentdjfaklfjdasfjeiwofjo</p>
+        </article>
+
+    </main>
+    <aside></aside>
+    <footer></footer>
+
+    <div></div>
+    
+    <form action="">
+        <label for="name">name</label>
+        <input type="text" id="name">
+    </form>
+
+    
+
+</body>
+</html>
