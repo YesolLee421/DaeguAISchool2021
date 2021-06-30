@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <!-- css 속성: 값; css파일 연동하기-->
+        <!-- <style>
+            h1 {
+                color: red;
+            }
+        </style> -->
+        <!-- css 파일 가져오기:<link> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+    </head>
+    <body>
+        <!-- <h1 style="background-color: pink;">Hello World</h1> -->
+
+        <!-- 태그의 부모 자식 관계
+        자식 태그는 부모 태그의 속성 상속받음. 하지만 모든 속성 상속하진 않음
+        자식 태그가 다른 속성값을 가지고 있으면 자식의 속성값이 적용됨.
+        -->
+        <!-- <header>
+            <h1>header h1</h1>
+            <p>header p</p>
+            <a href="#">네이버</a>
+        </header>
+
+        <footer>
+            <h1>footer h1</h1>
+            <p>footer p</p>
+        </footer> -->
+
+        <!-- 선택자: css에서 html특정 요소에 접근하는 방법
+        종류: type, id, class, attribute -->
+
+        <!-- <h1>hello World</h1>
+        <h2 id="test1">nice to meet you</h2>
+        <h3 class="test2">welcome</h3> -->
+
+        <!--적용순서 id > class -->
+        <!-- <h4 id="first" class="new">1st</h4>
+        <h4 id="first" class="new2">2nd</h4>
+        <h4 id="third" class="new2">3rd</h4>
+
+        <input type="text" placeholder="이름" name="" id="">
+        <input type="password" placeholder="비밀번호" name="" id=""> -->
+
+        <!-- 
+            id(이름) 속성값 하나만, class(별명) 여러 개 추가 가능
+        동일 class를 문서 안에 여러 개 사용가능 / id는 문서 하나에 하나만
+        -->
+        <!-- <h2 id="color-1">id 선택자</h2>
+        <h3 class="bg-1 font-size-1">class 선택자</h3>
+
+        
+        <p class="bg-1">welcome</p>
+
+        <h4 id="color-1">dkdkdk</h4>
+        <h2 id="color-1">id 선택자</h2> -->
+
+        <!-- <header id="intro">
+            <div class="container">
+                <h2>header h2</h2>
+                <p>header p</p>
+            </div>
+        </header>
+
+        <p>out p</p> -->
+
+        <!-- cascading: 디자인 적용 우선순위 / 원본코드 유지하면서 새로운 css코드로 디자인 덮어쓰기 하고싶을 때
+        1. 동일한 선택자: 나중에 적용된 속성
+        2. type(tag) < class < id < style attribute
+        3. 더 디테일할수록 우선적용
+        -->
+
+        <!-- <h1 style="color: gray;" id="color-id" class="color-1">Hello World</h1> -->
+
+        <!-- <header id="intro">
+            <h1>header h1</h1>
+            <div class="container">
+                <h1>header h2</h1>
+            </div>
+        </header> -->
+
+        
+        <!-- <div>
+            <h1>Nice</h1>
+            
+            <ul>
+                <li>메뉴1</li>
+                <li>메뉴2</li>
+            </ul>
+        </div> -->
+
+        <!-- <div id="bg"></div>
+        <img src="icon.png" alt="코드 아이콘" width="100px" height="50px"> -->
+
+
+
+
+    </body>
+</html>

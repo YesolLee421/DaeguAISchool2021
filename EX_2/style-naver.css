@@ -1,0 +1,25 @@
+a { 
+    text-decoration: none;
+    color: black;
+}
+
+.menu-name {
+    color: teal;
+}
+
+ul { list-style: none;}
+
+div .container {
+    color: black;
+}
+
+.container {
+    padding: 10px;
+    margin: 10px;
+    border: cornflowerblue solid 3px;
+}
+
+.releasedDate {
+    text-align: right;
+    font-style: italic;
+}
