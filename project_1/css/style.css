@@ -1,0 +1,73 @@
+/* h1 {
+    color: lightcoral;
+}
+
+div {
+    width: 300px;
+    height: 300px;
+    background-image: url("../img/icon.png");
+    background-repeat: no-repeat;
+} */
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #585858;
+}
+
+.nav .nav-lists .nav-item a {
+    color: #585858;
+    text-decoration: none;
+}
+.nav .nav-lists .nav-item:first-child a {
+    background-color: #f9f9f9;
+}
+.nav .nav-lists .nav-item:nth-child(2) a{
+    background-color: #f4f4f4;
+}
+
+.nav .nav-lists .nav-item:last-child a{
+    background-color: #ededed;
+}
+
+.nav .nav-lists .nav-item a img {
+    border-radius: 20px;
+}
+
+.product-img-lists ul li a .product-info .product-name {
+    color: mediumslateblue;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.product-img-lists ul li a .product-info .product-name::after{
+    content : "-->";
+}
+
+.product-img-lists ul li a:hover .product-info .product-name{
+    background-color: lightpink;
+}
+
+.text {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.moveToNext::before,
+.moveToNext::after {
+    content: "**";
+}
+
+.support-lists a {
+    font-size: 18px;
+}
+
+.payment-methods-lists p {
+    font-size: 18px;
+}
+
