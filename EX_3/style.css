@@ -169,3 +169,54 @@ html <img> vs css background image
     background-repeat: no-repeat;
     background-position: left center;
 } */
+
+
+/* 가상선택자
+1. 행동 관련 디자인 적용
+a:link 방문한 적 없는 링크
+a:active 클릭 유지 시
+a:hover 마우스 올릴 때
+input:focus 입력칸에 커서 둘 때
+*/
+
+/* 
+2. 일정 규칙에 따라 디자인 적용
+li:first-child
+li:last-child
+li:nth-child(n) ->2n, 2n+1로 짝수 홀수 응용 가능
+*/
+
+/* a:link { color: red; }
+
+a:active { color:blue }
+
+a:hover {color: pink;}
+
+input:focus { border: solid 3px green;}
+
+
+li:first-child {
+    color: greenyellow;
+}
+
+li:last-child {
+    color: indigo;
+}
+
+li:nth-child(2n) {
+    color: lightcoral;
+} */
+
+
+/* before & after
+html문서에는 없고 css로 삽입한 부분. 문자를 넣어도 html에서 문자로 인식 안되고
+단순 디자인, 캘리그라피 취급
+메뉴 앞 디자인 삽입 시 유용
+?? 예시엔 content에 이미지 넣었나? 찾아보기
+*/
+/* li::before {
+    content: url("icon.png");
+}
+li::after {
+    content: url("icon.png");
+} */
