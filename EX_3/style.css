@@ -194,15 +194,12 @@ a:hover {color: pink;}
 
 input:focus { border: solid 3px green;}
 
-
 li:first-child {
     color: greenyellow;
 }
-
 li:last-child {
     color: indigo;
 }
-
 li:nth-child(2n) {
     color: lightcoral;
 } */
@@ -215,7 +212,7 @@ html문서에는 없고 css로 삽입한 부분. 문자를 넣어도 html에서 
 ?? 예시엔 content에 이미지 넣었나? 찾아보기
 */
 /* li::before {
-    content: url("icon.png");
+    content: "--";
 }
 li::after {
     content: url("icon.png");

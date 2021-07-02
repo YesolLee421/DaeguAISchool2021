@@ -55,7 +55,6 @@ a {
 .text {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 30px;
-    text-align: center;
 }
 
 .moveToNext::before,
