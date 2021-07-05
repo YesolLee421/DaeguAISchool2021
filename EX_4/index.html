@@ -77,9 +77,9 @@
     부모자식관계 생성-부모position*자식position 16가지(-fixed)->포지션 경우의수 3가지 따져보기 48가지
     -->
 
-    <div class="static-parent">
+    <!-- <div class="static-parent">
         <div class="static-child"></div>
-    </div>
+    </div> -->
 
     <!-- <div class="box1"></div>
     <div class="fixed-parent">
@@ -97,6 +97,113 @@
         <div class="absolute-child"></div>
     </div>
     <div class="box2"></div> -->
+
+
+    <!-- z index css 속성
+    형제 관계 태그에서 깊이 조절하는 속성 (앞으로 오기, 뒤로 보내기)
+    단위 없이 숫자만 전달. default=0
+    3차원 특징을 갖고 있는 position 속성값에서만 사용 가능 (fixed, absolute + relative)
+    첫 번째 형제 요소의 position이 3차원->요소 겹침 
+    큰 공간 제작 시 2차원 사용 / 내부 요소는 2차원 + 3차원
+    **형제관계 position 실험해보기
+    -->
+    <!-- <div class="z-one"></div>
+    <div class="z-two"></div> -->
+
+
+    <!-- x축정렬 or 브라우저 기준 배치: float
+        특정 위치에 float 띄우기->3차원 요소 일부 갖게 됨
+
+        clear: float 속성 끌 때 사용
+        float을 마지막으로 사용한 태그 바로 아래에 적기
+        both: left, right 둘 다 끄기
+
+        float 주의점
+        1. 브라우저 크기 변경하면 레이아웃 틀어짐
+        float을 사용하는 태그의 부모의 width가 반드시 고정값이어야 함
+        2. 3차원 속성 가지게 됨
+        float 사용한 자식의 높이값이 부모 높이값에 영향주지 않음
+        3. position은 static이나 relative를 사용해야 함.
+        순수 3차원 position은 float과 사용할 수 없음
+    -->
+
+    <!-- <div class="left-1"></div>
+    <div class="right-1"></div> -->
+
+
+    <!-- <header></header>
+    <section>
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </section>
+
+    <footer></footer> -->
+
+
+    <!-- flaot 사용 실무 팁
+    1. flaot - clear 사용 시 class=clearfix 사용하기
+    2. 부모 overflow hidden + 자식 float 3차원 : 자식 높이가 부모에 적용되게함
+    -->
+    <!-- <section>
+        <div class="left-2"></div>
+        <div class="right-2"></div>
+    </section>
+
+    <div class="clearfix"></div>
+
+    <footer></footer> -->
+
+    <!-- <div class="over-box">
+        <p>Nice to meet you Nice to meet you Nice to meet you Nice to meet you Nice to meet you Nice to meet you
+            Nice to meet you Nice to meet you Nice to meet you Nice to meet you
+            Nice to meet you Nice to meet you Nice to meet you Nice to meet you Nice to meet you 
+            Nice to meet you Nice to meet you</p>
+    </div> -->
+
+
+
+    <!-- float의 발전된 개념 display속성 flex
+    웹사이트 배치 효율 높음. float보다 제약사항 적음
+    부모 요소에 display=flex쓰면 자식요소 x축기준 left정렬
+    https://flexbox.help/
+    
+    1. 정렬 바꾸기 flex-direction: row (default, x축 정렬)
+    column(y축정렬), row-reverse(x축 right부터 정렬), 
+    colume-reverse(y축 아래부터 정렬)
+    2. flex-wrap: nowrap(부모영역에 맞게 자식 리사이즈), 
+    wrap(넓이 초과 시 자동 줄바꿈)
+    3. flex-flow:(direction, wrap 한번에 지정)
+
+    x축 정렬하기: justify-content: flex-start, flex-end, center
+    space-between(개체 간 공백), space-around(처음, 끝에도 공백)
+
+    세로 정렬하기: align-items: flex-start, flex-end, center, baseline,
+
+    -->
+
+    <!-- <div class="container">
+        <div class="item one"></div>
+        <div class="item two"></div>
+        <div class="item three"></div>
+    </div> -->
+
+
+
+
+    <!-- 중앙정렬 팁
+    https://css-tricks.com/centering-in-css/
+    1. margin: 0 auto (상하마진, 좌우마진) block요소에서 사용
+    2. position: relative, left:50%, margin-left:-1/2 width
+    -->
+
+    <div class="center-1"></div>
+    <div class="center-2"></div>
+
+
+    <!-- 오늘 여기까지 ------------------------------ -->
+
+
 
 
 

@@ -161,3 +161,162 @@ span {
 }
 
 
+
+
+
+.z-one {
+    position: relative;
+    /* z-index: 30; */
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+}
+.z-two {
+    position: relative;
+    /* z-index: 20; */
+    width: 200px;
+    height: 300px;
+    background-color: blue;
+}
+
+
+
+.left-1 {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+.right-1 {
+    float: right;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+/* header {
+    width: 100%;
+    height: 100px;
+    background-color: yellow;
+}
+.left {
+    float: left;
+    width: 300px;
+    height: 200px;
+    background-color: pink;
+}
+.center {
+    float: left;
+    width: 500px;
+    height: 200px;
+    background-color: blue;
+}
+.right {
+    position: absolute;
+    float: right;
+    width: 300px;
+    height: 200px;
+    background-color: green;
+}
+footer {
+    clear: both;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+section {
+    width: 1400px;
+    height: 200px;
+    background-color: cadetblue;
+} */
+
+
+
+
+/* .left-2 {
+    float: left;
+    width: 100px;
+    height: 150px;
+    background-color: cadetblue;
+}
+
+.right-2 {
+    float: right;
+    width: 100px;
+    height: 150px;
+    background-color: chartreuse;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: chocolate;
+}
+
+.clearfix {
+    clear: both;
+}
+
+section {
+    overflow: hidden;
+    width: 800px;
+    background-color: orange;
+}
+
+
+.over-box {
+    overflow: hidden;
+    overflow-y: scroll ;
+    overflow-x: scroll;
+    
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+} */
+
+
+.container {
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 1000px;
+    border: solid 10px red;
+    height: 500px;
+}
+.item {
+    width: 200px;
+    height: 300px;
+}
+.one {
+    background-color: yellow;
+    height: 100px;
+}
+.two {
+    background-color: blue;
+    height: 200px;
+}
+.three {
+    background-color: orange;
+    height: 300px;
+    /* width: 900px; */
+}
+
+
+.center-1 {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    margin: 0 auto;
+}
+.center-2 {
+    position: relative;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    /* margin: 0 auto; */
+}
