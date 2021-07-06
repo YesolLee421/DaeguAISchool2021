@@ -19,7 +19,7 @@ a {
 
 /* 
 글자 위아래 중앙 정렬
-1. 요소 height 있을 때: line-height = height (폰트 종류에 따라 미세조정 필요)
+1. 요소 height 있을 때: 글자 간 간격 line-height = height (폰트 종류에 따라 미세조정 필요)
 2. 요소 height 없을 때: padding 위 아래 똑같이 주기
 
 요소 border겹칠 때
@@ -116,6 +116,11 @@ a {
 
 h3, p {
     margin: 0;
+}
+
+.living-lists li {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 

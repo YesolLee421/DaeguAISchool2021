@@ -1,16 +1,12 @@
-/* h1 {
-    color: lightcoral;
+html, body {
+    margin: 0;
+    padding:0;
 }
-
-div {
-    width: 300px;
-    height: 300px;
-    background-image: url("../img/icon.png");
-    background-repeat: no-repeat;
-} */
 
 ul {
     list-style: none;
+    margin: 0;
+    padding:0;
 }
 
 a {
@@ -18,9 +14,32 @@ a {
     color: #585858;
 }
 
+header {
+    position: fixed;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+    width: 100%;
+    background-color: white;
+}
+
+.nav .nav-lists {
+    overflow: hidden;
+    width: 300px;
+}
+.nav .nav-lists .nav-item {
+    float: left;
+    width: 100px;
+}
 .nav .nav-lists .nav-item a {
+    display: block;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
     color: #585858;
-    text-decoration: none;
 }
 .nav .nav-lists .nav-item:first-child a {
     background-color: #f9f9f9;
@@ -28,45 +47,86 @@ a {
 .nav .nav-lists .nav-item:nth-child(2) a{
     background-color: #f4f4f4;
 }
-
 .nav .nav-lists .nav-item:last-child a{
     background-color: #ededed;
 }
 
-.nav .nav-lists .nav-item a img {
-    border-radius: 20px;
-}
 
-.product-img-lists ul li a .product-info .product-name {
+.product-img-lists {
+    overflow: hidden;
+}
+.product-img-lists ul li {
+    float: left;
+    /* display: inline-block;
+    vertical-align: middle; */
+}
+.product-img-lists ul li a,
+.product-big-img a {
+    width: 50%;
     color: mediumslateblue;
     font-size: 20px;
     font-weight: 500;
     line-height: 1;
 }
-
-.product-img-lists ul li a .product-info .product-name::after{
-    content : "-->";
+.product-img-lists ul li a h3,
+.product-big-img h3 {
+    margin:0;
+    position: relative;
+    top: -50px;
+    /* left: 20px; */
+    padding-left: 20px;
 }
 
-.product-img-lists ul li a:hover .product-info .product-name{
-    background-color: lightpink;
-}
 
 .text {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 30px;
 }
 
+.middle {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.middle:hover {
+    background-color: violet;
+}
 .moveToNext::before,
 .moveToNext::after {
     content: "**";
 }
 
-.support-lists a {
-    font-size: 18px;
+
+footer {
+    width: 100%;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+    font-size: 13px;
+    color: #585858;
+    text-align: center;
+}
+footer .support-lists li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    text-align: center;
+}
+footer .payment-methods-lists p {
+    font-size: 13px;
+    margin: 0;
+}
+footer .payment-methods-lists p,
+footer .payment-methods-lists ul {
+    display: inline-block;
+    vertical-align: middle;
+}
+footer .payment-methods-lists ul li{
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.payment-methods-lists p {
-    font-size: 18px;
-}
 
