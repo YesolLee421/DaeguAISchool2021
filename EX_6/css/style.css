@@ -1,0 +1,144 @@
+/* 
+rotate(음수~양수deg): 2차원 회전
+scale(width, height): 비율로 크기 조절
+skew(x축, y축): 3차원 회전 -> 박스 6개로 정육면체
+translate(x축, y축): 상하좌우 이동 
+
+transform 주의점
+1. explorer 10.0 이상에서만 사용가능->이전 버전에서 사용하려면 prefix 필요
+-webkit-transform: 크롬, 사파리
+-moz- :파이어폭스
+-ms :익스플로러
+-o :오페라
+prefix없는 형태 default로 넣어주기
+
+*/
+
+.transform {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    /* transform: rotate(45deg); */
+    /* transform: scale(0.5); */
+    /* transform: skew(-10deg, 20deg); */
+    /* transform: translate(100px, 300px); */
+    transform: rotate(45deg) scale(0.2);
+
+    /* margin-left: 300px;
+    margin-top: 500px; */
+}
+
+/* transition: 움직임
+transition-property: 어떤 속성이 변화하는가
+transition-duration: 변화 지속 시간
+transition-timing-function: 이동 방식 (점점 빠르게, 균등하게 linear 등)
+transition-delay: 변화 시작 전 지연시간
+transition: 요소 순서 상관없으나 시간의 경우 먼저 오는 것이 duration, 나중에 나오는 것이 delay
+*/
+.transition {
+    width: 300px;
+    height: 300px;
+    background-color: teal;
+
+    /* transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay:1s; */
+
+    transition: width 2s linear, height 2s linear;
+}
+.transition:hover {
+    width: 600px;
+    height: 600px;
+}
+
+/* animation: 사용자 행동에 관계없이 일어나는 움직임
+animation-name
+animation-iteration-count: 실행 횟수 / infinite
+animation-direction: 진행방향 (normal:1회, alternate:왕복)
+alternate 돌아올 때도 count 소모
+@keyframes {animation-name} 으로 실행 내용 정해주기
+ */
+.animation {
+    width: 300px;
+    height: 300px;
+    background-color: tomato;
+
+    animation-name: changeWidth;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes changeWidth {
+    0% {
+        width: 300px;
+        height: 300px;
+        background-color: tomato;
+        border: solid 0px blue;
+    }
+    50% {
+        background-color: brown;
+    }
+    100% {
+        width: 600px;
+        height: 600px;
+        background-color: yellowgreen;
+        border: solid 10px blue;
+    }
+}
+/* from-to, 0%-25%-100% 가능 */
+
+.spin-lion {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+
+    /* animation-name: spinLion;
+    animation-duration: 1500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+    -webkit-animation: spinLion 1500ms linear infinite alternate;
+}
+@-webkit-keyframes spinLion {
+    from {
+        -webkit-transform: rotate(-10deg);
+    }
+    to {
+        -webkit-transform: rotate(10deg);
+    }
+}
+@keyframes spinLion {
+    from {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+/* 복잡한 애니메이션 만들기 https://jeremyckahn.github.io/stylie/
+ */
+.save {
+    animation-name: save-keyframes;
+    animation-duration: 2000ms;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: 0 0;
+  }
+  @keyframes save-keyframes {
+    0% {transform:translate(0px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+    12.5% {transform:translate(11.3419px, -25.0817px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+    25% {transform:translate(43.6411px, -96.5083px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+    37.5% {transform:translate(91.9802px, -203.4058px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+    50% {transform:translate(149px, -329.5px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+    62.5% {transform:translate(283.2344px, -247.75px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+    75% {transform:translate(319.5px, -166px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+    87.5% {transform:translate(324.8281px, -84.25px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+    100% {transform:translate(325px, -2.5px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  }html::after { content: url(https://ga-beacon.appspot.com/UA-42910121-1/stylie?pixel); position: absolute; left: -999em; }
+  
