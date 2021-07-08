@@ -222,3 +222,12 @@ animation-fill-mode: backwards(0% 기준으로 화면 보여줌)
     margin-left: 200px;
 }
 
+
+.parent {
+    margin-top: 200px;
+    margin-left: 200px;
+    width: 300px;
+    height: 300px;
+    border: solid 10px black;
+}
+
