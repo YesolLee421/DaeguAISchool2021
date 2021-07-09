@@ -1,0 +1,199 @@
+html, body, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* 미디어쿼리 
+사용자가 접속한 기기의 width값을 기준으로 적용
+    320px ~768px 미만: 스마트폰
+    768px ~ 1024px미만: 태블릿
+    1024px 이상: PC
+미디어 쿼리 사용 시 주의점
+1. 미디어쿼리 밖에 작성된 css를 확인하면서 작성해야 함.
+미디어쿼리 안의 코드는 밖의 코드에서 상속 받는다. ->모바일버전 별도 css
+2. html meta 태그 추가: viewport는 사용자 디바이스 넓이에 맞춰 자연스럽게 scale up 해줌
+
+@media screen 사용자가 보는 화면
+@media print 웹페이지 프린트 결과물 조절
+
+orientation: 스마트폰 사용 시 방향 (portrait=세로), (landscape=가로)
+orientation 따로 설정하거나 그냥 새로운 min-width, max-width 추가해줌
+
+스마트폰에서 확인하는 방법
+1. dothome 서버에 올려서 도메인으로 들어가기: 실제 가지고있는 디바이스만 테스트가능
+2. 크롬 브라우저에서 기기 종류 선택해서 보기
+
+크롬브라우저에서 미디어쿼리 코드 확인하기: 브라우저 크기 조절
+
+미디어쿼리 실무 팁
+pc버전, 모바일 버전 html코드 따로 있을 때->하나씩만 보여주어야 함
+display 사용 (none <-> 다른 속성값. initial적용도 가능했음)
+중복작성을 피하기 위해 처음부터 pc, mobile 둘다 고려하는 것이 좋음
+*/
+/* .pc {
+    
+    font-size: 50px;
+    background-color: pink;
+    color: red;
+}
+.mobile {
+    display: none;
+}
+@media (min-width:320px) and (max-width: 767px) {
+    .pc {
+        display: none;
+    }
+    .mobile {
+        display: initial;
+    }
+} */
+
+
+
+/* @media (min-width: 300px) and (max-width: 767px) {
+    .pc {
+        color: blue;
+        font-size: 20px;
+        background-color: yellow;
+    }
+} */
+/* @media (min-width: 100px) and (max-width:599px) {
+    .pc {
+        color: green;
+        font-size: 10px;
+        background-color: yellowgreen;
+    }
+} */
+
+
+/* 미디어쿼리 응용
+적응형, 반응형 제작 시: 모바일 버전 기획 먼저 -> pc로 확장
+min-width만 사용->media쿼리 안쪽은 pc, 밖은 모바일
+min-width가 더 큰 미디어쿼리 추가하면 이전 쿼리는 자연스럽게 max-width 정해짐
+1em = 16px정도
+*/
+
+/* h1 {
+    font-size: 20px;
+    background-color: yellow;
+}
+@media (min-width:768px) {
+    h1 {
+        font-size: 40px;
+        background-color: pink;
+    }
+}
+@media (min-width:1024px) {
+    h1 {
+        font-size: 80px;
+        background-color: gray;
+    }
+} */
+
+
+
+/* .media-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 700px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.media-menu a {
+    text-decoration: none;
+    color: black;
+}
+.media-menu li {
+    width: 150px;
+    background-color: yellow;
+    border: solid 5px red;
+    padding: 5px 15px;
+    text-align: center;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .media-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 190px;
+    }
+    .media-menu li {
+        margin-bottom: 10px;
+    }
+    .media-menu li:last-child {
+        margin-bottom: 0;;
+    }
+} */
+
+
+/* pc버전
+3등분 팁: width:33.3333%
+*/
+.intro {
+    display: flex;
+    position: fixed;
+
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+}
+.intro h1 {
+    width: 50%;
+    height: 80px;
+    background-color: black;
+}
+.intro nav {
+    width: 50%;
+    height: 80px;
+    background-color: yellow;
+}
+.intro nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.intro nav ul li {
+    width: 33.3333%;
+    height: 80px;
+}
+.intro nav ul li:nth-child(1) { 
+    background-color: #f9f9f9;
+}
+.intro nav ul li:nth-child(2) {
+    background-color: #f4f4f4;
+}
+.intro nav ul li:nth-child(3) { 
+    background-color: #ededed;
+}
+
+/* 
+위 요소가 3차원, 아래 요소가 2차원이라 두 요소 겹치는 현상 일어날 때
+1. 아래 요소에 padding-top 등을 이용해 내용을 아래로 내린다.
+*/
+main {
+    width: 100%;
+    height: 2000px;
+    background-color: pink;
+    padding-top: 80px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .intro {
+        position: static;
+        height: 160px;
+        flex-direction: column;
+    }
+    .intro h1 {
+        width: 100%;
+    }
+    .intro nav {
+        width: 100%;
+    }
+    main {
+        padding-top: 0;
+    }
+}
+

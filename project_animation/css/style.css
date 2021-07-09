@@ -231,3 +231,27 @@ animation-fill-mode: backwards(0% 기준으로 화면 보여줌)
     border: solid 10px black;
 }
 
+.img-box {
+    width: 400px;
+    height: 500px;
+    background-color: aquamarine;
+    
+}
+.img-box img {
+    width: 100%;
+}
+.img-box ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 0;
+    padding:0;
+}
+.img-box .img-box-item {
+    width: 120px;
+    height: 120px;
+    background-image: url(/resources/bedroom1.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid black;
+}
