@@ -131,7 +131,7 @@ min-width가 더 큰 미디어쿼리 추가하면 이전 쿼리는 자연스럽�
 /* pc버전
 3등분 팁: width:33.3333%
 */
-.intro {
+/* .intro {
     display: flex;
     position: fixed;
 
@@ -167,13 +167,13 @@ min-width가 더 큰 미디어쿼리 추가하면 이전 쿼리는 자연스럽�
 }
 .intro nav ul li:nth-child(3) { 
     background-color: #ededed;
-}
+} */
 
 /* 
 위 요소가 3차원, 아래 요소가 2차원이라 두 요소 겹치는 현상 일어날 때
 1. 아래 요소에 padding-top 등을 이용해 내용을 아래로 내린다.
 */
-main {
+/* main {
     width: 100%;
     height: 2000px;
     background-color: pink;
@@ -195,5 +195,79 @@ main {
     main {
         padding-top: 0;
     }
+} */
+
+
+.container {
+    /* width: 100%; */
+
+    width: 1140px;
+    margin: 0 auto;
+    background-color: silver;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
+.container .column {
+    /* box-sizing: border-box;
+    width: 33%; */
+    width: 355px;
+    background-color: #ffffff;
+    border: solid 2px black;
+    margin-bottom: 10px;
+}
+.container .column:nth-child(4),
+.container .column:nth-child(5),
+.container .column:nth-child(6) {
+    margin-bottom: 0;
+}
+/* img 공백 없애기 */
+.container .column img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.container .column .image-info {
+    padding: 20px 0;
+    text-align: center;
+}
+.container .column .image-info h2{
+    margin:0;
+}
+
+@media (min-width: 540px) and (max-width:720px) {
+    .container {
+        width: 720px;
+    }
+    /* .container .column {
+        width: 49%;
+    } */
+    .container .column:nth-child(4) {
+        margin-bottom: 10px;
+    }   
+}
+@media (min-width: 320px) and (max-width: 539px) {
+    .container {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .container .column {
+        width: 100%;
+    }
+    .container .column:nth-child(4),
+    .container .column:nth-child(5) {
+        margin-bottom: 10px;
+    } 
+}
+
+
+
+/* 미디어쿼리 사용법
+1. css 안에 적기
+2. 모바일버전 별도 파일에 제작
+3. <style media="(min-width: 300px) and (max-width)">
+        body { background-color: red;} </style>
+*/
