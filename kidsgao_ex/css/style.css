@@ -1,0 +1,294 @@
+/* Default css */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+/* overflow-x 가로 넓이 넘어가면 안보이게: 안하면 가로스크롤 */
+body {
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+/* button 초기속성: border, 배경색 */
+button {
+    border: none;
+    background-color: transparent;
+}
+.clearfix {
+    clear: both;
+}
+
+
+/* intro */
+#intro {
+    width: 100%;
+    height: 1600px;
+    background-image: url(../img/intro/intro_bg.png);
+
+    padding-top:100px;
+    box-sizing: border-box;
+}
+/* 왜 position relative?
+1. 중앙정렬 하기 위해 : left 50% + margin(1/2 width)
+2. 부모 포지션 상태에 따라 3차원 자식의 top, left 등의 속성의
+기준점이 달라질 수 있음 ->부모에 relative 적용함
+3. 로고 top으로 내리기 위해: 형제 relative일 때 겹쳐서 보임.
+나중에 작성된 3차원 속성이 z-index가 더 높음 
+덕분에 레이아웃은 틀어지지 않음
+
+introWrap 내리기: margin-top ->부모intro도 같이 내려오는 margin병합현상
+intro에 padding-top 사용
+-> 모든content가 padding-top만큼 내려오게 됨
+*/
+#intro .introWrap {
+    position: relative;
+
+    width: 760px;
+    height: 516px;
+    left: 50%;
+    margin-left: -380px;
+    /* margin-top: 100px; */
+    /* top: 100px; */
+}
+
+/* 왜 absolute? 여러 동물들이 앞뒤로 배치됨.
+z-index 사용하기 위해 3차원 속성 필요
+*/
+#intro .introWrap .logo {
+    position: absolute;
+    width: 760px;
+    height: 516px;
+    background-image: url(../img/intro/logo.png);
+    z-index: 100;
+}
+
+#intro .introWrap .lion {
+    position: absolute;
+    width: 161px;
+    height: 161px;
+    background-image: url(../img/intro/lion.png);
+    margin: 80px 0 0 30px;
+}
+#intro .introWrap .rabbit {
+    position: absolute;
+    background-image: url(../img/intro/rabbit.png);
+
+    width: 105px;
+    height: 129px;
+    margin: 90px 0 0 580px;
+}
+#intro .introWrap .bear {
+    position: absolute;
+    background-image: url(../img/intro/bear.png);
+    width: 112px;
+    height: 105px;
+    margin: 310px 0 0 560px;
+    z-index: 200;
+}
+#intro .introWrap .monkey {
+    position: absolute;
+    background-image: url(../img/intro/monkey.png);
+    width: 85px;
+    height: 93px;
+    margin: 310px 0 0 50px;
+
+    z-index: 200;
+}
+/* 이미지 크기에 딱 맞는 공간 넓이 속성
+background-image: 전체 공간을 이미지로 채우려는 속성 있음
+배경이미지는 제외
+*/
+
+
+/* 자식 요소가 absolute일 때 부모를 relative */
+#intro .cloudWrap {
+    position: relative;
+    width: 100%;
+    height: 1050px;
+    /* background-color: pink; */
+}
+#intro .cloudWrap .leftCloud {
+    position: absolute;
+    /* float: left; */
+    width: 934px;
+    height: 816px;
+    background-image: url(../img/intro/cloud1.png);
+    left: 0;
+    z-index: 2;
+}
+#intro .cloudWrap .rightCloud {
+    position: absolute;
+    /* float: right; */
+    width: 843px;
+    height: 858px;
+    background-image: url(../img/intro/cloud2.png);
+    right: 0;
+}
+#intro .cloudWrap .dragonFly {
+    position: absolute;
+    width: 366px;
+    height: 228px;
+    background-image: url(../img/intro/dragonfly.png);
+    top: 800px;
+}
+
+/* 실무에서 직접 디자인해야 하는 경우
+제작된 이미지의 크기는 5로 떨어지거나 짝수로 끝남
+*/
+
+
+
+#farm1 {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background-image: url(../img/farm/farm1/farm1_bg.png);
+}
+#farm1 .leftRice1 {
+    position: absolute;
+    width: 390px;
+    height: 670px;
+    background-image: url(../img/farm/farm1/leftrice.png);
+    left: 0;
+}
+#farm1 .rightRice1 {
+    position: absolute;
+
+    width: 335px;
+    height: 570px;
+    background-image: url(../img/farm/farm1/rightrice.png);
+    right: 0;
+    top: 100px;
+}
+#farm1 .farmer {
+    position: absolute;
+    width: 747px;
+    height: 1078px;
+    background-image: url(../img/farm/farm1/farmer.png);
+    left: 50%;
+    margin-left: -310px
+}
+#farm1 .farmSpeechWrap {
+    position: relative;
+    top: 250px;
+    left: 150px;
+}
+#farm1 .farmSpeechWrap .farmSpeech {
+    color: #895C2F;
+    font-size: 18px;
+    line-height: 27px;
+}
+/* 이전 형제들이 전부 3차원-> 그 다음에 나오는 요소는
+차원 상관없이 레이어 겹침
+나중에 사용된 3차원인 farmSpeech가 가장 앞에 배치됨
+
+*/
+
+
+
+/* Farm2 */
+#farm2 {
+    position: relative;
+    width: 100%;
+    height: 850px;
+    background-image: url(../img/farm/farm2/farm2_bg.png);
+}
+#farm2 .leftRice2 {
+    float: left;
+    width: 250px;
+    height: 850px;
+    background-image: url(../img/farm/farm2/leftrice2.png);
+}
+#farm2 .rightRice2 {
+    float: right;
+    width: 236px;
+    height: 850px;
+    background-image: url(../img/farm/farm2/rightrice2.png);
+}
+#farm2 .scarecrow {
+    position: absolute;
+    width: 103px;
+    height: 206px;
+    background-image: url(../img/farm/farm2/scarecrow.png);
+    margin: 200px 0 0 300px;
+}
+
+
+
+
+/* farm3 */
+#farm3 {
+    position: relative;
+    width: 100%;
+    height: 850px;
+    background-image: url(../img/farm/farm3/farm3_bg.png);
+}
+#farm3 .farm3Window {
+    position: absolute;
+    width: 247px;
+    height: 169px;
+    background-image: url(../img/farm/farm3/window.png);
+    margin: 100px 0 0 100px;
+}
+#farm3 .machineWrap {
+    position: relative;
+    width: 600px;
+    height: 455px;
+    left: 50%;
+    margin-left: -285px;
+    top: 150px;
+}
+#farm3 .machineWrap .machine1 {
+    position: absolute;
+    width: 586px;
+    height: 455px;
+    background-image: url(../img/farm/farm3/machine1.png);
+    z-index:900;
+}
+#farm3 .machineWrap .sawShadow {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    background-image: url(../img/farm/farm3/sawshadow.png);
+    margin: 145px 0 0 145px;
+}
+#farm3 .machineWrap .saw1,
+#farm3 .machineWrap .saw2 {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    background-image: url(../img/farm/farm3/saw.png);
+}
+#farm3 .machineWrap .saw1 {
+    margin: 140px 0 0 140px;
+}
+#farm3 .machineWrap .saw2 {
+    margin: 140px 0 0 350px;
+}
+#farm3 .machineWrap .timer {
+    position: absolute;
+    width: 103px;
+    height: 104px;
+    background-image: url(../img/farm/farm3/second.png);
+    margin: 125px 0 0 45px;
+    z-index: 999;
+}
+#farm3 .machineWrap .machineBird {
+    position: absolute;
+    width: 44px;
+    height: 49px;
+    background-image: url(../img/farm/farm3/machinebird.png);
+    margin: 220px 0 0 20px;
+    z-index: 999;
+}
+#farm3 .farm3Bubble {
+    position: absolute;
+    top: 350px;
+    right: 80px;
+}
+
+
+
+
