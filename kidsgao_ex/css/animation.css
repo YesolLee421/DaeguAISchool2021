@@ -179,3 +179,50 @@ body overflow-x:hidden (default로 사용됨)
     from { transform: scale(1);}
     to { transform: scale(0.8);}
 }
+
+
+
+
+/* 0715 night2 */
+#night2 .moon {
+    animation: moveMoon linear 10s infinite;
+}
+/* position static이라 margin 사용 */
+@keyframes moveMoon {
+    from { margin-left: -135px;}
+    to { margin-left: 110%;}
+}
+
+
+/* morning
+뒤에 나오는 시간이 딜레이
+시작위치 자연스럽게 하기 위해 fill-mode:backwards 적용함
+*/
+#morning .sun {
+    animation: moveSun linear 10s 1500ms infinite backwards;
+}
+@keyframes moveSun {
+    from { margin-left: -131px;}
+    to { margin-left: 110%;}
+}
+
+
+/* kitchen */
+.bubble1 {
+    animation-name: bubble;
+    animation-duration: 1000ms;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: 0 0;
+  }
+  @keyframes bubble {
+    0% {transform:translate(0px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+    50% {transform:translate(-71.4178px, -104.5px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+    100% {transform:translate(-101px, -209px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  }
+
+
+
+  
