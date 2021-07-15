@@ -1,0 +1,211 @@
+/* css 초기화 */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+button {
+    border: none;
+    background-color: transparent;
+}
+.clearfix {
+    clear: both;
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 134px;
+}
+#header .top {
+    width: 100%;
+    background-color: #ededed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px 5px 30px;
+    box-sizing: border-box;
+}
+#header .top .nav-register li{
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+#header .middle {
+    width: 1000px;
+    box-sizing: border-box;
+    padding: 10px 30px 10px 30px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#header .middle a .logo {
+    height: 29px;
+    float: left;
+    padding: 5px 0 5px 0;
+}
+#header .middle nav {
+    float: left;
+    margin: 10px 20px 0 20px;
+    font-size:20px;
+    box-sizing: border-box;
+}
+#header .middle nav .to-art{
+    margin-right:20px;
+    color: #ff7b30;
+}
+#header .middle form .search-input {
+    float: left;
+    width: 285px;
+    height: 30px;
+    border: #ff7b30 1px solid;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#header .middle .mypage {
+    float: right;
+}
+#header .middle .mypage img{
+    width: 25px;
+}
+#header .middle .mypage .profile,
+#header .middle .mypage .cart{
+    display: inline-block;
+    margin-left: 20px;
+    text-align: center;
+}
+#header .middle .mypage .profile span,
+#header .middle .mypage .cart span{
+    display: block;
+    font-size: 10px;
+}
+#header .bottom {
+    width: 100%;
+    border-top: 1px solid #d9d9d9;
+    padding: 10px 30px 10px 30px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);    
+}
+#header .bottom .nav-main ul {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#header .bottom .nav-main ul li {
+    font-size: 13px;
+}
+
+#main-image {
+    width: 100%;
+    height: 480px;
+    background-image: url(../img/product1.jpg);
+    margin-top: 13px;
+}
+
+#today-art {
+    width: 1000px;
+    padding: 20px;
+    margin: 0 auto;
+}
+#today-art h2 {
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#today-art .today-frame {
+    width: 100%;
+}
+#today-art .today-frame ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#today-art .today-frame ul .card {
+    position: relative;
+    width: 180px;
+    height: 350px;
+    font-size: 12px;
+    border: 1px solid #d9d9d9;
+    margin-bottom: 20px;
+    
+}
+#today-art .today-frame ul .card .btn-like {
+    position: absolute;
+    width: 24px;
+    padding-top:24px ;
+    background-image: url(../img/heart-shape-outline.png);
+    top: 10px;
+    right:10px;
+    cursor: pointer;
+    z-index: 10;
+}
+/* 아직 토글버튼 만드는 법을 모르겠다. */
+#today-art .today-frame ul .card .btn-like:focus {
+    background-image: url(../img/love.png);
+}
+#today-art .today-frame ul .card .product-img {
+    height: 180px;
+    width: 180px;
+    overflow: hidden;
+}
+
+#today-art .today-frame ul .card .product-img img {
+    height: 180px;
+    background-image: url(../img/peach.jpg);
+}
+#today-art .today-frame ul .card .product-img:hover img {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+#today-art .today-frame ul .card .product-info {
+    padding: 10px 10px 30px 10px;
+    border-bottom: 1px solid #d9d9d9;
+    box-sizing: border-box;
+}
+#today-art .today-frame ul .card .product-info .brand-name {
+    color: gray;
+    font-size: 10px;
+}
+#today-art .today-frame ul .card .product-rating {
+    margin: 10px;
+    width: 100%;
+}
+#today-art .today-frame ul .card .product-rating .rating-star {
+    background-image: url(../img/star.png);
+    width: 80px;
+    height: 16px;
+}
+#today-art .today-frame ul .card .product-rating p {
+    padding-top: 20px;
+}
+#today-art .btn-more {
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    left: 50%;
+    margin-left: -150px;
+}
+
+
+
