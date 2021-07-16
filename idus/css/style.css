@@ -1,7 +1,8 @@
 /* css 초기화 */
-html, body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body {
     overflow-x: hidden;
@@ -22,6 +23,9 @@ h1, h2, h3, h4, h5, h6, p {
 button {
     border: none;
     background-color: transparent;
+}
+img {
+    vertical-align: middle;
 }
 .clearfix {
     clear: both;
@@ -69,7 +73,7 @@ button {
     margin-right:20px;
     color: #ff7b30;
 }
-#header .middle form .search-input {
+#header .middle .search-input {
     float: left;
     width: 285px;
     height: 30px;
@@ -206,6 +210,16 @@ button {
     left: 50%;
     margin-left: -150px;
 }
+
+
+#footer {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: pink;
+}
+
+
 
 
 

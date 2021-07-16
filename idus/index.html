@@ -6,6 +6,9 @@
     <meta name="keywords" content="핸드메이드, 수공예, 먹거리">
     <meta name="author" content="yesollee">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
     <title>아이디어스</title>
@@ -24,14 +27,14 @@
         </div>
         <div class="middle">
             <a href="#"><img class="logo" src="img/logo_idus.png" alt="아이디어스 메인으로"></a>
-            <nav>
+            <nav class="category">
                 <a class="to-art" href="#">작품</a>
                 <a class="to-class" href="#">클래스</a>
             </nav>
             <!-- form action:"url" 서식데이터를 서버로 보낼 때 해당 데이터가 도착할 url -->
-            <form action="#">
-                <input class="search-input" type="text" placeholder="소독제를 검색해주세요">
-            </form>            
+
+            <input class="search-input" type="text" placeholder="소독제를 검색해주세요">
+          
             <nav class="mypage">
                 
                 <a class="profile" href="#">
@@ -251,7 +254,37 @@
         <button class="btn-more" type="button">오늘의 작품 더보기</button>
     </div>
 
-    <footer></footer>
+    <footer id="footer"></footer>
+
+    <nav id="nav-bot">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="icon-art">작품</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon-class">클래스</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon-search">검색</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon-category">카테고리</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon-mypage">내 정보</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
 
 

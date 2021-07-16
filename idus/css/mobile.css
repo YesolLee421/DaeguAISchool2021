@@ -1,0 +1,166 @@
+#nav-bot {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border-top: 1px solid #d9d9d9;
+    bottom: 0;
+    z-index: 150;
+}
+#nav-bot ul li {
+    width: 20%;
+    float: left;
+}
+#nav-bot ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 15px;
+}
+#nav-bot ul li a:hover {
+    color: #ff7b30;
+}
+#nav-bot ul li a .icon-art::before {
+    display: block;
+    content: "\f54e";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.0em;
+    font-weight: 600;
+}
+#nav-bot ul li a .icon-class::before {
+    display: block;
+    content: "\f51c";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.0em;
+    font-weight: 600;
+}
+#nav-bot ul li a .icon-search::before {
+    display: block;
+    content: "\f00e";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.0em;
+    font-weight: 600;
+}
+#nav-bot ul li a .icon-category::before {
+    display: block;
+    content: "\f0ca";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.0em;
+    font-weight: 600;
+}
+#nav-bot ul li a .icon-mypage::before {
+    display: block;
+    content: "\f2bd";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.0em;
+    font-weight: 600;
+}
+
+
+@media (max-width: 43em) {
+    #header {
+        font-size: 12px;
+        height: auto;
+    }
+    #header .top {
+        display: none;
+    }
+    #header .middle {
+        width: 100%;
+    }
+    #header .middle .category {
+        display: none;
+    }
+    #header .middle .search-input {
+        width: 60%;
+        margin: 2px 0 0 20px;
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    #header .middle .mypage {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        width: 60px;
+    }
+    #header .middle .mypage a {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        margin: 0;
+    }
+
+    #header .middle .mypage .profile,
+    #header .middle .mypage .cart span{
+        display: none;
+    }
+    #header .middle .mypage img{
+        width: 100%;
+    }
+    #header .bottom .nav-main ul {
+        width: 100%;
+    }
+    #header .bottom .nav-main ul li {
+        font-size: 10px;
+    }
+    #main-image {
+        height: 300px;
+        margin: 0;
+    }
+    #today-art {
+        width: 100%;
+    }
+    #today-art h2 {
+        font-size: 15px;
+    }
+    #today-art .today-frame ul .card {
+        position: relative;
+        width: 48%;
+        height: 350px;
+        font-size: 12px;
+        border: 1px solid #d9d9d9;
+        margin: 0 10px 20px 0;
+    }
+    #today-art .today-frame ul .card:nth-child(2n) {
+        margin-right:0px;
+    }
+    #today-art .today-frame ul .card .product-info {
+        padding: 10px;
+    }
+    #today-art .today-frame ul .card .product-rating p {
+        padding-top: 10px;
+    }
+    #today-art .today-frame ul .card .product-img {
+        width: 100%;
+        height: 60%;
+        overflow: hidden;
+    }
+    #today-art .today-frame ul .card .product-img img {
+        width: 100%;
+        height: 100%;
+    }
+    #today-art .btn-more {
+        position: relative;
+        width: 200px;
+        padding: 10px;
+        border: 1px solid #d9d9d9;
+        border-radius: 5px;
+        left: 50%;
+        margin-left: -100px;
+    }
+
+
+
+
+
+    #nav-bot {
+        display: initial;
+    }
+    #footer {
+        margin-bottom: 50px;
+    }
+}
