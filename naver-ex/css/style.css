@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+ol, ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+img {
+    vertical-align: middle;
+}
+.clearfix {
+    clear: both;
+}
+body {
+    overflow-x: hidden;
+}
+button {
+    border: none;
+    background-color: transparent;
+}
+input, textarea {
+    outline: none;
+} 
+
+.container {
+    width: 1130px;
+    margin: 0 auto;
+}
+
+
+
+/* 강사님의 css 작성 규칙
+1. html 태그의 성격을 결정짓는 속성들 ex. position, display 등
+2. 공간 만들 때 사용하는 속성: width, height, background-color, border 등
+3. text 관련
+*/
+
+#main-header {
+    position: relative;
+    background-color: #fff;
+}
+#main-header .search-area {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    position: relative;
+
+    height: 160px;
+    background-color: #ffffff;
+    border-bottom: solid 1px #e4e8eb;
+}
+#main-header .search-area .search-wrap {
+    position: relative;
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+    width: 582px;
+    height: 52px;
+    border: solid 2px #19ce60;
+}
+/* 
+button 요소 특성
+- border, background-color
+- type 입력 안하면 default로 button 속성
+
+input, textarea 태그 특성
+focus -> outline 있음
+
+input, button == inline-block 요소들
+inline 요소들 연달아서 기입하면 사이 미세 공백 있음
+flex 사용 시 공백 없어짐
+calc()
+*/
+#main-header .search-area .search-wrap input {
+    width: calc(100% - 52px);
+    height: 100%;
+    padding: 13px 15px;
+    border: none;
+
+    font-size: 22px;
+}
+/* input, textarea outline:none으로 초기화하면 focus 따로 선택안해도 테두리 없어짐 */
+#main-header .search-area .search-wrap input:focus {
+    outline: none;
+}
+#main-header .search-area .search-wrap button {
+    width: 52px;
+    height: 100%;
+    background-color: #19ce60;
+}
+/* box-shadow 그림자 적용.
+https://html-css-js.com/css/generator/box-shadow/
+*/
+#main-header #navbar {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+#main-header #navbar ul {
+    padding: 11px 0;
+}
+/* inline 공백 신경쓰이면 flex 사용하기 */
+#main-header #navbar ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+#main-header #navbar ul li a {
+    color: #03c75a;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* 아이콘 넣기: 무료 아이콘 사이트 활용하기
+background -> 아이콘 이미지 넣기
+*/
+
+/* 자식이 float으로 3차원일 때 overflow:hidden으로 부모 높이 조절 */
+main {
+    overflow:hidden;
+    padding-top: 20px;
+}
+main #main-left {
+    float: left;
+    width: 750px;
+    /* height: 2000px;
+    background-color: yellow; */
+}
+main #main-right {
+    float: right;
+    width: 350px;
+    height: 2000px;
+    background-color: pink;
+}
+
+
+main #main-left #banner-wrap{
+    width: 750px;
+    height: 135px;
+    background-color: purple;
+    margin-bottom: 12px;
+}
+main #main-left #news-wrap  .news-header{
+    padding: 22px 0 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main #main-left #news-wrap .news-header h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+main #main-left #news-wrap .news-header .news-btn-wrap {
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main #main-left #news-wrap .news-header .news-btn-wrap button {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+}
+
+
+/* 6등분: width: 16.66%
+네이버 뉴스리스트 border 방식 특이했음. 별도 div만들고 i 태그로 줄 넣어줌
+*/
+main #main-left #news-wrap .news-lists {
+    overflow:hidden;
+    border: 1px solid #dae1e6;
+}
+
+main #main-left #news-wrap .news-lists .news-list {
+    position: relative;
+    float: left;
+    width: 16.66%;
+    height: 65px;
+    background-color: #ffffff;
+
+    padding: 0;
+
+    border-bottom: solid 1px #e4e8eb;
+    border-right: solid 1px #e4e8eb;
+
+    text-align: center;
+}
+main #main-left #news-wrap .news-lists .news-list:nth-child(6n) {
+    border-right: none;
+}
+main #main-left #news-wrap .news-lists .news-list:nth-child(19),
+main #main-left #news-wrap .news-lists .news-list:nth-child(20),
+main #main-left #news-wrap .news-lists .news-list:nth-child(21),
+main #main-left #news-wrap .news-lists .news-list:nth-child(22),
+main #main-left #news-wrap .news-lists .news-list:nth-child(23),
+main #main-left #news-wrap .news-lists .news-list:nth-child(24) {
+    border-bottom: none;
+}
+/* y축 중앙정렬 공식 */
+main #main-left #news-wrap .news-lists .news-list img {
+    position: relative;
+
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+main #blog-wrap {
+    padding-top: 35px;
+}
+
+main #blog-wrap .blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding-bottom: 17px;
+}
+
+main #blog-wrap .blog-header .left-header {
+    display: flex;
+    align-items: center;
+}
+main #blog-wrap .blog-header .left-header h3 {
+    font-size: 14px;
+    margin-right: 8px;
+}
+main #blog-wrap .blog-header .left-header span,
+main #blog-wrap .blog-header .right-header span {
+    font-size: 12px;
+    color: gray;
+}
+main #blog-wrap .blog-header .right-header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+main #blog-wrap .blog-header .right-header span strong{
+    color: black;
+}
+
+
+
+main #blog-wrap .blog-nav ul {
+    overflow: hidden;
+    border: solid 1px #dae1e6;
+}
+
+main #blog-wrap .blog-nav ul li{
+    float: left;
+    width: 12.5%;
+    height: 49px;
+
+    border-right: solid 1px #dae1e6;
+}
+main #blog-wrap .blog-nav ul li:last-child {
+    border-right: 0;
+}
+main #blog-wrap .blog-nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    line-height: 49px;
+    text-align: center;
+}
+
+
+
+main #blog-wrap .blog-list-wrap {
+    padding-top: 18px;
+    border-bottom: solid 1px #dae1e6;
+}
+main #blog-wrap .blog-list-wrap ul li {
+    margin-bottom: 18px;
+}
+main #blog-wrap .blog-list-wrap ul li a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+main #blog-wrap .blog-list-wrap li a img {
+    width: 170px;
+    height: 114px;
+    margin-right: 21px;
+}
+main #blog-wrap .blog-list-wrap li .blog-list-info {
+    width: 559px;
+    padding-right: 47px;
+}
+main #blog-wrap .blog-list-wrap li .blog-list-info span {
+    font-size: 12px;
+    color: #35ae5e;
+}
+main #blog-wrap .blog-list-wrap li .blog-list-info h4 {
+    font-size: 13px;
+}
+main #blog-wrap .blog-list-wrap li .blog-list-info p {
+    font-size: 13px;
+}
+
+main #blog-wrap .blog-list-wrap li .blog-list-info .date-wrap span {
+    font-size: 12px;
+    color: #505050;
+}
+
+
+
+
+main .blog-media-wrap ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 0;
+    border-bottom: solid 1px #dae1e6;
+}
+/* 공백 및 이미지 크기 고려해서 이미지 크기와 동일하게 넓이 만들어줌 */
+main .blog-media-wrap ul li .blog-media-info {
+    padding-top: 12px;
+}
+main .blog-media-wrap ul li .blog-media-info h4 {
+    font-size: 13px;
+}
+main .blog-media-wrap ul li .blog-media-info span {
+    font-size: 12px;
+}
