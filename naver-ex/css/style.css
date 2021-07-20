@@ -133,8 +133,8 @@ main #main-left {
 main #main-right {
     float: right;
     width: 350px;
-    height: 2000px;
-    background-color: pink;
+    /* height: 2000px;
+    background-color: pink; */
 }
 
 
@@ -329,5 +329,186 @@ main .blog-media-wrap ul li .blog-media-info h4 {
     font-size: 13px;
 }
 main .blog-media-wrap ul li .blog-media-info span {
+    font-size: 12px;
+}
+
+
+
+/* 0720 main-right */
+#main-right #account {
+    width: 100%;
+    border: solid 1px #dae1e6;
+    padding: 16px 16px 12px 16px;
+    margin-bottom: 12px;
+}
+#main-right #account p {
+    font-size: 12px;
+    padding-left: 3px;
+    margin-bottom: 11px;
+}
+#main-right #account a {
+    display: block;
+    width: 100%;
+    background-color: #19ce60;
+    border-radius: 2px;
+    /* padding 값 조정해서 왼쪽 큰 배너랑 크기 맞춰줌 */
+    padding: 13px 0;
+    margin-bottom: 14px;
+
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    font-size: 13px;
+}
+#main-right #account .account-sub {
+    padding: 0 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#main-right #account .account-sub span {
+    font-size: 12px;
+}
+
+#main-right #banner {
+    width: 348px;
+    height: 198px;
+    background-color: yellowgreen;
+    margin-bottom: 20px;
+}
+
+
+#main-right #shop-wrap .shop-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main-right #shop-wrap .shop-title h3,
+#main-right #shop-wrap .shop-title h4 {
+    font-size: 13px;
+}
+#main-right #shop-wrap .shop-title h4 {
+    margin-left: 15px;
+}
+#main-right #shop-wrap .shop-title .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px 0;
+}
+
+
+#main-right #shop-wrap .shop-content {
+    border: solid 1px #e4e8eb;
+    padding: 0 0 22px 0;
+}
+/* flex space between 의 단점
+wrap 상태에서 사용하면 첫 줄과 다음줄에 나오는 컨텐츠 갯수가 동일하지 않으면
+두번째 줄 컨텐츠 갭이 극단적이게 됨
+갯수가 깔끔하게 떨어지지 않으면 float:left 사용하기
+영상과 달리 쇼핑몰 이름 길이가 달라서 개수가 같아도 각 줄에 동일한 개수가 들어가지 않았다.
+아마 네이버도 그래서 두 줄로 공간을 분리한게 아닐까 생각이 든다.
+*/
+#main-right #shop-wrap .shop-content .commerce-lists-wrap {
+    background-color: #f7f9fa;
+    padding: 12px 4px;
+    border-bottom: solid 1px #dae1e6;
+}
+#main-right #shop-wrap .shop-content .commerce-lists {
+    /* overflow: hidden; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#main-right #shop-wrap .shop-content .commerce-lists li {
+    /* float: left; */
+    font-size: 12px;
+    margin: 0 0 5px 10px;
+}
+#main-right #shop-wrap .shop-content .commerce-lists li:first-child {
+    margin-left: 0;
+}
+
+
+#main-right #shop-wrap .shop-content .shop-goods {
+    padding: 55px 8px 0 8px;
+}
+#main-right #shop-wrap .shop-content .shop-goods .product-lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}#main-right #shop-wrap .shop-content .shop-goods .product-lists li {
+    margin-bottom: 10px;
+}
+#main-right #shop-wrap .shop-content .shop-goods .product-lists .product-info {
+    text-align: center;
+}
+#main-right #shop-wrap .shop-content .shop-goods .product-lists li h2,
+#main-right #shop-wrap .shop-content .shop-goods .product-lists li span
+{
+    font-size: 12px;
+}
+
+
+#main-footer  {
+    background-color: #fafbfc;
+    border-top: solid 1px #e4e8eb;
+    padding-bottom: 92px;
+}
+
+#main-footer .news-lists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 0;
+}
+#main-footer .news-lists li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#main-footer .news-lists li img {
+    margin-right: 15px;
+}
+#main-footer .news-lists li .news-info {
+    width: 172px;
+    font-size: 13px;
+}
+#main-footer .news-lists li .news-info span {
+    color: #58c464;
+}
+
+
+#main-footer .corp-lists {
+    padding-top: 25px;
+    border-top: solid 1px #e4e8eb;
+}
+/* 네이버에서 사용된 방식 복사함
+vertical-align으로 위치 조정하기
+
+설정한 것을 없애고 싶을 땐 initial 활용하기
+*/
+#main-footer .corp-lists li {
+    display: inline-block;
+    vertical-align: middle;
+}
+#main-footer .corp-lists li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 0 8px;
+    background-color: #e4e8eb;
+    vertical-align: -1px;
+}
+#main-footer .corp-lists li:first-child::before {
+    content: initial;
+}
+#main-footer .corp-lists li a {
     font-size: 12px;
 }
