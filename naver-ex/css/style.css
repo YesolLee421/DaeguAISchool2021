@@ -549,7 +549,6 @@ default css 클래스를 먼저 만들고 html에 적용하는 방법
     border-bottom: solid 1px #e8e8e8;
 }
 #shop-header #shop-header-top a {
-    position: relative;
     height: 100%;
     padding-left: 10px;
 
@@ -1188,8 +1187,10 @@ a 태그를 직접 지정해 색 초기화 해주었기 때문에.
     width: 135px;
     height: 58px;
     border-left: solid 1px #ced2d7;
-    border-right: solid 1px #ced2d7;
     border-bottom: solid 1px #ced2d7;
+}
+#webtoon-main .webtoon-main-left .webtoon-carousel-banner-nav ul li:last-child {
+    border-right: solid 1px #ced2d7;
 }
 /* 왼쪽 상단 전체 border랑 겹쳐서 안 예쁨
 box-sizing을 일부러 해제해서 공간 밖으로 아래줄 생기게 했음
