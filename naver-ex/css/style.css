@@ -18,7 +18,7 @@ img {
     clear: both;
 }
 body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 button {
     border: none;
@@ -1847,3 +1847,747 @@ text-overflow: ellipsis 글자가 넘치는 경우 말줄임 표시하는 속성
 .webtoon-detail #webtoon-daily .webtoon-day-list .webtoon-list a h3 {
     font-size: 12px;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* 네이버 블로그 페이지 */
+.blog-container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+#blog-header .blog-header-top {
+    height: 60px;
+    background-color: #00c73c;
+    border-bottom: 1px solid #51b036;
+}
+#blog-header .blog-header-top .blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/* flex로 정렬할 때 처음엔 정렬할 오른쪽 대상이 없어서 위아래 중앙정렬 안 됐지만
+비교대상 만들고 나니 align-items:center로 인해 정렬된듯 */
+#blog-header .blog-header-top .blog-header-left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* margin-top: 8px; */
+}
+#blog-header .blog-header-top .blog-header-left h2 {
+    margin-right: 20px;
+    font-size: 20px;
+}
+#blog-header .blog-header-top .blog-header-left h2 a {
+    color: #ffffff;
+    font-weight: 700;
+}
+#blog-header .blog-header-top .blog-header-input-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#blog-header .blog-header-top .blog-header-input-wrap .blog-search-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    width: 325px;
+    height: 40px;
+    background-color: #ffffff;
+
+    margin-right: 5px;
+}
+/* border가 생성되는 시점 바꿔서 정렬 맞추기 */
+#blog-header .blog-header-top .blog-header-input-wrap .blog-search-wrap input {
+    width: calc(100% - 40px);
+    height: 40px;
+    background-color: #ffffff;
+    border: solid 1px #4da733;
+    padding: 0 15px;
+}
+#blog-header .blog-header-top .blog-header-input-wrap .blog-search-wrap input:focus {
+    outline: none;
+}
+#blog-header .blog-header-top .blog-header-input-wrap .blog-search-wrap .btn-search {
+    width: 40px;
+    height: 40px;
+    background-color: #28a93a;
+    border: solid 1px #239e36;
+}
+#blog-header .blog-header-top .blog-header-input-wrap .btn-total-search {
+    width: auto;
+    height: 40px;
+    background-color: #28a93a;
+    border: solid 1px #239e36;
+    padding: 0 5px;
+
+    line-height: 40px;
+    color: #ffffff;
+}
+
+
+#blog-header .blog-header-top .blog-header-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+#blog-header .blog-header-top .blog-header-right .btn-login {
+    display: inline-block;
+    padding: 5px 10px;
+    border: solid 1px #239e36;
+    margin-right: 20px;
+
+    color: #ffffff;
+    font-size: 12px;
+}
+/* button 태그 기본 background-color: 옅은 회색 있음 */
+#blog-header .blog-header-top .blog-header-right .btn-menu {
+    width: 60px;
+    height: 60px;
+    
+    border-left: solid 1px #239e36;
+    border-right: solid 1px #239e36;
+    cursor: pointer;
+}
+
+#blog-header .blog-header-nav {
+    height: 40px;
+    border-bottom: solid 1px #e5e5e5;
+    background-color: #ffffff;
+}
+#blog-header .blog-header-nav .blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#blog-header .blog-header-nav .nav-left ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#blog-header .blog-header-nav .nav-left ul li {
+    height: 40px;
+    margin-right: 16px;
+    border-bottom: 3px solid transparent;
+}
+#blog-header .blog-header-nav .nav-left ul li:hover,
+#blog-header .blog-header-nav .nav-left ul li.on {
+    border-bottom: 3px solid #00ab33;
+}
+#blog-header .blog-header-nav .nav-left ul li:hover a,
+#blog-header .blog-header-nav .nav-left ul li.on a{
+    color: #00ab33;
+    font-weight: 700;
+}
+#blog-header .blog-header-nav .nav-left ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 13px;
+}
+#blog-header .blog-header-nav .nav-right ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+#blog-header .blog-header-nav .nav-right ul li {
+    width: auto;
+    height: 26px;
+    border: solid 1px rgba(0, 0, 0, 0.07);
+    margin-left: 8px;
+}
+/* 높이값과 line-height를 동일하게 맞추니 내부 글자가 밑으로 쏠렸다.
+line-height값을 조정해주긴 했는데 왜 그런지 모르겠다. 
+네이버블로그 페이지를 직접 보니 역시 값을 조정해놓음 */
+#blog-header .blog-header-nav .nav-right ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border: 1px solid #cecece;
+
+    line-height: 20px;
+    padding: 0 10px;
+    font-size: 13px;
+}
+#blog-header .blog-header-nav .nav-right ul li.on a{
+    background-color: #00c73c;
+    border-color: rgba(0, 0, 0, 0.07);
+    color: #ffffff;
+}
+/* 네이버가 flex보다 float을 많이 사용한 이유
+flex는 익스플로러 10 이상부터 지원하는 기능이기 때문
+브라우저 호환 범위에 따라 작업 난이도 달라질 수 있음
+*/
+
+
+
+
+
+#blog-main {
+    padding-top: 0;
+
+}
+#blog-main #hot-topic {
+    height: 305px;
+    background-color: #f5f5f5;
+    padding: 20px 0 15px;
+}
+#blog-main #hot-topic .blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#blog-main #hot-topic .hot-topic-left {
+    position: relative;
+    width: 770px;
+}
+#blog-main #hot-topic .hot-topic-left .topic-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 11px;
+}
+#blog-main #hot-topic .hot-topic-left .topic-heading h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #e55e5e;
+}
+/* i태그는 inline 속성 */
+#blog-main #hot-topic .hot-topic-left .topic-heading i {
+    display: block;
+    width: 8px;
+    height: 13px;
+    background-color: gray;
+    margin: 0 8px;
+}
+#blog-main #hot-topic .hot-topic-left .topic-heading a {
+    font-size: 16px;
+}
+#blog-main #hot-topic .hot-topic-left .topic-heading h3:hover, 
+#blog-main #hot-topic .hot-topic-left .topic-heading a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+#blog-main #hot-topic .hot-topic-left .topic-lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#blog-main #hot-topic .hot-topic-left .topic-lists li {
+    position: relative;
+    width: 252px;
+    height: 240px;
+}
+#blog-main #hot-topic .hot-topic-left .topic-lists li a img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#blog-main #hot-topic .hot-topic-left .topic-lists li a p {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(55, 66, 87, 0.9);
+    padding: 20px 18px;
+    bottom: 0;
+    color: #ffffff;
+    text-align: center;
+}
+#blog-main #hot-topic .pagination-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#blog-main #hot-topic .pagination-wrap a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(221, 221, 223, 0.8);
+    background-color: #f6f6f7;
+    margin-left: 4px;
+
+    color: #888;
+    font-size: 12px;
+    text-align: center;
+    line-height: 17px;
+}
+#blog-main #hot-topic .pagination-wrap a.on {
+    border: 1px solid #69707d;
+    background-color: #69707d;
+    color: #fff;
+}
+#blog-main #hot-topic .pagination-wrap a:hover {
+    border: 1px solid #69707d;
+}
+
+
+
+
+#blog-main #hot-topic .hot-topic-right {
+    position: relative;
+    width: 280px;
+    padding-top: 30px;
+}
+
+#blog-main #hot-topic .hot-topic-right .topic-banner {
+    width: 100%;
+    height: 240px;
+    background-color: royalblue;
+}
+
+
+
+
+
+
+
+
+#blog-main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 20px;
+}
+#blog-main-content .blog-main-left {
+    width: 770px;
+    height: 2000px;
+    /* background-color: skyblue; */
+}
+#blog-main-content .blog-main-left #blog-main-notification {
+    background-color: #ffffff;
+    padding: 54px 0;
+    text-align: center;
+}
+#blog-main-content .blog-main-left #blog-main-notification p {
+    line-height: 30px;
+    font-size: 16px;
+}
+#blog-main-content .blog-main-left #blog-article .blog-article-nav {
+    border-top: solid 1px #999;
+    border-bottom: solid 1px #999;
+    background-color: #ffffff;
+    padding: 10px 0;
+    font-size: 14px;
+}
+#blog-main-content  #blog-article .blog-article-nav ul { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#blog-main-content  #blog-article .blog-article-nav ul li {
+    margin-right: 22px;
+}
+#blog-main-content  #blog-article .blog-article-nav ul li.on a {
+    color: #00ab33;
+    font-weight: 700;
+}
+#blog-main-content  #blog-article .blog-article-nav ul li:hover a {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* display: table (?) */
+#blog-main-content  #blog-article .blog-article-lists li {
+    border-bottom: solid 1px #eeeeef;
+    padding: 25px 0 23px;
+}
+#blog-main-content  #blog-article .blog-article-lists li a {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+#blog-main-content .blog-article-lists .blog-article-info {
+    width: 573px;
+}
+#blog-main-content .blog-article-lists .blog-article-info .blog-profile-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+#blog-main-content .blog-article-lists .blog-article-info .blog-profile-wrap img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#blog-main-content .blog-article-lists .blog-article-info .blog-profile-wrap .blog-profile-info h3 {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+#blog-main-content .blog-article-lists .blog-article-info .blog-profile-wrap .blog-profile-info p {
+    font-size: 11px;
+    color: #959595;
+}
+
+#blog-main-content .blog-article-lists .blog-article-info h2 {
+    margin-top: 16px;
+    font-size: 17px;
+}
+/* 여러 줄 말줄임표시
+display: -webkit-box; 이걸 해줘야 말줄임 기호 나타났음. 또한 박스 크기에 맞게
+글자 높이 조정해줌
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3; ellipsis 줄번호
+max-height
+word-wrap: 텍스트가 자신의 콘텐츠 박스 밖으로 오버플로 할 때 줄을 바꿀 지 지정
+    - normal(기본줄바꿈), break-all(두문자 사이 줄바꿈 발생, 한중일 텍스트 제외), 
+    keep-all(한중일(CJK)텍스트에서 줄바꿀 때 단어 끊지 않음. 나머지는 normal과 동일),
+    break-word(word-break:normal + overflow-wrap:anywhere)
+overflow: hidden
+text-overflow: ellipsis;
+
+*/
+#blog-main-content .blog-article-lists .blog-article-info .blog-profile-wrap .blog-profile-info:hover h3,
+#blog-main-content .blog-article-lists .blog-article-info h2:hover,
+#blog-main-content .blog-article-lists .blog-article-info .paragraph:hover {
+    text-decoration: underline;
+}
+#blog-main-content .blog-article-lists .blog-article-info .paragraph {
+    max-height: 60px;
+    margin-top: 10px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-size: 13px;
+    color: #666666;
+    line-height: 20px;
+}
+
+/* letter-spacing: 글자 좌우간격 */
+#blog-main-content .blog-article-lists .blog-article-info .comments {
+    margin-top: 14px;
+    color: #959595;
+    font-size: 12px;
+    /* letter-spacing: -1px; */
+}
+#blog-main-content .blog-article-lists .blog-article-info .comments span {
+    margin-right: 9px;
+}
+#blog-main-content .blog-article-lists .blog-article-info .comments span em {
+    font-style: normal;
+}
+#blog-main-content .blog-article-lists .blog-article-img-wrap {
+    position: relative;
+    width: 167px;
+    height: 167px;
+}
+#blog-main-content .blog-article-lists .blog-article-img-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#blog-main-content .blog-article-lists .blog-article-img-wrap i {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.07);
+    bottom: 0;
+    right: 0;
+}
+
+#blog-main-content .blog-article-pagination-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    height: 28px;
+    margin: 40px 0 70px;
+    color: #666;
+    text-align: center;
+}
+/* line-height를 조정해서 a버튼들과 다음버튼 높이 맞춰줌 */
+#blog-main-content .blog-article-pagination-wrap a {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ffffff;
+    margin: 0 1px;
+    padding: 0 6px;
+    font-size: 13px;
+    line-height: 24px;
+}
+#blog-main-content .blog-article-pagination-wrap a.on {
+    border: 1px solid #e0e0e0;
+    color: #00ab33;
+    font-weight: 600;
+}
+#blog-main-content .blog-article-pagination-wrap a:hover {
+    border: 1px solid #e0e0e0;
+}
+/* btn 다음 뒤쪽 화살표 자리를 background로 만들었더니 
+a버튼들과 다음버튼 가로 정렬이 어려워서 a버튼들의 line-height를 조정해서 맞춤
+*/
+#blog-main-content .blog-article-pagination-wrap .btn-next {
+    margin-left: 12px;
+    height: 28px;
+    padding-right: 15px;
+
+    background-image: url(../img/next.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 12px 12px;
+
+    text-align: center;
+    font-size: 13px;
+    line-height: 28px;
+    cursor: pointer;
+}
+#blog-main-content .blog-article-pagination-wrap .btn-next:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+#blog-main-content .blog-main-right {
+    width: 280px;
+    height: 2000px;
+    /* background-color: skyblue; */
+}
+
+
+#blog-main-content .blog-main-right #blog-account {
+    width: 100%;
+    border: solid 1px #dddddf;
+    background-color: #f5f5f6;
+    padding: 20px 15px;
+    margin-bottom: 12px;
+}
+#blog-main-content .blog-main-right #blog-account p {
+    font-size: 11px;
+    margin-bottom: 7px;
+    color: #888;
+}
+#blog-main-content .blog-main-right #blog-account a {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    border: solid 1px #ccc;
+    /* padding 값 조정해서 왼쪽 큰 배너랑 크기 맞춰줌 */
+    padding: 10px 0;
+    margin-bottom: 14px;
+
+    color: #000000;
+    font-weight: 700;
+    text-align: center;
+    font-size: 13px;
+}
+#blog-main-content .blog-main-right #blog-account .account-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#blog-main-content .blog-main-right #blog-account .account-sub span {
+    font-size: 11px;
+    color: #888;
+}
+/* em태그로 중간 바 넣어주었다. */
+#blog-main-content .blog-main-right #blog-account .account-sub em {
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background-color: #c5c5c5;
+    vertical-align: -2px;
+}
+
+
+
+
+#blog-main-content .blog-main-right #blog-banner {
+    width: 100%;
+    height: 240px;
+    border: solid 1px #dddddf;
+    background-color: darkmagenta;
+}
+
+
+#blog-main-content .blog-main-right .blog-guide {
+    border: solid 1px #dddddf;
+    border-width: 0 1px 1px;
+    padding: 19px 20px;
+}
+/* flex는 좌우배치 하고 싶은 태그의 바로 위 부모에 적용하기 */
+#blog-main-content .blog-main-right .blog-guide a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#blog-main-content .blog-main-right .blog-guide p {
+    width: 170px;
+    font-size: 17px;
+    line-height: 25px;
+    color: #222;
+}
+#blog-main-content .blog-main-right .blog-guide p span {
+    font-size: 18px;
+    font-weight: 700;
+}
+#blog-main-content .blog-main-right .blog-guide i {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    background-color: olivedrab;
+}
+
+
+/* border-width: 상, 좌우, 하 */
+#blog-main-content #blog-notice {
+    border: solid 1px #dddddf;
+    border-width: 0 1px 1px;
+    padding: 24px 22px 22px;
+}
+#blog-main-content #blog-notice .blog-notice-heading {
+    margin-bottom: 13px;
+
+}
+#blog-main-content #blog-notice .blog-notice-heading:hover a h3 {
+    text-decoration: underline;
+}
+#blog-main-content #blog-notice .blog-notice-heading a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#blog-main-content #blog-notice .blog-notice-heading a h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+#blog-main-content #blog-notice .blog-notice-heading a i {
+    width: 8px;
+    height: 13px;
+    background-color: orange;
+}
+/* html 태그에 class로 만들어 둔 ellipsis 적용해서 한줄 말줄임 적용함 */
+#blog-main-content #blog-notice .blog-notice-lists li:hover a {
+    text-decoration: underline;
+}
+#blog-main-content #blog-notice .blog-notice-lists li a {
+    font-size: 12px;
+}
+
+
+
+
+#blog-main-content #blog-helper {
+    border: solid 1px #dddddf;
+    border-width: 0 1px 1px;
+    padding: 24px 16px;
+}
+#blog-main-content #blog-helper .blog-helper-lists li {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+#blog-main-content #blog-helper .blog-helper-lists li:hover a {
+    text-decoration: underline;
+}
+
+/* background 속성
+padding을 사용하면 background-img는 영향받지 않고 글자만 영향받음
+아이콘 넣을때는 상황과 스타일에 따라 여러 가지 방법 사용하기
+background-size: 이미지 크기 임의조정 가능
+*/
+#blog-main-content #blog-helper .blog-helper-lists li a {
+    display: block;
+    height: 35px;
+
+    padding-left: 30px;
+    background-image: url(../img/checkbox.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 20px 20px;
+
+    line-height: 35px;
+}
+
+
+
+
+
+
+#blog-footer {
+    padding-top: 40px;
+    padding-bottom: 55px;
+    background-color: #f6f6f6;
+
+    text-align: center;
+}
+#blog-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+#blog-footer ul li a {
+    font-size: 13px;
+}
+#blog-footer ul li a::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background-color: #d7d7d7;
+    margin: 0 10px;
+    vertical-align: -1px;
+}
+#blog-footer ul li:first-child a::before {
+    content: initial;
+}
+#blog-footer p {
+    font-size: 11px;
+}
+
+
+
+
