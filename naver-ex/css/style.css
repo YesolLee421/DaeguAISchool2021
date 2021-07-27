@@ -23,6 +23,7 @@ body {
 button {
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 input, textarea {
     outline: none;
@@ -2591,3 +2592,509 @@ background-size: 이미지 크기 임의조정 가능
 
 
 
+
+
+
+/* 블로그 상세페이지: 챌린지 */
+.blog-border {
+    border: solid 1px #eaeaec;
+}
+
+
+#blog-main-detail {
+    padding-bottom: 100px;
+}
+#blog-main-detail #program {
+    padding: 62px 0 50px;
+    background-color: #634ea4;
+
+    color: #ffffff;
+}
+#blog-main-detail #program h3 {
+    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: 400;
+}
+#blog-main-detail #program p {
+    font-size: 16px;
+}
+
+
+
+
+#blog-main-detail #program-nav {
+    font-size: 14px;
+    border-bottom: solid 1px #ebebeb;
+    background-color: #ffffff;
+    padding: 10px 0 ;
+}
+#blog-main-detail #program-nav .blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#blog-main-detail #program-nav a {
+    color: #666;
+}
+#blog-main-detail #program-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#blog-main-detail #program-nav ul li.on a {
+    color: #000;
+    font-weight: 600;
+}
+#blog-main-detail #program-nav  ul li:hover a {
+    text-decoration: underline;
+}
+#blog-main-detail #program-nav ul li a::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #ababab;
+    margin: 0 12px;
+}
+#blog-main-detail #program-nav ul li:first-child a::before {
+    content: initial;
+}
+
+
+
+
+
+#blog-main-detail #program-info {
+    background-color: #f8f8f9;
+    padding: 44px 0 36px;
+
+}
+#blog-main-detail #program-info .program-info-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#blog-main-detail #program-info .program-info-wrap h4 {
+    color: #7d55c8;
+    font-size: 32px;
+    line-height: 44px;
+    margin-right: 120px;
+}
+#blog-main-detail #program-info .program-info-wrap p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #262626;
+    margin-bottom: 18px
+}
+#blog-main-detail #program-info .program-info-wrap a {
+    font-size: 13px;
+    color: #7d55c8;
+}
+
+
+#blog-main-detail #program-info .program-msg-box {
+    padding: 29px;
+    background-color: #ffffff;
+}
+#blog-main-detail #program-info .program-msg-box .from {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #7d55c8;
+    margin-bottom: 6px;
+}
+
+#blog-main-detail #program-info .program-msg-box .program-msg-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#blog-main-detail #program-info .program-msg-box p {
+    width: 810px;
+    font-size: 18px;
+}
+#blog-main-detail #program-info .program-msg-box .date {
+    color: #693bbc;
+}
+#blog-main-detail #program-info .program-msg-box .txt::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 18px;
+    background-color: #d5d5d5;
+    margin: 0 9px;
+    vertical-align: -3px;
+}
+#blog-main-detail #program-info .program-msg-box a {
+    display: block;
+    width: 179px;
+    height: 40px;
+    background-color: rgba(125, 85, 200, 1);
+
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 40px;
+    text-align: center;
+}
+#blog-main-detail #program-info .program-msg-box a:hover {
+    background-color: rgba(125, 85, 200, 0.8);
+}
+
+
+
+
+
+#blog-main-detail #program-day {
+    background-color: #ffffff;
+}
+#blog-main-detail #program-day .program-day-list .program-day-title-wrap {
+    padding: 36px 0 16px;
+    font-size: 16px;
+    line-height: 16px;
+}
+#blog-main-detail #program-day .program-day-list .program-day-title-wrap .date {
+    color: #693bbc;
+}
+#blog-main-detail #program-day .program-day-list .program-day-title-wrap .txt::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 18px;
+    background-color: #d5d5d5;
+    margin: 0 9px;
+    vertical-align: -3px;
+}
+#blog-main-detail #program-day .program-day-list .program-day-title-wrap .msg {
+    font-size: 14px;
+    color: #666666;
+    line-height: 14px;
+}
+
+
+
+
+#blog-main-detail #program-day .program-img-lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#blog-main-detail #program-day .program-img-lists li {
+    width: 175px;
+    height: 228px;
+}
+#blog-main-detail #program-day .program-img-lists li img {
+    width: 100%;
+    height: 130px;
+    margin-bottom: 15px;
+}
+#blog-main-detail #program-day .program-img-lists li h4 {
+    font-size: 14px;
+    color: #333;
+    margin: 0 15px 15px 15px;
+}
+#blog-main-detail #program-day .program-img-lists li span {
+    font-size: 12px;
+    color: #959595;
+    margin: 0 15px 15px 15px;
+}
+
+
+
+
+
+
+
+/* 뉴스 메인페이지 */
+.news-container {
+    width: 1080px;
+    margin: 0 auto;
+}
+.news-flex-between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.news-flex-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.news-flex-end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+#news-header {
+    background-color: #3f63bf;
+}
+
+#news-header .news-header-left {
+    padding: 17px 0;
+}
+#news-header .news-header-left ul li:first-child a {
+    font-size: 20px;
+    opacity: 0.8;
+    font-weight: 700;
+}
+#news-header .news-header-left ul li a {
+    color: #ffffff;
+    font-size: 15px;
+    opacity: 0.8;
+}
+#news-header .news-header-left ul li a::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 15px;
+    background-color: #000;
+    opacity: 0.2;
+
+    margin: 0 10px;
+}
+#news-header .news-header-left ul li:last-child a::after {
+    content: initial;
+}
+
+
+
+
+#news-header .news-header-right .btn-login {
+    display: inline-block;
+    width: 55px;
+    height: 25px;
+    border: 1px solid rgba(0,0,0,0.12);
+    margin-right: 20px;
+
+    line-height: 25px;
+    text-align: center;
+
+    color: #ffffff;
+    font-size: 12px;
+}
+#news-header .news-header-right .btn-menu {
+    width: 55px;
+    height: 55px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-width: 0 1px;
+}
+
+
+
+#news-header .sub-nav {
+    background-color: #ffffff;
+    border-top: solid 1px #000000;
+    border-bottom: 1px solid #e3e3e3;
+}
+#news-header .sub-nav ul li {
+    width: auto;
+    height: 46px;
+    margin-right: 16px;
+    text-align: center;
+    
+}
+#news-header .sub-nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid transparent;
+
+    font-weight: bold;
+    line-height: 46px;
+}
+#news-header .sub-nav ul li a.on {
+    color: #3f63bf;
+    border-bottom: 2px solid #3f63bf;
+}
+
+
+
+/* 추후 버튼 이미지 넣어서 겹치게 하기 */
+#news-header .sub-nav .news-search-wrap {
+    width: 280px;
+    height: 30px;
+    border: solid 1px #e1e1e1;
+    background-color: #fafafa;
+}
+#news-header .sub-nav .news-search-wrap input {
+    width: calc(100% - 30px);
+    height: 100%;
+    padding: 3px 9px;
+    border: none;
+
+    font-size: 12px;
+    color: #888888;
+}
+#news-header .sub-nav .news-search-wrap .btn-search {
+    width: 30px;
+    height: 100%;
+    background-image: url(../img/search.png);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+/* 잠시 자바스크립트 끄기 */
+#news-headline {
+    padding-top: 20px;
+}
+#news-headline .news-container {
+    border-bottom: solid 1px #000000;
+    padding-bottom: 12px;
+}
+#news-headline .news-headline-menu-wrap {
+    margin-bottom: 15px;
+}
+#news-headline .news-headline-menu-wrap .main-lists li {
+    margin-right: 20px;
+    font-size: 15px;
+}
+#news-headline .news-headline-menu-wrap .sub-lists li {
+    font-size: 12px;
+}
+#news-headline .news-headline-menu-wrap .sub-lists li:hover a {
+    text-decoration: underline;
+}
+#news-headline .news-headline-menu-wrap .sub-lists li a:before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #e0e0e0;
+    margin: 0 5px;
+    vertical-align: -1px;
+}
+#news-headline .news-headline-menu-wrap .sub-lists li:first-child a::before {
+    content: initial;
+}
+
+
+
+
+#news-headline .news-headline-lists {
+    margin-bottom: 12px;
+}
+#news-headline .news-headline-lists li {
+    width: 255px;
+    height: 178px;
+    border: solid 1px #ccc;
+}
+#news-headline .news-headline-lists li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#news-headline .news-headline-lists li a article {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#news-headline .news-headline-lists li a article h3 {
+    width: 100%;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+}
+#news-headline .news-headline-lists li a article .img-wrap {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 44px);
+}
+#news-headline .news-headline-lists li a article .img-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#news-headline .news-headline-lists li a article .img-wrap .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+#news-headline .news-headline-lists .img-wrap .overlay .headline-info {
+    position: absolute;
+    width: 100%;
+    left:0;
+    bottom:0;
+    padding: 15px 20px;
+
+    color: #ffffff;
+}
+#news-headline .news-headline-lists .img-wrap .overlay .headline-info i {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-color: pink;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#news-headline .news-headline-lists .img-wrap .overlay .headline-info div {
+    width: calc(100% - 38px);
+}
+#news-headline .news-headline-lists .img-wrap .overlay .headline-info span {
+    font-size: 13px;
+    font-weight: bold;
+}
+/* inline-block일 때 줄바꿈된 이유 아마 미세공백 때문인듯 */
+#news-headline .news-headline-lists .img-wrap .overlay .headline-info p {
+    display: inline;
+    font-size: 12px;
+}
+
+
+
+
+
+#news-headline .news-headline-arrows .btn-wrap {
+    margin-right: 15px;
+}
+#news-headline .news-headline-arrows .btn {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: solid 1px #dcdddc;
+}
+#news-headline .news-headline-arrows .btn.btn-prev {
+    background-color: purple;
+    border-left: none;
+}
+#news-headline .news-headline-arrows .btn.btn-next {
+    background-color: blue;
+}
+#news-headline .news-headline-arrows .btn.btn-up {
+    background-color: cadetblue;
+}
+
+
+
+
+/* 뉴스 메인 */
+#news-main .news-container {
+    overflow: hidden;
+}
+#news-main .news-left {
+    float: left;
+    width: 750px;
+    height: 2000px;
+    background-color: cadetblue;
+}
+#news-main .news-right {
+    float: right;
+    width: 327px;
+    height: 2000px;
+    background-color: salmon;
+    border-left: solid 1px #dfdfdf;
+
+    padding: 25px 0 40px 26px;
+}
