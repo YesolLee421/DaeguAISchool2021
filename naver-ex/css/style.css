@@ -3083,18 +3083,584 @@ background-size: 이미지 크기 임의조정 가능
 #news-main .news-container {
     overflow: hidden;
 }
+
+
+
+
+
+
 #news-main .news-left {
     float: left;
     width: 750px;
-    height: 2000px;
-    background-color: cadetblue;
+    padding-right: 26px;
+    padding-bottom: 100px;
+    border-right: solid 1px #dfdfdf;
+    /* background-color: cadetblue; */
 }
+#news-main .news-left .news-main-wrap {
+    padding: 25px 0;
+    border-bottom: solid 1px #dedede;
+}
+#news-main .news-left .news-main-wrap .news-main-header {
+    margin-bottom: 14px;
+}
+#news-main .news-left .news-main-header .news-main-header-left h3 a {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 12px;
+}
+#news-main .news-left .news-main-header .news-main-header-left a {
+    font-size: 13px;
+}
+#news-main .news-left .news-main-header .news-main-header-left ul {
+    margin-top: -2px;
+}
+#news-main .news-left .news-main-header .news-main-header-left ul li a:hover {
+    text-decoration: underline;
+}
+#news-main .news-left .news-main-header .news-main-header-left ul li a::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #e5e5e5;
+    margin: 0 8px;
+    vertical-align: -1px;
+}
+#news-main .news-left .news-main-header .news-main-header-left ul li:first-child a::before {
+    content: none;
+}
+#news-main .news-left .news-main-header .news-main-header-right i {
+    width: 24px;
+    height: 20px;
+    display: block;
+    margin-left: 8px;
+}
+#news-main .news-left .news-main-header .news-main-header-right i.icon-1 {
+    background-color: yellow;
+}
+#news-main .news-left .news-main-header .news-main-header-right i.icon-2 {
+    background-color: violet;
+    cursor: pointer;
+}
+#news-main .news-left .news-main-header .news-main-header-right i.icon-3 {
+    background-color: green;
+    cursor:pointer;
+}
+
+
+
+
+
+
+#news-main .news-left .news-main-body .img-wrap {
+    width: 220px;
+    height: 100%;
+    cursor: pointer;
+}
+#news-main .news-left .news-main-body .img-wrap img {
+    width: 100%;
+    height: 140px;
+    margin-right: 25px;
+    margin-bottom: 6px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+#news-main .news-left .news-main-body .img-wrap h4 {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -1px;
+}
+#news-main .news-left .news-main-body .img-wrap h4:hover {
+    text-decoration: underline;
+}
+
+
+#news-main .news-left .news-main-body .news-lists {
+    width: 470px;
+    height: 100%;
+    padding-left: 25px;
+}
+#news-main .news-left .news-main-body .news-lists li {
+    margin-bottom: 11px;
+}
+#news-main .news-left .news-main-body .news-lists li a {
+    max-width: 330px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+#news-main .news-left .news-main-body .news-lists li a:hover {
+    text-decoration: underline;
+}
+#news-main .news-left .news-main-body .news-lists li span {
+    display: inline-block;
+    font-size: 12px;
+    color: #888888;
+    vertical-align: middle;
+}
+/* before로 아이콘 넣기 */
+#news-main .news-left .news-main-body .news-lists li span::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 11px;
+    background-color: gray;
+    margin: 0 4px;
+    top: 1px;
+}
+
+/* 링크로 이동하는 a태그의 기능은 추후 js로 제거 가능 */
+#news-main .news-left .news-main-wrap.news-custome .news-main-header ul li a {
+    cursor: default;
+}
+#news-main .news-left .news-main-wrap.news-custome .news-main-header ul li a:hover {
+    text-decoration: none;
+}
+
+#news-main .news-left .news-main-wrap.news-custome .news-main-header ul li:first-child a::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #e5e5e5;
+    margin: 0 8px 0 0;
+    vertical-align: -1px;
+}
+
+#news-main .news-left .news-main-wrap.news-custome .news-main-body .img-wrap {
+    position: relative;
+    width: 300px;
+    height: 190px;
+}
+#news-main .news-left .news-main-wrap.news-custome .news-main-body .img-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#news-main .news-left .news-main-wrap.news-custome .news-main-body .img-wrap h4 {
+    position: absolute;
+    width: 100%;
+    max-height: 66px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px 10px;
+    
+    left: 0;
+    bottom: 0;
+
+    text-align: center;
+    color: #fff;
+}
+/* 버튼 추가 */
+#news-main .news-left .news-main-wrap.news-custome .news-main-body .img-wrap .btn-wrap {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#news-main .news-left .news-main-wrap.news-custome .news-main-body .img-wrap .btn-wrap i {
+    width: 24px;
+    height: 24px;
+}
+#news-main .news-left .news-main-wrap.news-custome .news-main-body .img-wrap .btn-wrap i.icon-1 {
+    background-color: rosybrown;
+}
+#news-main .news-left .news-main-wrap.news-custome .news-main-body .img-wrap .btn-wrap i.icon-2 {
+    background-color: slateblue;
+}
+
+
+
+
+#news-main .news-left .news-main-wrap.news-custome .news-lists {
+    width: 390px;
+}
+#news-main .news-left .news-main-wrap.news-custome .news-lists li a  {
+    width: 340px;
+    vertical-align: middle;
+    max-width: initial;
+}
+#news-main .news-left .news-main-wrap.news-custome .news-lists li i {
+    display: inline-block;
+    width: 22px;
+    height: 16px;
+    background-color: springgreen;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+
 #news-main .news-right {
     float: right;
     width: 327px;
-    height: 2000px;
-    background-color: salmon;
-    border-left: solid 1px #dfdfdf;
-
+    /* background-color: salmon; */
+    /* border-left: solid 1px #dfdfdf; */
     padding: 25px 0 40px 26px;
+}
+
+#news-main .news-right #news-popular {
+    margin-bottom: 30px;
+}
+/* 더보기 올리는 방법 cascading으로 align-item 속성 덮어쓰기 */
+#news-main .news-right #news-popular .news-popular-header {
+    margin-bottom: 10px;
+    align-items: flex-start;
+}
+#news-main .news-right #news-popular .news-popular-header div h3 {
+    font-size: 14px;
+}
+#news-main .news-right #news-popular .news-popular-header div p {
+    font-size: 12px;
+}
+#news-main .news-right #news-popular .news-popular-header span {
+    color: #7d7d7d;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+
+#news-main .news-right #news-popular .news-popular-lists li {
+    padding: 6px 0;
+}
+#news-main .news-right #news-popular .news-popular-lists li .news-popular-info {
+    width: 202px;
+    border-bottom: solid 1px #e3e3e3;
+    padding-bottom: 8px;
+}
+#news-main .news-right #news-popular .news-popular-lists li .news-popular-info h4 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+#news-main .news-right #news-popular .news-popular-lists li .news-popular-info h4:hover,
+#news-main .news-right #news-popular .news-popular-lists li .news-popular-info span:hover {
+    text-decoration: underline;
+}
+#news-main .news-right #news-popular .news-popular-lists li .news-popular-info i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: gray;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+#news-main .news-right #news-popular .news-popular-lists li .news-popular-info span {
+    display: inline-block;
+    font-size: 12px;
+    color: #888888;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+
+
+
+#news-main .news-right .news-banner {
+    width: 300px;
+    height: 250px;
+    background-color: royalblue;
+    border: solid 1px #e3e3e3;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+
+
+
+
+#news-main .news-right #news-today .news-today-header {
+    margin-bottom: 11px;
+}
+#news-main .news-right #news-today .news-today-header h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+#news-main .news-right #news-today .news-today-header span {
+    font-size: 12px;
+}
+#news-main .news-right #news-today .news-today-header span::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #e5e5e5;
+    margin: 0 7px;
+    vertical-align: -1px;
+}
+
+
+
+
+
+
+#news-main .news-right #news-today .news-today-body {
+    border: solid 1px #e8e8e8;
+    padding: 13px 20px 20px;
+}
+#news-main .news-right #news-today .news-today-body .news-notice-lists li {
+    border-bottom: solid 1px #f2f2f2;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+#news-main .news-right #news-today .news-today-body .news-notice-lists li:last-child {
+    margin-bottom: 0;
+}
+#news-main .news-right #news-today .news-today-body .news-notice-lists li h4 {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 12px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+#news-main .news-right #news-today .news-today-body .news-notice-lists li p {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+#news-main .news-right #news-today .news-today-body .news-notice-lists li h4:hover,
+#news-main .news-right #news-today .news-today-body .news-notice-lists li p:hover {
+    text-decoration: underline;
+}
+#news-main .news-right #news-today .news-today-body .news-notice-lists li:first-child h4:hover {
+    text-decoration: none;
+    cursor: initial;
+}
+#news-main .news-right .news-today-body .news-stock-wrap .news-stock-lists {
+    padding: 10px 0 7px;
+}
+#news-main .news-right .news-today-body .news-stock-wrap .news-stock-lists li {
+    width: 50%;
+}
+#news-main .news-right .news-today-body .news-stock-wrap .news-stock-lists li:last-child {
+    border-left: solid 1px #f2f2f2;
+    padding-left: 20px;
+}
+#news-main .news-right .news-today-body .news-stock-wrap .news-stock-lists li a span {
+    font-size: 12px;
+    color: #777777;;
+    margin-bottom: 8px;
+}
+#news-main .news-right .news-today-body .news-stock-wrap .news-stock-lists li a h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+#news-main .news-right .news-today-body .news-stock-wrap .news-stock-lists li a em {
+    font-style: normal;
+}
+#news-main .news-right .news-today-body .news-stock-wrap .news-stock-lists li a em.down {
+    color: #066fd1;
+}
+#news-main .news-right .news-today-body .news-stock-wrap .news-stock-lists li a em.up {
+    color: #fe4638;
+}
+
+
+
+#news-main .news-right .news-today-body .news-stock-wrap .news-stock-search-wrap {
+    width: 100%;
+    height: 30px;
+    border: solid 1px #f2f2f2;
+}
+#news-main .news-right .news-today-body .news-stock-wrap .news-stock-search-wrap input {
+    width: calc(100% - 30px);
+    height: 100%;
+    background-color: #ffffff;
+    border: none;
+    padding: 3px 9px;
+}
+#news-main .news-right .news-today-body .news-stock-wrap .news-stock-search-wrap input:focus {
+    outline: none;
+}
+#news-main .news-right .news-today-body .news-stock-wrap .news-stock-search-wrap .btn-search {
+    width: 30px;
+    height: 100%;
+    background-color: #fafafa;
+}
+#news-main .news-right .news-today-body .news-stock-wrap .news-stock-search-wrap .btn-search::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/search.png);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    margin: 3px 0 0 2px;
+}
+
+
+
+#news-nav-bottom {
+    border-top: solid 1px #dfdfdf;
+    border-bottom: solid 1px #e3e7ee;
+    padding: 15px 0;
+}
+#news-nav-bottom li {
+    margin-right: 10px;
+}
+
+
+
+
+/* shop-footer 가져와서 변형함 */
+#news-footer {
+    padding-bottom: 27px;
+    text-align: center;
+    background-color: #f2f4f7;
+}
+#news-footer .policy-wrap {
+    padding-top: 27px;
+    margin-bottom: 12px;
+}
+#news-footer .policy-wrap span {
+    font-size: 12px;
+}
+#news-footer .policy-wrap span::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 0 8px;
+    background-color: #d7d7d7;
+    vertical-align: -1px;
+}
+#news-footer .policy-wrap span:first-child:before {
+    content: initial;
+}
+#news-footer p {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 11px;
+}
+#news-footer p.copyright {
+    color: #000000;
+}
+
+
+
+
+
+
+
+/* 뉴스 - 연예 페이지 */
+.ent-container {
+    width: 980px;
+    margin: 0 auto;
+}
+.ent-border {
+    border: solid 1px #ededed;
+}
+.ent-flex-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.ent-flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.ent-flex-end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.ent-flex-between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+/* 네이버 연예 뉴스 border 특이함. span태그 bar 클래스 만들어서 사용함 */
+#ent-header {
+    width: 100%;
+    height: 62px;
+    background-color: #ffffff;
+    border-bottom: solid 2px #f1f1f1;
+    padding: 20px 25px 0;
+}
+#ent-header .ent-header-left ul li {
+    font-weight: 700;
+    font-size: 16px;
+}
+#ent-header .ent-header-left ul li a {
+    color: #9f9f9f;
+}
+#ent-header .ent-header-left ul li a::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #dddddd;
+    margin: 0 8px;
+    vertical-align: -1px;
+}
+#ent-header .ent-header-left ul li:first-child a::before {
+    content: none;
+}
+#ent-header .ent-header-left ul li:first-child a{
+    color: #000000;
+}
+
+
+
+
+
+
+#ent-header .ent-header-center ul li {
+    font-weight: 700;
+    font-size: 16px;
+    
+    padding: 0 15px;
+}
+#ent-header .ent-header-center ul li a {
+    display: inline-block;
+    border-bottom: solid 2px #ffffff;
+    padding-bottom: 2px;
+}
+#ent-header .ent-header-center ul li.on a {
+    border-bottom: 2px solid #e2458f;
+    color: #e2458f;
+}
+
+
+
+
+/* 마진 병합 현상: 형제 지간 마진 병합현상은 
+margin top, bottom에서만 일어나고 left, right에선 일어나지 않음  */
+#ent-header .ent-header-right .btn-login {
+    width: 45px;
+    height: 20px;
+    border: solid 1px rgba(0, 0, 0, 0.05);
+    margin: 0 9px;
+
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+    text-align: center;
+}
+#ent-header .ent-header-right .btn-menu {
+    width: 16px;
+    height: 16px;
+    background-color: gray;
+    margin: 0 9px;
+}
+#ent-header .ent-header-right .btn-search {
+    width: 25px;
+    height: 25px;
+    background-color: indianred;
+    margin-left: 9px;
 }
