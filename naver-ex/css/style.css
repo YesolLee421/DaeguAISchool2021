@@ -3664,3 +3664,702 @@ margin top, bottom에서만 일어나고 left, right에선 일어나지 않음  
     background-color: indianred;
     margin-left: 9px;
 }
+
+
+
+
+
+
+
+#ent-main {
+    padding-bottom:  1000px;
+
+}
+#ent-main .ent-container {
+    overflow: hidden;
+}
+#ent-main .ent-left {
+    float: left;
+    width: 654px;
+    /* height: 2000px; */
+    /* background-color: seagreen; */
+    padding-right: 24px;
+}
+
+
+
+
+
+#ent-main .ent-left #ent-media-headline {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #f1f1f1;
+}
+#ent-main .ent-left #ent-media-headline ul li {
+    width: 148px;
+    height: 204px;
+    border-radius: 10px;
+}
+#ent-main .ent-left #ent-media-headline a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* border-radius: top-left, top-right, bottom-right, bottom-left */
+#ent-main .ent-left #ent-media-headline .media-top {
+    position:relative;
+    width: 100%;
+    height: 144px;
+}
+#ent-main .ent-left #ent-media-headline .media-top img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#ent-main .ent-left #ent-media-headline .media-top .time {
+    position: absolute;
+    display: block;
+    height: 16px;
+    border-radius: 2px;
+    background-color: rgba(0,0,0, 0.56);
+    padding: 0 4px;
+
+    line-height: 16px;
+    color: #ffffff;
+    font-size: 11px;
+
+    top: 8px;
+    right: 8px;
+}
+#ent-main .ent-left #ent-media-headline .media-top .icon-play {
+    position: absolute;
+    display: block;
+
+    width: 28px;
+    height: 28px;
+    background-color: gray;
+    border-radius: 50%;
+
+    left: 8px;
+    bottom: 7px;
+}
+
+
+
+#ent-main .ent-left #ent-media-headline .media-bottom {
+    width: 100%;
+    height: 60px;
+    background-color: #444a60;
+}
+#ent-main .ent-left #ent-media-headline .media-bottom p {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    padding: 11px 12px 0;
+    color: #ffffff;
+}
+
+
+
+
+
+
+#ent-main .ent-left #ent-section-1 ul li {
+    border-bottom: solid 1px #f1f1f1;
+    padding: 20px 0;
+}
+#ent-main .ent-left #ent-section-1 ul li a img {
+    width: 148px;
+    height: 90px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+#ent-main .ent-left #ent-section-1 ul li a .ent-news-wrap {
+    width: 462px;
+}
+#ent-main .ent-left #ent-section-1 ul li a .ent-news-wrap h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+#ent-main .ent-left #ent-section-1 ul li a .ent-news-wrap p {
+    margin-bottom: 8px;
+
+    font-size: 12px;
+    color: #898989;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+#ent-main .ent-left #ent-section-1 ul li a .ent-bottom-wrap .source,
+#ent-main .ent-left #ent-section-2 ul li a .ent-bottom-wrap .source {
+    font-size: 11px;
+    font-weight: 400;
+    color: #a7a7a7;
+}
+#ent-main .ent-left #ent-section-1 ul li a .ent-bottom-wrap .count,
+#ent-main .ent-left #ent-section-2 ul li a .ent-bottom-wrap .count {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: solid 1px #f1f1f1;
+    border-radius: 5px;
+
+    text-align: center;
+    line-height: 20px;
+    font-size: 10px;
+}
+
+
+
+
+
+
+#ent-main .ent-left #ent-section-2 {
+    border-bottom: solid 1px #f1f1f1;
+    padding: 20px 0;
+}
+#ent-main .ent-left #ent-section-2 li {
+    width: 200px;
+}
+#ent-main .ent-left #ent-section-2 li img { 
+    width: 200px;
+    height: 122px;
+    margin-bottom: 15px;
+}
+#ent-main .ent-left #ent-section-2 li h3 {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 9px;
+}
+
+
+
+
+
+
+
+
+#ent-main .ent-left #ent-section-3 {
+    padding: 24px 0;
+    border-bottom: solid 1px #e4e4e4;
+}
+#ent-main .ent-left #ent-section-3 .title-wrap {
+    margin-bottom: 18px;
+}
+#ent-main .ent-left #ent-section-3 .title-wrap h3 {
+    font-size: 16px;
+}
+
+
+#ent-main .ent-left #ent-section-3 .title-wrap .right-wrap .count-wrap span {
+    font-size: 12px;
+    color: #666;
+}
+#ent-main .ent-left #ent-section-3 .title-wrap .right-wrap .count-wrap span em {
+    font-style: normal;
+    color: #ff0080;
+}
+
+
+#ent-main .ent-left #ent-section-3 .title-wrap .right-wrap .btn-wrap {
+    margin-left: 8px;
+}
+#ent-main .ent-left #ent-section-3 .title-wrap .right-wrap .btn-wrap .btn {
+    width: 24px;
+    height: 24px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+#ent-main .ent-left #ent-section-3 .title-wrap .right-wrap .btn-wrap .btn.btn-prev {
+    background-color: yellow;
+}
+#ent-main .ent-left #ent-section-3 .title-wrap .right-wrap .btn-wrap .btn.btn-prev {
+    border-right: none;
+}
+#ent-main .ent-left #ent-section-3 .title-wrap .right-wrap .btn-wrap .btn.btn-next {
+    background-color: palevioletred;
+}
+
+
+
+
+#ent-main .ent-left #ent-section-3 li {
+    width: 148px;
+    height: 148px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+#ent-main .ent-left #ent-section-3 li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#ent-main .ent-left #ent-section-3 li img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* 길이 100% 넘어가면 말줄임 표시하기: max-width + 한줄 말줄임 */
+#ent-main .ent-left #ent-section-3 li span {
+    position: absolute;
+    background-color: #f40080;
+    padding: 0 5px;
+    max-width: 100%;
+
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+
+    left: 0;
+    top: 0;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#ent-main .ent-left #ent-section-3 li h3 {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: 32px;
+    padding: 9px 10px 8px;
+
+    left: 0;
+    bottom: 0;
+
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+#ent-main .ent-left #ent-section-4 {
+    border-bottom: solid 1px #f1f1f1;
+    padding: 23px 0;
+}
+#ent-main .ent-left #ent-section-4 .title-wrap h3 {
+    font-size: 16px;
+}
+
+#ent-main .ent-left #ent-section-4 ul li {
+    padding: 18px 0;
+    border-bottom: solid 1px #f1f1f1;
+}
+#ent-main .ent-left #ent-section-4 ul li:last-child {
+    border-bottom: none;
+}
+#ent-main .ent-left #ent-section-4 .ent-info {
+    width: 528px;
+}
+#ent-main .ent-left #ent-section-4 .ent-info h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+#ent-main .ent-left #ent-section-4 .ent-info p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #898989;
+
+    margin-bottom: 9px;
+}
+#ent-main .ent-left #ent-section-4 .ent-info .source {
+    font-size: 12px;
+    font-weight: 400;
+    color: #a7a7a7;
+}
+#ent-main .ent-left #ent-section-4 ul li a img {
+    width: 88px;
+    height: 88px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+#ent-main .ent-left #ent-section-4 .btn-more {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: solid 1px #e8e8e8;
+    background-color: #ffffff;
+
+    line-height: 40px;
+    text-align: center;
+    color: #444;
+}
+
+
+
+
+
+#ent-main .ent-left #ent-section-5 {
+    border-bottom: solid 1px #f1f1f1;
+    padding: 24px 0 14px;
+}
+#ent-main .ent-left #ent-section-5 .title-wrap {
+    margin-bottom: 20px;
+}
+#ent-main .ent-left #ent-section-5 .title-wrap h3 {
+    font-size: 16px
+}
+#ent-main .ent-left #ent-section-5 .title-wrap a {
+    font-size: 12px;
+    color: #999;
+}
+/* flex-start 클래스 적용하고 속성 하나만 바꿔줌 */
+#ent-main .ent-left #ent-section-5 ul {
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: center; */
+    justify-content: space-around;
+}
+#ent-main .ent-left #ent-section-5 ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#ent-main .ent-left #ent-section-5 ul li a img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+#ent-main .ent-left #ent-section-5 ul li a h4 {
+    font-size: 12px;
+}
+
+
+
+
+
+
+#ent-main .ent-left #ent-section-6 {
+    padding: 24px 0;
+    border-bottom: solid 1px #e4e4e4;
+}
+#ent-main .ent-left #ent-section-6 .title-wrap {
+    margin-bottom: 17px;
+}
+#ent-main .ent-left #ent-section-6 .title-wrap h3 {
+    font-size: 16px
+}
+#ent-main .ent-left #ent-section-6 .title-wrap a {
+    font-size: 12px;
+    color: #999;
+}
+
+
+
+#ent-main .ent-left #ent-section-6 ul li  {
+    width: 148px;
+}
+#ent-main .ent-left #ent-section-6 li .img-wrap {
+    position: relative;
+    width: 148px;
+    height: 85px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+#ent-main .ent-left #ent-section-6 li .img-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#ent-main .ent-left #ent-section-6 li .img-wrap .icon-play {
+    position:absolute;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: gray;
+    border-radius: 50%;
+    left: 8px;
+    bottom: 7px;
+}
+#ent-main .ent-left #ent-section-6 li h4 {
+    font-size: 12px;
+    color: #222;
+}
+#ent-main .ent-left #ent-section-6 span {
+    font-size: 11px;
+    color: #141414;
+}
+#ent-main .ent-left #ent-section-6 .source {
+    font-size: 12px;
+    color: #999;
+}
+/* before, after 아이콘 자리 조정하기 vertical-align, margin */
+#ent-main .ent-left #ent-section-6 .source::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background-color: #d3d3d3;
+    vertical-align: top;
+    margin: 10px 2px 0 4px;
+}
+#ent-main .ent-left #ent-section-6 .program::after {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 10px;
+    background-color: red;
+
+    vertical-align: top;
+    margin: 8px 2px 0 4px;
+}
+
+
+
+
+
+
+#ent-main .ent-left #ent-section-7 {
+    padding: 24px 0 20px;
+    border-bottom: solid 1px #e4e4e4;
+}
+#ent-main .ent-left #ent-section-7 .title-wrap {
+    margin-bottom: 17px;
+}
+#ent-main .ent-left #ent-section-7 .title-wrap h3 {
+    font-size: 16px
+}
+#ent-main .ent-left #ent-section-7 .title-wrap a {
+    font-size: 12px;
+    color: #999;
+}
+
+/* ent-flex-start 가 뭔가 적용 안되서 따로 적어줌
+.ent-flex-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+ */
+#ent-main .ent-left #ent-section-7 .movie-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-content: stretch;
+}
+#ent-main .ent-left #ent-section-7 .movie-wrap .movie-left {
+    width: 200px;
+}
+#ent-main .ent-left #ent-section-7 .movie-wrap .movie-left img {
+    width: 100%;
+    height: 122px;
+    margin-bottom: 11px;
+}
+#ent-main .ent-left #ent-section-7 .movie-wrap .movie-left h4 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+#ent-main .ent-left #ent-section-7 .movie-wrap .movie-right {
+    width: calc(100% - 200px);
+    margin-left: 18px;
+}
+#ent-main .ent-left #ent-section-7 .movie-wrap .movie-right ul li {
+    margin-bottom: 10px;
+}
+#ent-main .ent-left #ent-section-7 .movie-wrap .movie-right ul li:last-child {
+    margin-bottom: 0;
+}
+#ent-main .ent-left #ent-section-7 .movie-wrap .movie-right ul li a {
+    display: inline-block;
+    max-width: 363px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 5px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#ent-main .ent-left #ent-section-7 .movie-wrap .movie-right ul li span {
+    font-size: 11px;
+    color: #898989;
+    vertical-align: top;
+}
+
+
+
+
+
+
+
+
+
+#ent-main .ent-left #ent-section-8 {
+    padding: 24px 0 20px;
+    border-bottom: solid 1px #e4e4e4;
+}
+#ent-main .ent-left #ent-section-8 .title-wrap h3 {
+    font-size: 16px
+}
+#ent-main .ent-left #ent-section-8 .title-wrap ul {
+    position: relative;
+    margin-left: 19px;
+    top: -1px;
+} 
+#ent-main .ent-left #ent-section-8 .title-wrap ul li a {
+    font-size: 12px;
+    color: #181818;
+    border-bottom: solid 1px transparent;
+}
+#ent-main .ent-left #ent-section-8 .title-wrap ul li a.on {
+    font-weight: 700;
+    color: #e2458f;
+    border-bottom: solid 1px #e2458f;
+}
+#ent-main .ent-left #ent-section-8 .title-wrap ul li a::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #e8e8e8;
+    vertical-align: -1px;
+    margin: 0 10px;
+}
+#ent-main .ent-left #ent-section-8 .title-wrap ul li:first-child a::before {
+    content: none;
+}
+#ent-main .ent-left #ent-section-8 .title-wrap a {
+    font-size: 12px;
+    color: #999;
+}
+
+
+
+
+
+
+#ent-main .ent-left #ent-section-8 .news-lists li {
+    padding: 18px 0;
+    border-bottom: solid 1px #f1f1f1;
+}
+#ent-main .ent-left #ent-section-8 .news-lists li .rank {
+    display: block;
+    width: 40px;
+    text-align: center;
+}
+#ent-main .ent-left #ent-section-8 .news-lists li a {
+    width: calc(100% - 40px);
+}
+#ent-main .ent-left #ent-section-8 .news-lists li a .news-info-wrap {
+    width: 100%;
+}
+#ent-main .ent-left #ent-section-8 .news-lists li a .news-info-txt {
+    width: 486px;
+}
+#ent-main .ent-left #ent-section-8 .news-lists li a .news-info-txt h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+#ent-main .ent-left #ent-section-8 .news-lists li a .news-info-txt p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #898989;
+    margin-bottom: 8px;
+}
+#ent-main .ent-left #ent-section-8 .news-lists li a .news-info-txt span {
+    font-size: 11px;
+    color: #898989;
+}
+#ent-main .ent-left #ent-section-8 .news-lists li a .news-info-wrap img {
+    width: 88px;
+    height: 88px;
+}
+
+
+
+
+#ent-main .ent-left #ent-section-9 {
+    padding: 24px 0 20px;
+    border-bottom: solid 1px #e4e4e4;
+}
+#ent-main .ent-left #ent-section-9 .title-wrap {
+    margin-bottom: 17px;
+}
+#ent-main .ent-left #ent-section-9 .title-wrap h3 {
+    font-size: 16px
+}
+#ent-main .ent-left #ent-section-9 .title-wrap a {
+    font-size: 12px;
+    color: #999;
+}
+
+
+
+#ent-main .ent-left #ent-section-9 ul li {
+    width: 200px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+#ent-main .ent-left #ent-section-9 ul li a  {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#ent-main .ent-left #ent-section-9 li img {
+    width: 100%;
+    height: 120px;
+}
+#ent-main .ent-left #ent-section-9 li .txt-wrap {
+    padding: 13px 14px 18px;
+}
+/* span이 inline임을 이용해서 자연스럽게 x축 정렬했으니 margin 등도 그거 고려해서 넣기 */
+#ent-main .ent-left #ent-section-9 li .txt-wrap span {
+    font-size: 11px;
+}
+#ent-main .ent-left #ent-section-9 li .txt-wrap .program {
+    color: #ff0080;
+}
+#ent-main .ent-left #ent-section-9 li .txt-wrap .source {
+    color: #999;
+}
+#ent-main .ent-left #ent-section-9 li .txt-wrap .program::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background-color: #d3d3d3;
+    vertical-align: top;
+    margin: 11px 2px 0 8px;
+}
+#ent-main .ent-left #ent-section-9 li .txt-wrap h4 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    min-height: 36px;
+    padding-top: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 0730 할 것 */
+#ent-main .ent-right {
+    float: right;
+    width: 324px;
+    height: 3000px;
+    background-color: sienna;
+    padding-left: 24px;
+}
+#ent-main .ent-right .ent-banner {
+    width: 300px;
+    height: 250px;
+    background-color: steelblue;
+    border: solid 1px #f1f1f1;
+    margin-bottom: 30px;
+}
