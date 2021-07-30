@@ -3672,8 +3672,7 @@ margin top, bottom에서만 일어나고 left, right에선 일어나지 않음  
 
 
 #ent-main {
-    padding-bottom:  1000px;
-
+    /* padding-bottom:  100px; */
 }
 #ent-main .ent-container {
     overflow: hidden;
@@ -3684,6 +3683,7 @@ margin top, bottom에서만 일어나고 left, right에선 일어나지 않음  
     /* height: 2000px; */
     /* background-color: seagreen; */
     padding-right: 24px;
+    border-right: solid 1px #f1f1f1;
 }
 
 
@@ -4353,7 +4353,7 @@ margin top, bottom에서만 일어나고 left, right에선 일어나지 않음  
     float: right;
     width: 324px;
     height: 3000px;
-    background-color: sienna;
+    /* background-color: lightblue; */
     padding-left: 24px;
 }
 #ent-main .ent-right .ent-banner {
@@ -4363,3 +4363,598 @@ margin top, bottom에서만 일어나고 left, right에선 일어나지 않음  
     border: solid 1px #f1f1f1;
     margin-bottom: 30px;
 }
+
+
+
+
+
+
+#ent-main .ent-right #ent-section-10 {
+    padding-bottom: 12px;
+    border-bottom: solid 1px #e4e4e4;
+}
+#ent-main .ent-right #ent-section-10 .title-wrap {
+    margin-bottom: 8px;
+}
+#ent-main .ent-right #ent-section-10 .title-wrap h3 {
+    font-size: 16px
+}
+#ent-main .ent-right #ent-section-10 .title-wrap .more {
+    font-size: 12px;
+    color: #999;
+}
+
+#ent-main .ent-right #ent-section-10 ol li .rank {
+    display: inline-block;
+    width: 16px;
+    font-size: 16px;
+    color: #e2458f;
+    text-align: center;
+    vertical-align: middle;
+}
+#ent-main .ent-right #ent-section-10 ol li p {
+    display: inline-block;
+    width: 270px;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+#ent-section-11 {
+    border-bottom: solid 1px #f2f2f2;
+    padding: 13px 0 24px 0;
+}#ent-section-11 ul {
+    margin-bottom: 12px;
+}
+#ent-section-11 ul li {
+    padding: 14px 0;
+    border-bottom: solid 1px #f2f2f2;
+}
+
+
+
+
+#ent-section-11 ul .title-wrap {
+    margin-bottom: 10px;
+}
+
+#ent-section-11 ul .title-wrap .title-left .count {
+    width: 20px;
+    height: 20px;
+    padding: 2px 4px;
+    border: 1px solid #e2458f;
+    margin-right: 8px;
+
+    font-size: 10px;
+    color: #e2458f;
+}
+#ent-section-11 ul .title-wrap .title-left h3 {
+    color: #e2458f;
+    font-size: 12px;
+}
+#ent-section-11 ul .title-wrap .icon-arrow {
+    width: 8px;
+    height: 12px;
+    background-color: #e2458f;
+}
+
+
+
+
+
+#ent-section-11 ul .article-content .content-left {
+    width: 210px;
+}
+#ent-section-11 ul .article-content .content-left h4 {
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #111;
+}
+#ent-section-11 ul .article-content .content-left .source {
+    font-size: 11px;
+    color: #a6a6a6;
+}
+#ent-section-11 ul .article-content img {
+    width: 70px;
+    height: 70px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+#ent-section-11 ul .article-content .content-left h4:hover,
+#ent-section-11 ul .article-content .content-left .source:hover {
+    text-decoration: underline;
+}
+
+/* btn 요소=inline-block  inline은 기본적으로 공백 가지고 있음
+flex-start로 공백 제거한 정렬 할 수 있음 */
+#ent-section-11 .bottom .btn-wrap .btn {
+    width: 24px;
+    height: 24px;
+    border: solid 1px #f2f2f2;
+}
+#ent-section-11 .bottom .btn-wrap .btn.btn-prev {
+    background-color: gray;
+    border-right: none;
+}
+#ent-section-11 .bottom .btn-wrap .btn.btn-next {
+    background-color: green;
+}
+#ent-section-11 .bottom .more {
+    font-size: 12px;
+    color: #999;
+}
+/* after 사용해서 화살표 영역 만들어 줌 */
+#ent-section-11 .bottom .more::after {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: gray;
+    margin: 5px 0 0 5px;
+    vertical-align: top;
+}
+
+
+
+
+
+
+#ent-section-12 {
+    border-bottom: solid 1px #f2f2f2;
+    padding: 20px 0 2px;
+
+}#ent-section-12 ul {
+    margin-bottom: 12px;
+}
+#ent-section-12 ul li {
+    width: 146px;
+
+    margin-bottom: 19px;
+}
+
+
+
+#ent-section-12 .title-wrap {
+    margin-bottom: 12px;
+}
+#ent-section-12 .title-wrap h3 {
+    font-size: 16px
+}
+
+
+#ent-section-12 ul li img {
+    width: 100%;
+    height: 138px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 9px;
+}
+#ent-section-12 ul li h4 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+#ent-section-12 ul li span {
+    font-size: 11px;
+    color: #898989;
+}
+
+
+
+.more:hover,
+.source:hover,
+#ent-section-12 ul li h4:hover,
+#ent-section-12 ul li span:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+#ent-section-13 {
+    padding-top: 22px;
+}
+#ent-section-13 .title-wrap {
+    margin-bottom: 8px;
+}
+#ent-section-13 .title-wrap h3 {
+    font-size: 16px;
+    color: #e2458f;
+}
+#ent-section-13 .title-wrap .more {
+    font-size: 12px;
+    color: #999;
+}
+
+
+
+#ent-section-13 .heading {
+    margin-bottom: 8px;
+}
+#ent-section-13 .heading .heading-info {
+    width: 210px;
+}
+#ent-section-13 .heading .heading-info h4 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    cursor: pointer;
+}
+#ent-section-13 .heading .heading-info .source {
+    font-size: 11px;
+    color: #999;
+}
+#ent-section-13 .heading img {
+    width: 70px;
+    height: 70px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+
+#ent-section-13 ul li  {
+    margin-bottom: 10px;
+}
+#ent-section-13 ul li a {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    color: #222;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#ent-section-13 ul li a::before {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background-color: silver;
+    margin: 7px 7px 0 0;
+    vertical-align: top;
+}
+
+#ent-section-13 .title-wrap .more:hover, 
+#ent-section-13 .heading .heading-info h4:hover,
+#ent-section-13 ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* news-footer 가져와서 변형함
+left의 마지막 section border-bottom 없애고 싶은데
+.left div:last-child 는 잘 적용되지 않았다.
+이전 코드 복사한 거라서 class 변경하기도 좀 그래서
+그냥 html에 style속성으로 bordr-bottom:none 해버림
+*/
+#ent-footer {
+    border-top: solid 1px #e4e4e4;
+    padding-bottom: 27px;
+    text-align: center;
+}
+#ent-footer .policy-wrap {
+    padding-top: 27px;
+    margin-bottom: 12px;
+}
+#ent-footer .policy-wrap span {
+    font-size: 12px;
+}
+#ent-footer .policy-wrap span::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 0 8px;
+    background-color: #d7d7d7;
+    vertical-align: -1px;
+}
+#ent-footer .policy-wrap span:first-child:before {
+    content: initial;
+}
+#ent-footer p {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 11px;
+}
+#ent-footer p.copyright {
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+/* 네이버 게임 페이지
+가독성 떨어지는 class명 왜지?
+react, angular, vue 등의 도구에서 사용하는 css 작용법: css in javascript
+js 기반으로 css 적용시키는 것을 도와주는 도구 사용 시 랜덤한 문자열로 클래스명 자동으로 만들어짐
+*/
+
+.game-container {
+    width: 1280px;
+    margin: 0 auto;
+}
+.flex-between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-start {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* box-shadow */
+.game-shadow {
+    box-shadow: 0 2px 30px 0 rgb(0 0 0 / 6%);
+}
+
+.game-p-30 {
+    padding: 30px;
+}
+.game-r-12 {
+    border-radius: 12px;
+}
+
+.font-19 {
+    font-size: 19px;
+}
+.font-17 {
+    font-size: 17px;
+}
+.font-400 {
+    font-weight: 400;
+}
+.underline:hover {
+    text-decoration: underline;
+}
+
+
+
+
+#game-body {
+    background-color: #f8f9fd;
+}
+
+
+#game-header {
+    width: 100%;
+    background-color: #4e41db;
+}
+#game-header nav {
+    height: 60px;
+}
+#game-header nav .game-header-left h1 a {
+    color: #ffffff;
+    font-size: 20px;
+    vertical-align: 3px;
+}
+#game-header nav .game-header-left ul li a {
+    color: #9da5b6;
+    font-size: 18px;
+}
+#game-header nav .game-header-left ul li a::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    border-right: .5px;
+    background-color: #9da5b6;
+    margin: 0 12px
+}
+
+
+
+
+
+
+#game-header nav .game-header-right .search-wrap {
+    width: 300px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.28);
+    overflow: hidden;
+}
+#game-header nav .game-header-right .search-wrap input {
+    width: calc(100% - 38px);
+    height: 38px;
+    padding: 10px 12px 9px 14px;
+    border: none;
+    background-color: transparent;
+
+    font-size: 15px;
+    color: #fff;
+}
+#game-header nav .game-header-right .search-wrap input::placeholder {
+    color: rgba(255, 255, 255, 0.46);
+}
+#game-header nav .game-header-right .search-wrap input:focus {
+    outline: none;
+}
+#game-header nav .game-header-right .search-wrap .btn-search {
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/search-white.png);
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    /* margin-top: 3px; */
+    border: none;
+}
+
+/* 부모 크기가 정해져있을 때 */
+#game-header nav .game-header-right .ticket-wrap {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+#game-header nav .game-header-right .ticket-wrap .btn-ticket {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/ticket.png);
+    background-size: 40px 40px;
+}
+#game-header nav .game-header-right .ticket-wrap .bubble-msg {
+    /* display: none; */
+    position: absolute;
+    /* width: 165px; */
+    background-color: #697183;
+    padding: 10px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+/* hsla 처음보는 색상 단위 */
+#game-header nav .game-header-right .btn-login {
+    width: 60px;
+    border: 1px solid hsla(0,0%,80%,.3);
+    padding: 7px 0 6px;
+    border-radius: 8px;
+    
+    margin-left: 10px;
+
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+
+#game-header .game-events-wrap {
+    position: relative;
+    padding: 60px 0;
+}
+/* 그림자 역할 할 영역을 만들어서 배치해보았다.  */
+#game-header .game-events-wrap .title-bg {
+    position: absolute;
+    width: 407px;
+    height: 264px;
+    border-radius: 40px;
+    background-color: rgb(42, 44, 52);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+}
+#game-header .game-events-wrap .title-bg.two {
+    left: 437px;
+}
+#game-header .game-events-wrap .title-bg.three {
+    right: 0;
+}
+#game-header .game-events-wrap .event-wrap {
+    position: relative;
+    width: 407px;
+    height: 264px;
+    border-radius: 40px;
+    z-index: 100;
+
+    top: 0;
+    transition: all 200ms linear;
+}
+#game-header .game-events-wrap .event-wrap a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#game-header .game-events-wrap .event-wrap:hover {
+    top: -10px;
+    box-shadow: 0 2px 30px 0 rgb(0 0 0 / 6%);
+}
+#game-header .game-events-wrap .event-wrap.one {
+    background-color: rgb(112, 104, 236);
+}
+#game-header .game-events-wrap .event-wrap.two {
+    background-color: rgb(69, 39, 39);
+}
+#game-header .game-events-wrap .event-wrap.three {
+    background-color: rgb(112, 177 , 181);
+}
+
+
+#game-header .game-events-wrap .event-wrap .title-wrap {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #fff;
+}
+#game-header .game-events-wrap .event-wrap .title-wrap span {
+    display: inline-block;
+    /* width: 30px; */
+    padding: 4px 8px;
+    border: solid 2px #fff;
+    border-radius: 10px;
+    margin-bottom: 8px;
+
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+#game-header .game-events-wrap .event-wrap .title-wrap h2 {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+#game-main .game-container {
+    align-items: stretch;
+}
+/* grid? */
+#game-main .left {
+    width: 900px;
+    height: 2000px;
+    background-color: lightcyan;
+    
+}
+
+
+
+
+
+
+
+#game-main .right {
+    width: 358px;
+    height: 2000px;
+    background-color: lightyellow;
+
+}
+
+
