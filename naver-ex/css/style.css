@@ -4719,6 +4719,9 @@ js 기반으로 css 적용시키는 것을 도와주는 도구 사용 시 랜덤
 .game-r-12 {
     border-radius: 12px;
 }
+.game-m-t-20 {
+    margin-top: 20px;
+}
 
 .font-19 {
     font-size: 19px;
@@ -4726,7 +4729,7 @@ js 기반으로 css 적용시키는 것을 도와주는 도구 사용 시 랜덤
 .font-17 {
     font-size: 17px;
 }
-.font-400 {
+.font-w-400 {
     font-weight: 400;
 }
 .underline:hover {
@@ -4939,9 +4942,284 @@ js 기반으로 css 적용시키는 것을 도와주는 도구 사용 시 랜덤
 /* grid? */
 #game-main .left {
     width: 900px;
-    height: 2000px;
-    background-color: lightcyan;
-    
+    /* background-color: lightcyan; */
+    padding-bottom: 200px;
+}
+
+
+
+/* shadow, radius 초기화 할 때 만들어놓은 클래스 사용함 */
+#game-main .left .left-banner {
+    width: 900px;
+    height: 120px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+/* img의 부모는 a태그이니 a태그도 공간 채워주기 
+border-radius 적용하려면 이미지 감싼 공간에 overflow:hidden 적용해서
+부모 영역 넘어가는 이미지는 감추기 */
+#game-main .left .left-banner a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#game-main .left .left-banner img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* 반복되는 요소 css클래스로 만들기 */
+.game-section {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 2px 30px 0 rgb(0 0 0 / 6%);
+    border-radius: 12px;
+    padding: 27px 30px 40px;
+    margin-bottom: 40px;
+}
+.game-section .section-title-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.game-section .section-title-wrap h2 {
+    font-size: 19px;
+    font-weight: 700;
+}
+.game-section .section-middle-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.07) ;
+}
+.game-section .section-middle-nav ul li a {
+    display: block;
+    padding: 14px 14px 12px;
+    border-bottom: solid 3px transparent;
+
+    line-height: 19px;
+    font-weight: 600;
+    color: #222;
+    font-size: 15px;
+}
+.game-section .section-middle-nav ul li a.on {
+    border-bottom: solid 3px #7776ff;
+    color: #7776ff;
+    font-weight: 700;
+}
+.game-section .section-body-wrap {
+    margin-top: 18px;
+}
+/* 여러 곳에 쓰기 위해 정규화 */
+.game-section .section-body-wrap .img-txt-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.game-section .section-body-wrap .img-txt {
+    width: 407.5px;
+}
+.game-section .section-body-wrap img {
+    width: 180px;
+    height: 100px;
+    margin-right: 15px;
+    border-radius: 8px;
+    border: solid 1px rgba(0, 0, 0, 0.06);
+}
+.game-section .section-body-wrap .img-txt .txt {
+    width: 212px;
+}
+.game-section .section-body-wrap .title {
+    font-size: 15px;
+    font-weight: 600;
+}
+.game-section .section-body-wrap .source {
+    font-size: 13px;
+    letter-spacing: -.3px;
+    color: #999;
+}
+
+
+
+
+
+
+/* 중앙정렬 공식 사용 left, translate */
+.game-section .btn-circle {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 30px 0 rgb(0 0 0 / 6%);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -27.5px;
+    background-repeat: no-repeat;
+    background-position: 17px 15px;
+    background-size: 24px 24px;
+}
+/* 배경색 대신 아이콘 넣음 */
+.game-section .btn-circle.icon-arrow {
+    background-image: url(../img/expand-button.png);
+}
+
+
+
+
+
+
+#game-section-1 .section-btn-wrap a {
+    font-size: 14px;
+    color: #9da5b6;
+    font-weight: 700;
+}
+#game-section-1 .section-btn-wrap a.on {
+    color: #7776ff;
+}
+#game-section-1 .section-btn-wrap a:last-child {
+    margin-left: 14px;
+}
+
+
+
+
+
+
+#game-section-1 ol li {
+    padding: 10px 0;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.03);
+}
+
+#game-section-1 ol li .game-thumbnail {
+    margin-right: 10px;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 8px;
+}
+#game-section-1 ol li .txt-info {
+    width: 680px;
+    margin-right: 10px;
+}
+#game-section-1 ol li .txt-info h3 {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+}
+#game-section-1 ol li .txt-info .comment {
+    font-size: 13px;
+    line-height: 16px;
+    color: #858894;
+}
+#game-section-1 ol li .txt-info .source-wrap {
+    margin-top: 3px;
+    font-size: 13px;
+    color: #858894;
+}
+#game-section-1 ol li .txt-info .source-wrap .game {
+    margin-right: 5px;
+    color: #444;
+}
+#game-section-1 ol li .txt-info .source-wrap .author {
+    margin-right: 5px;
+}
+#game-section-1 ol li .txt-info .source-wrap .level {
+    margin-right: 5px;
+}
+/* 이미지 위에 겹쳐진 숫자 표현 */
+#game-section-1 ol li .img-wrap {
+    position: relative;
+    width: 90px;
+    height: 50px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 8px;
+}
+#game-section-1 ol li .img-wrap .blog-thumbnail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#game-section-1 ol li .img-wrap .count {
+    position: absolute;
+    padding: 2px 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 11px;
+
+    right: 3px;
+    bottom: 3px;
+}
+
+
+
+
+
+
+#game-section-2 {
+
+}
+#game-section-2 .section-title-wrap {
+
+}
+#game-section-2 .section-title-wrap .more {
+    font-size: 13px;
+    font-weight: 400;
+    color: #444;
+}
+
+
+#game-section-2 .section-body-wrap .img-txt {
+    width: 407.5px;
+}
+#game-section-2 .section-body-wrap .img-txt img {
+    width: 180px;
+    height: 100px;
+    margin-right: 15px;
+    border-radius: 8px;
+    border: solid 1px rgba(0, 0, 0, 0.06);
+}
+#game-section-2 .section-body-wrap .img-txt .txt {
+    width: 212px;
+}
+#game-section-2 .section-body-wrap .title {
+    font-size: 15px;
+    font-weight: 600;
+}
+#game-section-2 .section-body-wrap .source {
+
+    font-size: 13px;
+    letter-spacing: -.3px;
+    color: #999;
+}
+#game-section-2 .section-body-wrap ul {
+    margin-top: 25px;
+}
+#game-section-2 .section-body-wrap ul li {
+    margin-bottom: 11px;
+}
+#game-section-2 .section-body-wrap ul li:last-child {
+    margin-bottom: 0;
+}
+#game-section-2 .section-body-wrap ul li a::before {
+    content:"";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background-color: #9da5b6;
+    margin: 2px -2px 0 0;
+    vertical-align: -1px;
+}
+/* 한 줄 말줄임 */
+#game-section-2 .section-body-wrap ul li a .title {
+    width: 776px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 19px;
 }
 
 
@@ -4950,9 +5228,187 @@ js 기반으로 css 적용시키는 것을 도와주는 도구 사용 시 랜덤
 
 
 
+#game-section-3 .section-body-wrap .img-txt .category {
+    display: inline-block;
+    font-size: 13px;
+    color: #7776ff;
+    margin-bottom: 3px;
+}
+.game-section .btn-circle.icon-plus {
+    background-image: url(../img/plus.png);
+}
+
+
+
+
+
+#game-section-4 ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#game-section-4 li a {
+    display: block;
+    
+}
+#game-section-4 .img-wrap {
+    position: relative;
+    width: 263px;
+    height: 148px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+#game-section-4 .img-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#game-section-4 .img-wrap .icon-play {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    
+    background-image: url(../img/camera.png);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: center;
+    left: 10px;
+    bottom: 10px;
+
+}
+#game-section-4 .img-wrap .time {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 6px;
+    border-radius: 6px;
+
+    color: #fff;
+
+    right: 10px;
+    bottom: 10px;
+}
+
+
+/* 위에 적은 css 코드가 중복 적용될 때 #아이디로 선택해서 추가하기 */
+#game-section-4 .img-txt {
+    width: 100%;
+    margin-top: 10px;
+}
+#game-section-4 .img-txt h4 {
+    font-size: 15px;
+}
+#game-section-4 .img-txt .source,
+#game-section-4 .img-txt .count {
+    
+    font-size: 13px;
+    color: #999;
+}
+#game-section-4 .img-txt .count {
+    margin-left: 9px;
+}
+
+
+
+
+
+
+
+#game-section-5 .section-title-wrap .info {
+    font-size: 13px;
+    color: #999999;
+}
+#game-section-5 li a {
+    display: block;
+}
+#game-section-5 .img-wrap {
+    position: relative;
+    width: 190px;
+    height: 120px;
+}
+#game-section-5 .img-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin-right: 0;
+}
+#game-section-5 .img-wrap .badge {
+    position: absolute;
+    display: inline-block;
+    background-color: #7776ff;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 8px;
+
+    top: -5px;
+    left: -5px;
+}
+#game-section-5 .img-wrap .badge.open {
+    background-color: crimson;
+}
+#game-section-5 .img-txt {
+    width: 190px;
+    margin-top: 12px;
+}
+#game-section-5 .img-txt span {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #999;
+}
+#game-section-5 .img-txt .date {
+    color: #222;
+}
+
+
+
+
+
+
+
+#game-section-6 .section-body-wrap img {
+    width: 80px;
+    height: 80px;
+    border-radius: 30px;
+}
+#game-section-6 .section-body-wrap .img-txt .txt {
+    width: 300px;
+    height: 100%;
+}
+#game-section-6 .section-body-wrap .category {
+    font-size: 15px;
+    color: #000;
+    font-weight: 600;
+
+}
+#game-section-6 .section-body-wrap .title {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    font-size: 13px;
+    color: #666;
+    font-weight: initial;
+}
+#game-section-6 .section-body-wrap .source {
+    display: inline-block;
+    margin-top: 5px;
+}
+#game-section-6 .section-body-wrap .source:hover {
+    text-decoration: none;
+}
+
+
+
+
+
 #game-main .right {
     width: 358px;
-    height: 2000px;
+    height: 3000px;
     background-color: lightyellow;
 
 }
