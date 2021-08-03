@@ -5159,12 +5159,7 @@ border-radius 적용하려면 이미지 감싼 공간에 overflow:hidden 적용�
 
 
 
-#game-section-2 {
 
-}
-#game-section-2 .section-title-wrap {
-
-}
 #game-section-2 .section-title-wrap .more {
     font-size: 13px;
     font-weight: 400;
@@ -5406,11 +5401,319 @@ border-radius 적용하려면 이미지 감싼 공간에 overflow:hidden 적용�
 
 
 
+
 #game-main .right {
     width: 358px;
-    height: 3000px;
-    background-color: lightyellow;
+    /* height: 3000px;
+    background-color: lightyellow; */
 
+}
+.right-section {
+    box-shadow: 0 2px 30px 0 rgb(0 0 0 / 6%);
+    border-radius: 12px;
+    padding: 30px;
+    background-color: #ffffff;
+    margin-bottom: 24px;
+}
+.right-section .title-wrap h2 {
+    font-size: 17px;
+    font-weight: 700;
+}
+.right-section .title-wrap a {
+    font-size: 13px;
+    font-weight: 400;
+    color: #444;
+}
+.right-section .right-section-body {
+    margin-top: 20px;
 }
 
 
+
+
+#visitor-section .text-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#visitor-section .text-wrap p {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #9da5b6;
+    text-align: center;
+}
+/* input-wrap을 중앙정렬하기
+1. 나: margin: 18px auto 0 auto;
+2. 네이버: flex로 감싸서 센터정렬
+*/
+#visitor-section .text-wrap .input-wrap {
+    position: relative;
+    overflow: hidden;
+
+    width: 250px;
+    height: 44px;
+    background-color: #f5f6fa;
+    border-radius: 12px;
+    margin-top: 18px;    
+    /* margin: 18px auto 0 auto; */
+}
+/* input태그 border 없애면 선택 시 outline도 없음 */
+#visitor-section .text-wrap .input-wrap input {
+    width: calc(100% - 44px);
+    height: 100%;
+    padding: 10px 16px;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+}
+/* #visitor-section .text-wrap .input-wrap input:focus {
+    outline: none;
+} */
+#visitor-section .text-wrap .input-wrap button {
+    width: 44px;
+    height: 100%;
+    background-color: transparent;
+    background-image: url(../img/search.png);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+}
+
+
+
+
+
+
+.rank-section .right-section-body li {
+    margin-bottom: 16px;
+}
+
+.rank-section .right-section-body li:last-child {
+    margin-bottom: 0;
+}
+/* y축 중앙정렬 */
+.rank-section .right-section-body li a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.rank-section .right-section-body li a::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background: url(../img/next.png) no-repeat;
+    background-size: 10px;
+}
+/* text-align: inline 영역인 글자에만 적용되는 속성이라
+div 태그인 equal 클래스를 inline-block으로 바꿔줌 */
+.rank-section .right-section-body li .count-wrap {
+    position: relative;
+    width: 25px;
+    /* text-align: center; */
+}
+
+
+.rank-section .right-section-body li .count-wrap .count {
+    font-size: 17px;
+    font-weight: 700;
+    font-style: italic;
+    color: #000;
+}
+/* 순위 나타내는 숫자가 위아래 중앙에 오게 하려면 .up-down-wrap 부분이 flex-start + align center에
+영향 안 받아야 함.
+up-down-wrap 영역이 flex-start 영향에서 벗어나게 하기 위해 absolute 사용 */
+.rank-section .right-section-body li .count-wrap .up-down-wrap {
+    position: absolute;
+    bottom: -13px;
+}
+.rank-section .right-section-body li .count-wrap .up-down-wrap .equal {
+    display: inline-block;
+    width: 5px;
+    height: 3px;
+    background-color: gray;
+    margin-left: 4px;
+}
+/* position 변경없이 margin, padding으로 움직이려 하니 위치 변동 없었음
+마진병합인지 아니면 position때문에 위치변경이 안된건지
+*/
+.rank-section .right-section-body li .count-wrap .up-down-wrap span {
+    position: relative;
+    display: inline-block;
+    top: 5px;
+}
+.rank-section .right-section-body li .count-wrap .up-down-wrap span::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 7px;
+    height: 3px;
+    margin-right: 1px;
+
+    top: -3px;
+}
+.rank-section .right-section-body li .count-wrap .up-down-wrap .up {
+    color: crimson;
+}
+.rank-section .right-section-body li .count-wrap .up-down-wrap .up::before {
+    background-color: crimson;
+}
+
+.rank-section .right-section-body li .count-wrap .up-down-wrap .down {
+    color: blue;
+}
+.rank-section .right-section-body li .count-wrap .up-down-wrap .down::before {
+    background-color: blue;
+}
+
+/* overflow:hidden 사용하니 chk가 잘려서 보임 */
+.rank-section .right-section-body li .img-wrap {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    margin-right: 14px;
+}
+.rank-section .right-section-body li .img-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: solid 1px rgba(0, 0, 0, 0.06);
+}
+.rank-section .right-section-body li .img-wrap .chk {
+    position: absolute;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-color: #634ea4;
+    border-radius: 50px;
+
+    top: -4px;
+    right: -4px;
+}
+
+
+.rank-section .right-section-body li .txt-wrap {
+    width: 180px;
+    margin-right: 10px;
+}
+.rank-section .right-section-body li .txt-wrap h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+    color: #000;
+}
+.rank-section .right-section-body li .txt-wrap .genre {
+    font-size: 13px;
+    color: #999;
+}
+
+
+.rank-section .right-section-body .time {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #999;
+}
+
+
+
+
+
+
+
+#news-section .right-section-body li {
+    margin-bottom: 10px;
+}
+#news-section .right-section-body li:nth-child(1),
+#news-section .right-section-body li:nth-child(2) {
+    font-weight: bold;
+}
+#news-section .right-section-body li:last-child {
+    margin-bottom: 0;
+}
+#news-section .right-section-body li a {
+    display: block;
+    width: 100%;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    font-size: 15px;
+    color: #000;
+
+}
+#news-section .right-section-body li a::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+
+    width: 3px;
+    height: 3px;
+    background-color: gray;
+    top: -5px;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+#week-section li {
+    margin-bottom: 16px;
+}
+#week-section li:last-child {
+    margin-bottom: 0;
+}
+#week-section li a img {
+    width: 128px;
+    height: 72px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+#week-section li a .txt-wrap h3 {
+    font-size: 15px;
+}
+#week-section li a .txt-wrap .genre {
+    font-size: 13px;
+    color: #999;
+}
+
+
+
+.right .game-banner a {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+.right .game-banner a img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+#game-footer-section a {
+    display: inline-block;
+    font-size: 12px;
+    color: #666;
+}
+#game-footer-section a::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background-color: #ddd;
+    margin: 4px 10px 0;
+    vertical-align: top;
+}
