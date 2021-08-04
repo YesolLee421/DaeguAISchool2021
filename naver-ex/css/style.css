@@ -5717,3 +5717,640 @@ up-down-wrap 영역이 flex-start 영향에서 벗어나게 하기 위해 absolu
     margin: 4px 10px 0;
     vertical-align: top;
 }
+
+
+
+
+
+
+
+
+
+
+.flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* .game-container랑 수치 같아서 따로 만들지 않았음 */
+/* .esport-container {
+    width: 1280px;
+    margin: 0 auto;
+} */
+
+
+/* fixed의 위치는 브라우저 기준. left, top을 이용해 위치 지정해 줌으로써
+스크롤 내려도 왼쪽 상단 같은 위치에 고정되게 만듦 */
+#esport-header {
+    position: fixed;
+    width: 100%;
+    background-color: #151618;
+    left: 0;
+    top: 0;
+    border-bottom: solid 1px lightgray;
+    z-index: 999;
+}
+#esport-header #esport-nav a {
+    color: #ffffff;
+}
+/* flex로 인해 60px 안에서 y축 중앙정렬 자동으로 됨 */
+#esport-header #esport-nav .nav-wrap {
+    height: 60px;
+}
+#esport-header #esport-nav .nav-wrap .left {
+    font-weight: 700;
+}
+#esport-header #esport-nav .nav-wrap .left h1 {
+    font-size: 20px;
+}
+#esport-header #esport-nav .nav-wrap .left li::before {
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 14px;
+    margin: 0 12px;
+    background-color: rgba(160, 165, 182, .3);
+}
+#esport-header #esport-nav .nav-wrap .left li a {
+    color: gray;
+}
+
+
+
+
+
+#esport-header #esport-nav .center li {
+
+    margin-right: 24px;
+}
+#esport-header #esport-nav .center li:last-child {
+    margin-right: none;
+}
+/* a의 영역 넓힐 때 고정높이 주면 되는데 괜히 100% 했다가
+부모인 center부터 높이값을 줘야 했다. */
+#esport-header #esport-nav .center li a {
+    display: inline-block;
+    height: 60px;
+    border-bottom: solid 5px transparent;
+    padding: 0 5px;
+
+    color: gray;
+    font-size: 17px;
+    line-height: 60px;
+    font-weight: 700;
+}
+#esport-header #esport-nav .center li a.on {
+    border-bottom: solid 5px #fff;
+    color: #fff;
+}
+#esport-header #esport-nav .center li a:hover {
+    color: lightgray;
+}
+#esport-header #esport-nav .center li a.on:hover {
+    color: #fff;
+}
+
+
+
+
+
+
+#esport-header #esport-nav .right .btn-login {
+    border: solid 1px hsla(0, 0%, 80%, .3);
+    border-radius: 8px;
+    padding: 4px 8px;
+
+    font-size: 12px;
+    margin-right: 10px;
+}
+#esport-header #esport-nav .right .btn-menu {
+    width: 40px;
+    height: 40px;
+    margin: 22px 0 0 5px;
+    background: url(../img/menu-white.png) no-repeat;
+    background-size: 20px 20px;
+}
+
+
+
+
+#esport-main {
+    padding-top: 61px;
+}
+#esport-main-top {
+    background-color: #151618;
+    
+}
+#esport-main-top a {
+    color: #fff;
+}
+
+
+#esport-main-top .timeline-wrap {
+    padding: 20px 0;
+}
+#esport-main-top .timeline-wrap li {
+    width: 16.6%;
+    background-color: #272b31;
+    border-radius: 10px;
+    margin-right: 1px;
+}
+#esport-main-top .timeline-wrap li:last-child {
+    margin-right: 0;
+}
+#esport-main-top .timeline-wrap li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 146px;
+    padding: 14px 18px;
+    
+    font-size: 12px;
+}
+#esport-main-top .timeline-wrap li a h2 {
+    font-size: 13px;
+    margin: 6px 0;
+    color: #a0a5b6;
+}
+
+
+/* 강의에 없는 부분. 리스트 내용물에 따라 있었다가 없어지는 영역이라
+배치 고려 필요 */
+#esport-main-top .timeline-wrap li a .match-wrap span{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#esport-main-top .timeline-wrap li a .status-wrap {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#esport-main-top .timeline-wrap li a .status-wrap.on .time,
+#esport-main-top .timeline-wrap li a .status-wrap .live,
+#esport-main-top .timeline-wrap li a .status-wrap .status {
+    display: none;
+}
+#esport-main-top .timeline-wrap li a .status-wrap .time,
+#esport-main-top .timeline-wrap li a .status-wrap.on .live,
+#esport-main-top .timeline-wrap li a .status-wrap.on .status {
+    display: initial;
+}
+#esport-main-top .timeline-wrap li a .status-wrap .time {
+    color: #595e71;
+}
+#esport-main-top .timeline-wrap li:first-child a .status-wrap .time {
+    color: #fff;
+}
+#esport-main-top .timeline-wrap li a .status-wrap .live {
+    font-weight: 700;
+}
+#esport-main-top .timeline-wrap li a .status-wrap .status {
+    color: red;
+    font-weight: 500;
+}
+
+
+
+
+
+#esport-main-top .live-wrap {
+    padding-bottom: 60px;
+}
+#esport-main-top .live-wrap h2 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+#esport-main-top .live-wrap h2 span {
+    color: #8a7cff;
+}
+#esport-main-top .live-wrap li {
+    width: 625px;
+    background-color: #272b31;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* display:block을 하니 display:flex가 안먹히는듯 */
+#esport-main-top .live-wrap li a {
+    /* display: block; */
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+}
+#esport-main-top .live-wrap .img-wrap {
+    position: relative;
+    width: 442px;
+    height: 250px;
+    overflow: hidden;
+}
+#esport-main-top .live-wrap .img-wrap:hover img {
+    transform: scale(1.1);
+    transition: transform 0.1s linear;
+}
+#esport-main-top .live-wrap .img-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#esport-main-top .live-wrap .img-wrap .status {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 14px 14px 0;
+    font-size: 12px;
+}
+#esport-main-top .live-wrap .img-wrap .live {
+    background-color: red;
+    padding: 3px 7px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+#esport-main-top .live-wrap .img-wrap .watch-count {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 3px 7px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+#esport-main-top .live-wrap .txt-wrap {
+    width: 180px;
+    padding: 17px 20px 22px;
+}
+#esport-main-top .live-wrap .txt-wrap span {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.2);
+    padding: 3px 7px;
+    border-radius: 3px;
+}
+#esport-main-top .live-wrap .txt-wrap h3 {
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+
+
+
+
+
+#esport-main .content-wrap {
+    overflow: hidden;
+    padding-top: 30px;
+}
+#esport-main .left {
+    float: left;
+    width: 900px;
+    /* height: 3000px; */
+    /* background-color: lightseagreen; */
+}
+#esport-main-article {
+    overflow: hidden;
+    width: 100%;
+    height: 468px;
+    background-color: lime;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+#esport-main-article .article {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 50%;
+}
+#esport-main-article .article.full {
+    height: 100%;
+    background-color: linen;
+}
+#esport-main-article .article img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* 선형 그라데이션 만들기
+linear-gradient(direction, start-color, end-color) */
+#esport-main-article .article .overlay {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient( to top, #000000, transparent);
+
+    left: 0;
+    bottom: 0;
+}
+#esport-main-article .article .txt-wrap {
+    position: absolute;
+    width: 100%;
+    padding: 0 24px 20px;
+
+    color: #fff;
+    left: 0;
+    bottom: 0;
+}
+#esport-main-article .article .txt-wrap h3 {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+}
+#esport-main-article .article .txt-wrap h3:hover {
+    text-decoration: underline;
+}
+#esport-main-article .article .txt-wrap p {
+    display: -webkit-box;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    max-height: 57px;
+
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    margin-top: 5px;
+
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 500;
+}
+#esport-main-article .article .txt-wrap .source {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 16px;
+    color: hsla(0,0%,100%,.7);
+}
+#esport-main-article .article .txt-wrap .source:hover {
+    text-decoration: none;
+}
+
+
+
+
+.esport-section {
+    border-top: solid 1px #f1f1f1;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.esport-section .title-wrap {
+    padding: 15px 0;
+}
+.esport-section .title-wrap h2 {
+    font-size: 18px;
+}
+.esport-section .title-wrap h2::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/next.png) no-repeat;
+    background-size: 12px;
+    background-position: center;
+    vertical-align: -3px;
+}
+
+
+
+
+
+#esport-replay .game-menu {
+    margin-bottom: 24px;
+}
+#esport-replay .game-menu ul li {
+    margin-right: 20px;
+}
+#esport-replay .game-menu ul li:last-child {
+    margin-right: 0;
+}
+#esport-replay .game-menu ul li a {
+    display: block;
+    width: 60px;
+    /* height: 82px; */
+    text-align: center;
+    font-size: 13px;
+}
+#esport-replay .game-menu ul li a.on i {
+    background-color: #4e41db;
+}
+#esport-replay .game-menu ul li a.on span {
+    color: #4e41db;
+    font-weight: 700;
+}
+#esport-replay .game-menu ul li a i {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+#esport-replay .play-lists li {
+    width: 285px;
+    margin-bottom: 24px;
+}
+#esport-replay .play-lists li a {
+    display: block;
+}
+#esport-replay .play-lists .img-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    margin-bottom: 11px;
+}
+#esport-replay .play-lists .img-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#esport-replay .play-lists .img-wrap .status-wrap {
+
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+
+    left: 0;
+    bottom: 0;
+}
+#esport-replay .play-lists .img-wrap .status-wrap i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/play.png) no-repeat;
+    background-size: 20px;
+}
+/* 
+overflow, float, display, position 관련
+공간 만들기
+배치
+폰트 속성
+*/
+#esport-replay .play-lists .img-wrap .status-wrap .time {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 3px 5px;
+    border-radius: 3px;
+
+    font-size: 11px;
+    color: #fff;
+}
+#esport-replay .play-lists h3 {
+    font-size: 15px;
+}
+
+
+
+
+
+
+#esport-news .article-wrap {
+    align-items: flex-start;
+}
+#esport-news .article-wrap .left-lists {
+    width: 472px;
+}
+#esport-news .article-wrap .left-lists li {
+    width: 226px;
+    margin-right: 20px;
+}
+#esport-news .article-wrap .left-lists li:last-child {
+    margin-right: 0;
+}
+#esport-news .article-wrap .left-lists li a  {
+    display: block;
+}
+#esport-news .article-wrap .left-lists li img {
+    width: 100%;
+    height: 132px;
+    margin-bottom: 9px;
+    border-radius: 10px;
+}
+#esport-news .article-wrap .left-lists li h3 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+}
+/* 여러 줄 말줄임 */
+#esport-news .article-wrap .left-lists li p {
+    display: -webkit-box;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    max-height: 38px;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    font-size: 14px;
+    color: #777;
+    line-height: 19px;
+}
+
+
+
+
+#esport-news .article-wrap .right-lists {
+    width: 400px;
+    padding-right: 20px;
+}
+#esport-news .article-wrap .right-lists li {
+    margin-bottom: 7px;
+}
+#esport-news .article-wrap .right-lists li a {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+}
+#esport-news .article-wrap .right-lists li a::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background-color: gray;
+    margin: 0 7px 5px;
+    
+}
+
+
+
+
+
+
+#esport-expert .news-lists li {
+    width: 450px;
+    margin-bottom: 15px;
+}
+
+#esport-expert .news-lists li a img {
+    width: 153px;
+    height: 86px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+#esport-expert .news-lists li .txt-wrap {
+    width: 268px;
+}
+#esport-expert .news-lists li .txt-wrap h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+}
+/* 여러 줄 밀줄임
+1. overflow:hidden
+2. max-height
+3. webkit-line-clamp 말줄임 시작할 줄, -webkit-box-orient 말줄임 방향
+4. display: -webkit-box; 말줄임 표시 나타남
+
+white-space: nowrap은 한 줄로 길게 이어지게 하는거니까 사용하지 않음
+*/
+#esport-expert .news-lists li .txt-wrap p {
+    display: -webkit-box;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    max-height: 38px;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    margin-top: 4px;
+
+    font-size: 14px;
+    color: #777;
+    line-height: 19px;
+}
+#esport-expert .news-lists li .txt-wrap .source {
+    font-size: 13px;
+    color: #777;
+}
+
+
+
+
+
+
+
+
+
+#esport-main .right {
+    float: right;
+    width: 357px;
+    height: 3000px;
+    background-color: lightskyblue;
+}
