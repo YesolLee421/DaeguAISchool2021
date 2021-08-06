@@ -6642,9 +6642,64 @@ input 태그만 focus 선택자가 먹혀서 position 사용해서 버튼이랑 
     background-size: 14px;
     margin: 3px 0 0 5px;
 }
+/* 버튼 표준화 */
 .audio-section .audio-body {
+    position: relative;
     padding-top: 19px;
 }
+.audio-body .btn {
+    display: none;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background-color: olive;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.audio-body:hover .btn {
+    display: initial;
+}
+.audio-body .btn.btn-left {
+    left: -22px;
+}
+.audio-body .btn.btn-right {
+    right: -22px;
+}
+
+
+
+
+/* 오디오클립 추천 오리지널, 새로나온 채널 공통 적용 */
+.audio-section .audio-body {
+    position: relative
+}
+.audio-section .audio-body ul {
+    align-items: flex-start;
+}
+.audio-section .audio-body li {
+    width: 120px;
+}
+.audio-section .audio-body li a img {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+}
+.audio-section .audio-body li a h3 {
+    margin-top: 10px;
+    font-size: 13px;
+}
+.audio-section .audio-body li a .author {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #959595;
+}
+/* section마다 버튼 위치 조정 */
+.audio-section .audio-body .btn {
+    top: 80px;
+}
+
+
 
 
 
@@ -6653,7 +6708,7 @@ input 태그만 focus 선택자가 먹혀서 position 사용해서 버튼이랑 
 내용이 헤더 아래에서 시작하도록 하기 */
 #audio-main {
     width: 100%;
-    height: 2000px;
+    /* height: 3000px; */
     padding-top: 62px;
     background-color: #f6f8fa;
 }
@@ -6667,7 +6722,7 @@ input 태그만 focus 선택자가 먹혀서 position 사용해서 버튼이랑 
 #audio-main .audio-main-left {
     /* float: left; */
     width: 700px;
-    background-color: mistyrose;
+    /* background-color: mistyrose; */
 }
 
 
@@ -6698,27 +6753,227 @@ input 태그만 focus 선택자가 먹혀서 position 사용해서 버튼이랑 
     margin-top: 12px;
 }
 /* 버튼 */
-#audio-today .audio-slide-wrap:hover .btn {
-    display: initial;
-}
 #audio-today .audio-slide-wrap .btn {
-    display: none;
-    position: absolute;
-    width: 44px;
-    height: 44px;
-    background-color: olive;
-    border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
 }
-#audio-today .audio-slide-wrap .btn.btn-left {
-    left: -22px;
-}
-#audio-today .audio-slide-wrap .btn.btn-right {
-    right: -22px;
-}
+
 
 /* 네이버오디오2 29:41까지 */
+
+
+
+
+
+
+
+
+
+
+
+
+#audio-playlist .audio-header {
+    position: relative;
+}
+#audio-playlist .audio-header p {
+    display: block;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
+}
+#audio-playlist .audio-header .link-total {
+    position: absolute;
+
+    padding: 10px 18px 8px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 20px;
+    box-shadow: 0 2px 10px 0 rgb(80 85 91 / 7%);
+
+    font-size: 13px;
+    font-weight: 500;
+    color: #157efb;
+
+    top: 6px;
+    right: 0;
+}
+
+
+
+
+#audio-playlist .audio-body ul {
+    align-items: flex-start;
+}
+#audio-playlist .audio-body li {
+    width: 152px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 4px;
+    box-shadow: 0 2px 9px 0 rgb(80 85 91 / 7%);
+}
+/* 부모인 li태그 크기 152px (border 포함) */
+#audio-playlist .audio-body li a .img-wrap {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+#audio-playlist .audio-body li a .img-wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+#audio-playlist .audio-body li a .img-wrap .icon-play {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: aqua;
+    border-radius: 50%;
+
+    bottom: -16px;
+    right: 10px;
+}
+#audio-playlist .audio-body li a h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+
+    padding: 17px 11px;
+    background-color: #fff;
+    font-size: 13px;
+    color: #444;
+}
+
+
+
+
+
+#audio-live ul {
+    align-items: flex-start;
+}
+#audio-live li {
+    width: 120px;
+}
+#audio-live li a .img-wrap {
+    /* overflow: hidden; */
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: solid 2px lightgray;
+    border-radius: 50%;
+}
+#audio-live li.active a .img-wrap {
+    border: solid 2px red;
+}
+#audio-live li a .img-wrap img {
+    width: 100%;
+    height: 100%;
+    border: solid 2px #fff;
+    border-radius: 50%;
+}
+#audio-live li a .img-wrap .live-state {
+    position: absolute;
+    padding: 2px;
+    border-radius: 3px;
+    background-color: #fff;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -11px;
+}
+#audio-live li a .img-wrap .live-state .live {
+    display: block;
+    padding: 2px 4px;
+    
+    border: solid 2px red;
+    border-radius: 3px;
+
+    color: red;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+#audio-live li.active a .img-wrap .live-state .live {
+    border: solid 2px red;
+    background-color: red;
+    color: #fff;
+}
+#audio-live li a h3 {
+    margin-top: 16px;
+    font-size: 13px;
+}
+#audio-live li a .time {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #959595;
+}
+#audio-live .audio-body .btn {
+    top: 80px;
+}
+
+
+
+
+
+
+#audio-book .audio-body ul  {
+    align-items: flex-start;
+}
+#audio-book .audio-body ul li {
+    width: 120px;
+
+}
+#audio-book .audio-body li a .img-wrap {
+    position: relative;
+    width: 100%;
+}
+#audio-book .audio-body li a .img-wrap img {
+    width: 100%;
+}
+/* 강의에선 부모 img-wrap의 높이값이 없어서 bottom이 적용되지 않았는데
+나는 그냥 됐다 왜지? 아 이미지도 absolute라서 강의영상에선 안 됐었음. 나는 안 줬었음
+*/
+#audio-book .audio-body li a .img-wrap .time {
+    position: absolute;
+    background-color: rgba(17, 17, 17, .75);
+    padding: 2px 5px;
+    border-radius: 1px;
+
+    font-size: 11px;
+    color: #fff;
+
+    bottom: 5px;
+    right: 5px;
+}
+
+#audio-book .audio-body li a h3 {
+    margin-top: 11px;
+    font-size: 13px;
+}
+#audio-book .audio-body li a span {
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+    color: #959595;
+}
+
+#audio-book .audio-body li a .price {
+    color: #000;
+}
+#audio-book .audio-body .btn {
+    top: 90px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -6727,5 +6982,295 @@ input 태그만 focus 선택자가 먹혀서 position 사용해서 버튼이랑 
     /* float: right; */
     width: 330px;
     height: 100%;
-    background-color: linen;
+    /* background-color: linen; */
 }
+
+
+
+
+
+#audio-intro .audio-body li {
+    width: 152px;
+}
+#audio-intro .audio-body li a img {
+    width: 152px;
+    height: 152px;
+    border-radius: 4px;
+}
+/* 글자를 입력할 때는 정보를 뜻하는 태그를 사용하는 것이 
+웹 표준(웹 접근성)에 맞다. div는 공간 만들 때 사용 */
+#audio-intro .audio-body li a h3 {
+    margin-top: 12px;
+    font-size: 13px;
+}
+#audio-intro .audio-body li a .source {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #959595;
+}
+
+
+
+
+#audio-discovery .audio-header {
+    position: relative;
+}
+#audio-discovery .audio-header h2 {
+    font-size: 17px;
+    line-height: 24px;
+}
+#audio-discovery .audio-header p {
+    margin-top: 7px;
+    font-size: 13px;
+    color: #888;
+}
+/* 기존에 만들어 놓은 코드 그대로 사용 */
+#audio-discovery .audio-header .link-setting{
+    position: absolute;
+    padding: 10px 18px 8px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 20px;
+    box-shadow: 0 2px 10px 0 rgb(80 85 91 / 7%);
+    font-size: 13px;
+    font-weight: 500;
+    color: #157efb;
+    top: 6px;
+    right: 0;
+}
+
+
+#audio-discovery .audio-body li {
+    width: 152px;
+    margin-bottom: 40px;
+}
+#audio-discovery .audio-body li a img {
+    width: 152px;
+    height: 152px;
+    border-radius: 4px;
+}
+#audio-discovery .audio-body li a h3 {
+    margin-top: 12px;
+    font-size: 13px;
+}
+/* inline-block 속성은 margin: 0 auto 안 됨
+block 속성으로 바꿔서 x축 한 줄 전부 차지한 후 그 안에서 
+중앙 정렬 하기
+ */
+#audio-discovery .audio-body .btn-more {
+    display: block;
+    margin: 0 auto;
+
+    padding: 12px 21px;
+    background-color: #fff;
+    border-radius: 24px;
+    border: solid 1px rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 10px 0 rgb(80 85 91 / 7%);
+    
+    font-weight: 500;
+    font-size: 14px;
+    color: #222;
+}
+#audio-discovery .audio-body .btn-more .color-blue {
+    color: #157efb;
+}
+#audio-discovery .audio-body .btn-more .pages {
+    color: #959595;
+}
+
+
+
+/* 강의와 다르게 거의 모든걸 a태그로 감싸주다보니
+레이아웃이 좀 달라지는 경우가 많음 */
+#audio-create .audio-body ul {
+    width: 100%;
+}
+#audio-create .audio-body li {
+    width: 100%;
+    height: 90px;
+    border-top: 1px solid #efefef;
+}
+#audio-create .audio-body li:last-child {
+    border-bottom: 1px solid #efefef;
+}
+#audio-create .audio-body li a {
+    width: 100%;
+}
+#audio-create .audio-body li a .txt-wrap {
+    width: 225px;
+}
+#audio-create .audio-body li a .txt-wrap h3 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+#audio-create .audio-body li a .txt-wrap p {
+    margin-top: 6px;
+    font-size: 14px;
+    letter-spacing: -.8px;
+}
+#audio-create .audio-body li a .txt-wrap p.color-blue {
+    color: #157efb;
+}
+#audio-create .audio-body li a .txt-wrap p.color-purple {
+    color: #8560f7;
+}
+#audio-create .audio-body li a .list-bg {
+    width: 80px;
+    height: 64px;
+}
+#audio-create .audio-body li a .list-bg.list-bg-1 {
+    background-color: #157efb;
+}
+#audio-create .audio-body li a .list-bg.list-bg-2 {
+    background-color: #8560f7;
+}
+
+
+
+
+
+
+
+#audio-footer {
+    background-color: #eaecef;
+    padding: 48px 0 164px;
+
+}
+#audio-footer a, 
+#audio-footer p {
+    color: #959595;
+}
+#audio-footer h1 {
+    font-size: 25px;
+}
+/* text 줄간격 조절하기: line-height */
+#audio-footer .copyright-wrap p {
+    margin-top: 37px;
+    font-size: 13px;
+    letter-spacing: -.3px;
+    line-height: 25px;
+}
+#audio-footer .footer-nav {
+    margin-top: 47px;
+}
+#audio-footer .footer-nav ul {
+    overflow: hidden;
+}
+#audio-footer .footer-nav li {
+    float: left;
+}
+#audio-footer .footer-nav li a {
+    font-size: 13px;
+    line-height: 20px;
+}
+#audio-footer .footer-nav li a::after {
+    display: inline-block;
+    margin: 12px 7px 0;
+    vertical-align: top;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: #959595;
+    content: "";
+}
+#audio-footer .footer-nav li:last-child a::after {
+    content: none;
+}
+#audio-footer .footer-link-copyright {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+
+
+
+
+
+/* 오디오 카테고리 */
+#audio-main.audio-sub-main {
+    background-color: #ffffff;
+}
+#audio-main .audio-category {
+    padding-top: 71px;
+}
+#audio-main .audio-category .title-wrap {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #ececec;
+} 
+#audio-main .audio-category .title-wrap h2 {
+    font-size: 27px;
+    font-weight: 600;
+}
+#audio-main .audio-category .title-wrap p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #959595;
+}
+
+/* 모든 줄의 요소 개수가 다르면 flex-between의 레이아웃이 틀어짐 */
+#audio-main .audio-category .audio-category-lists {
+    margin-top: 22px;
+
+}
+#audio-main .audio-category .audio-category-lists li {
+    width: 162px;
+    height: 164px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+/* nth-child() 활용
+n
+odd 홀수, even 짝수
+*/
+#audio-main .audio-category .audio-category-lists li:nth-child(6n) {
+    margin-right: 0;
+}
+#audio-main .audio-category .audio-category-lists li:nth-child(even) a {
+    background-color: rgb(230, 125, 127);
+}
+#audio-main .audio-category .audio-category-lists li:nth-child(4n+1) a {
+    background-color: rgb(225, 187, 114);
+}
+#audio-main .audio-category .audio-category-lists a {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(133, 134, 247);
+    border-radius: 6px;
+    padding: 14px;
+}
+#audio-main .audio-category .audio-category-lists a h3 {
+    font-size: 19px;
+    line-height: 1.3;
+    color: #ffffff;
+}
+#audio-main .audio-category .audio-category-lists a p {
+    position: absolute;
+    width: 80px;
+    font-size: 13px;
+    color: #fefefe;
+
+    /* left: 0; */
+    bottom: 14px;
+}
+#audio-main .audio-category li a .thumbnail {
+    position: absolute;
+    width: 78px;
+    height: 78px;
+
+    right: -17px;
+    bottom: 0;
+    
+    transform: rotate(25deg);
+}
+
+
+#audio-category-book {
+    padding-bottom: 120px;
+}
+
+
+
