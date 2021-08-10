@@ -73,16 +73,24 @@ h1, h2, h3, h4, h5, h6, p, span, input, button, a {
 }
 
 
+
+
+
 /* 상단 네비 영역 */
 /* position:fixed 사용하면서 width값도 지정해주기 */
-nav {
+/* 레이아웃 어그러지는 것을 막기위해 min-width값 지정 */
+/* left, content 부분 전부 3차원 속성이므로 z-index로 높이값 높여줌 */
+#top-nav {
     position: fixed;
     width: 100%;
+    min-width: 1340px;
     height: 50px;
     background-color: #0e0e10;
     padding: 0 15px;
+
+    z-index: 999;
 }
-nav .nav-wrap .nav-left .logo a img {
+#top-nav .nav-wrap .nav-left .logo a img {
     width: 24px;
     height: 28px;
 }
@@ -90,16 +98,16 @@ nav .nav-wrap .nav-left .logo a img {
 
 
 
-nav .nav-wrap .nav-left ul li {
+#top-nav .nav-wrap .nav-left ul li {
     height: 50px;
     padding: 0 20px;
     font-size: 20px;
 
 }
-nav .nav-wrap .nav-left ul li:first-child {
+#top-nav .nav-wrap .nav-left ul li:first-child {
     padding-right: 0;
 }
-nav .nav-wrap .nav-left ul li:first-child a::after {
+#top-nav .nav-wrap .nav-left ul li:first-child a::after {
     display: inline-block;
     position: relative;
     content: "";
@@ -110,13 +118,13 @@ nav .nav-wrap .nav-left ul li:first-child a::after {
 
     top: 8px;
 }
-nav .nav-wrap .nav-left ul li a {
+#top-nav .nav-wrap .nav-left ul li a {
     display: block;
     width: 100%;
     height: 100%;
     line-height: 50px;
 }
-nav .nav-wrap .nav-left .more a {
+#top-nav .nav-wrap .nav-left .more a {
     display: block;
     height: 50px;
     padding-left: 20px;
@@ -134,7 +142,7 @@ nav .nav-wrap .nav-left .more a {
 1. flex 영향에서 벗어나게 한다 : absolute
 2. x축 중앙정렬 공식 사용
  */
-nav .nav-wrap .nav-center {
+ #top-nav .nav-wrap .nav-center {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -145,7 +153,7 @@ nav .nav-wrap .nav-center {
 rem과 em 단위 차이 크지 않음
 수치변형 사이트: http://pxtoem.com/
 */
-nav .nav-wrap .nav-center .search-wrap {
+#top-nav .nav-wrap .nav-center .search-wrap {
     overflow: hidden;
 
     width: 380px;
@@ -153,12 +161,13 @@ nav .nav-wrap .nav-center .search-wrap {
     border-radius: 5px;
     background-color: gray;
 }
-nav .nav-wrap .nav-center .search-wrap input {
+#top-nav .nav-wrap .nav-center .search-wrap input {
     width: calc(100% - 34px);
     height: 100%;
     background-color: darkgrey;
+    padding: 5px 10px;
 }
-nav .nav-wrap .nav-center .search-wrap .btn-search {
+#top-nav .nav-wrap .nav-center .search-wrap .btn-search {
     width: 34px;
     height: 100%;
     background: url(../../naver-ex/img/search-white.png) no-repeat;
@@ -171,16 +180,16 @@ nav .nav-wrap .nav-center .search-wrap .btn-search {
 
 
 
-nav .nav-wrap .nav-right .mark-wrap {
+#top-nav .nav-wrap .nav-right .mark-wrap {
     position: relative;
 }
-nav .nav-wrap .nav-right .mark-wrap .icon-mark {
+#top-nav .nav-wrap .nav-right .mark-wrap .icon-mark {
     display: block;
     width: 20px;
     height: 20px;
     background-color: greenyellow;
 }
-nav .nav-wrap .nav-right .mark-wrap .alarm {
+#top-nav .nav-wrap .nav-right .mark-wrap .alarm {
     position: absolute;
     border-radius: 15px;
     background-color: red;
@@ -192,7 +201,7 @@ nav .nav-wrap .nav-right .mark-wrap .alarm {
     right: -12px;
 }
 /* 로그인, 회원가입 버튼 공통인 btn 적용 */
-nav .nav-wrap .nav-right .btn {
+#top-nav .nav-wrap .nav-right .btn {
     width: 60px;
     height: 30px;
     border-radius: 5px;
@@ -201,15 +210,15 @@ nav .nav-wrap .nav-right .btn {
     line-height: 30px;
     font-size: 12px;
 }
-nav .nav-wrap .nav-right .btn-login {
+#top-nav .nav-wrap .nav-right .btn-login {
     margin-left: 20px;
     background-color: gray;
     color: #ffffff;
 }
-nav .nav-wrap .nav-right .btn-purple {
+#top-nav .nav-wrap .nav-right .btn-purple {
     margin-left: 10px;
 }
-nav .nav-wrap .nav-right .btn-profile {
+#top-nav .nav-wrap .nav-right .btn-profile {
     width: 20px;
     height: 20px;
     background-color: #fff;
@@ -217,3 +226,222 @@ nav .nav-wrap .nav-right .btn-profile {
 }
 
 /* 1:05분까지 */
+
+
+
+/* 지구 쇼핑몰 사이트와 유사함
+특정 지점이 되었을 때 더이상 줄어들지 않도록 최소넓이값 지정
+main-container 높이는 현재 브라우저 크기 기준으로 적용 */
+.main-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 1340px;
+    /* padding-top: 50px; */
+}
+
+/* 브라우저 사이즈에 상관없이 full-height 차지하게 하고 싶을 때
+영역 시작과 끝을 top, bottom, left, right 등으로 지정해서 영역 늘려줌
+순수 3차원 속성 영역에만 적용됨
+
+일부 영역 별도 스크롤 생성: overflow
+실제 사이트 스크롤 디자인은 자바스크립트로 만듦
+jQuery scrollbar
+*/
+.left-area {
+    position: fixed;
+    width: 240px;
+    background-color: #202024;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    
+    overflow-y: auto;
+}
+
+
+
+
+.left-area .channel-wrap .channel-header {
+    padding: 10px 10px 0 10px;
+}
+.left-area .channel-wrap .channel-header h3 {
+    font-size: 15px;
+}
+.left-area .channel-wrap .channel-header .icon-arrow {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+}
+
+.left-area .channel-wrap .channel-body li a {
+    padding: 10px 5px 0;
+    align-items: flex-start;
+}
+/* top, transform을 사용하긴 애매해서
+가로 중앙정렬 margin: 0 auto; 생각나서 반대로 적용해봤더니 세로 중앙정렬됐음 */
+.left-area .channel-wrap .channel-body li a img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: auto 0;
+}
+.left-area .channel-wrap .channel-body li .txt-wrap {
+    width: 110px;
+    margin-left: 10px;
+}
+.left-area .channel-wrap .channel-body li .txt-wrap h4 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    width: 100%;
+    font-size: 13px;
+}
+.left-area .channel-wrap .channel-body li .txt-wrap .source {
+    font-size: 12px;
+    color: gray;
+}
+.left-area .channel-wrap .channel-body li .count {
+    display: block;
+    width: 53px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+.left-area .channel-wrap .channel-body li .count::before {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+.left-area .join-wrap {
+    margin: 10px;
+    background-color: #18181a;
+}
+.left-area .join-wrap .txt-wrap {
+    padding: 20px;
+    
+}
+.left-area .join-wrap .txt-wrap h2 {
+    font: 24px;
+}
+.left-area .join-wrap .txt-wrap p {
+    margin-top: 10px;
+    font-size: 13px;
+}
+.left-area .join-wrap .txt-wrap .btn-purple {
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+
+
+
+
+
+.left-area .info-wrap {
+    font-size: 11px;
+    color: gray;
+    margin: 0 10px 10px 10px;
+}
+.left-area .info-wrap p {
+    color: gray;
+}
+.left-area .info-wrap ul {
+    margin-top: 10px;
+}
+.left-area .info-wrap li a {
+    color: gray;
+}
+.left-area .info-wrap li a:hover {
+    text-decoration: underline;
+}
+.left-area .info-wrap li a::after {
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 10px;
+    background-color: gray;
+
+    margin: 0 5px;
+}
+.left-area .info-wrap li:last-child a::after {
+    content: none;
+}
+
+
+
+
+
+/* overflow-y: auto
+해당 영역의 y축 방향으로 필요할 때 스크롤 발생 시키는 것
+*/
+.content {
+    position: absolute;
+    overflow-y: auto;
+    background-color: darkgreen;
+    top: 50px;
+    left: 240px;
+    bottom: 0;
+    right: 0;
+}
+
+.content h1 {
+    font-size: 45px;
+}
+
+
+
+
+/* 
+background 속성: 여러 가지 background 관련 속성을 한 줄로 작성할 수 있음
+
+배경 이미지로 가득 채우기
+이미지 크기가 공간 크기와 달라서 잘 안나올 때: background-size: cover + background-position:center
+css가 알아서 공간 크기에 이미지 늘리거나 줄여서 맞춰주는 속성 (가로 세로 크기 비율 유지됨)
+주의점: 이미지 중앙에 주요 콘텐츠가 위치하는 이미지 선택하기
+*/
+.content #content-banner {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: url(../img/dice-game.jpg) no-repeat center;
+    background-size: cover;
+}
+.content #content-banner .layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+
+    top: 0;
+    left: 0;
+}
+.content #content-banner .layer .txt-wrap {
+    position: absolute;
+    text-transform: capitalize;
+    right: 200px;
+    top: 170px;
+}
+/* main-container 안의 자식 태그들이 전부 3차원인데 부모는 static이라
+자식 태그들의 크기값 부모가 제대로 인식할 수 없었음
+main-container를 relative로 감싸주고 height를 100%로 해서
+현재 브라우저 크기를 기준으로 가득 차게 만들어줌 */
+
+/* 트위치(2) 29:10까지 */
