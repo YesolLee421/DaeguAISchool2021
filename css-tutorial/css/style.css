@@ -1,0 +1,30 @@
+/* css 변수
+익스플로러에선 거의 지원안함
+트위치 카피캣할 때 자주 보았던 --변수명 형태의 변수
+호출 시에는 var(--변수명) 형태
+*/
+
+
+/* :root
+어떤 영역에서든 가져다 쓸 수 있는 변수값 */
+:root {
+    --black: #18181a;
+    --brand-color: #9147ff;
+    --font-size-40: 40px;
+}
+/* h1 {
+    color: var(--brand-color);
+    background-color: var(--black);
+    font-size: var(--font-size-40);
+} */
+/* 특정 영역 안에 선언하면 해당 영역에서만 사용할 수 있음 */
+#intro {
+    --font-color: blue;
+    --font-size: 50px
+}
+/* #intro p,
+#footer p {
+    font-size: var(--font-size);
+    color: var(--font-color);
+} */
+
