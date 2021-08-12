@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+ol, ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, p, span, a {
+    color: #ffffff;
+}
+/* 원래 middle 아니었나? */
+img {
+    vertical-align: middle;
+}
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+input {
+    outline: none;
+    border: none;
+}
+input:focus {
+    outline: none;
+}
+/* default flex 클래스 */
+.flex-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flex-end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.flex-between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+/* 내부 header, 왼쪽 nav 등 fixed로 3차원일 예정이니
+미리 초기화 */
+#wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 1320px;
+}
+
+/* 상단 메뉴 */
+#youtube-top-nav {
+    position: fixed;
+    width: 100%;
+    height: 56px;
+    background-color: #212121;
+
+    padding: 0 16px;
+}
+#youtube-top-nav .nav-left {
+    height: 56px;
+}
+#youtube-top-nav .nav-left .btn-menu {
+    width: 24px;
+    height: 24px;
+    background: url(../../naver-ex/img/menu-white.png) no-repeat;
+    background-size: 16px;
+    background-position:center;
+    margin-top: 4px;
+}
+#youtube-top-nav .nav-left h1 {
+    width: 90px;
+    height: 100%;
+    margin-left: 16px;
+    font-size: 15px;
+}
+#youtube-top-nav .nav-left h1 a {
+    width: 100%;
+    height: 100%;
+}
+#youtube-top-nav .nav-left h1 img {
+    width: 20px;
+    height: 15px;
+    margin: auto 0;
+}
+#youtube-top-nav .nav-left h1 span {
+    display: inline-block;
+    margin-left: 5px;
+    letter-spacing: -.5px;
+    padding-bottom: 2px;
+}
+
+
+
+
+/* absolute 사용해서 중앙정렬 */
+#youtube-top-nav .nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#youtube-top-nav .nav-center .search-wrap {
+    width: 620px;
+    height: 30px;
+}
+/* youtube 페이지의 hsl 색상 그대로 카피함 */
+#youtube-top-nav .nav-center .search-wrap input {
+    width: calc(100% - 65px);
+    height: 30px;
+    border: solid 1px  hsl(0deg 0% 21%);
+    background-color: #212121;
+    padding: 2px 6px;
+
+    font-size: 14px;
+    color: #ffffff;
+}
+#youtube-top-nav .nav-center .search-wrap .btn-search {
+    width: 65px;
+    height: 30px;
+    border: solid 1px  hsl(0deg 0% 21%);
+    background-color: hsl(0deg 0% 21%);
+}
+#youtube-top-nav .nav-center .btn-voice {
+    width: 24px;
+    height: 24px;
+    background-color: #3ea6ff;
+    margin-left: 16px;
+}
+
+
+
+
+
+
+#youtube-top-nav .nav-right .btn-menu {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+}
+#youtube-top-nav .nav-right .btn-menu.btn-menu-1 {
+    background-color: chocolate;
+}
+#youtube-top-nav .nav-right .btn-menu.btn-menu-2 {
+    background-color: crimson;
+}
+#youtube-top-nav .nav-right .btn-login {
+    border: solid 1px #3ea6ff;
+    border-radius: 2px;
+    padding: 10px 12px;
+
+    font-size: 14px;
+    color: #3ea6ff;
+}
+
+
+
+
+
+/* overflow: scroll 항상 스크롤 있음. auto는 필요할때만 scroll 생성됨
+세로로 스크롤 생성, 가로로는 내용 넘어가면 사라지게 함
+*/
+#youtube-left-nav {
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    width: 240px;
+    background-color: #212121;
+
+    top: 56px;
+    left: 0;
+    bottom: 0;
+}
+
+/* 왼쪽 사이드메뉴 */
+/* content에 height: 100%했더니 브라우저 기준인지
+스크롤 내리면 배경색 안 바꼈다. 이것도 나중에 bottom 등으로 
+stretch해주는걸까? */
+#youtube-left-content {
+    position: absolute;
+    width: 225px;
+    height: 100%;
+    background-color: cadetblue;
+}
+/* p {
+    font-size: 40px;
+} */
+
+
+
+
+
+
+/* 유튜브 메인 */
+#youtube-main {
+    position: absolute;
+    background-color: #181818;
+    
+    top: 56px;
+    left: 240px;
+    right: 0;
+    bottom: 0;
+}
+
+/* 1320px 될때까지 이미지 크기 리사이즈 */
+
