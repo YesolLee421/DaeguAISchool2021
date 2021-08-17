@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube 탐색</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <nav id="youtube-top-nav">
+            <div class="youtube-top-wrap flex-between">
+                <div class="nav-left flex-start">
+                    <button class="btn-menu" type="button"></button>
+                    <h1><a class="flex-start" href="#">
+                        <img src="img/youtube-logo-no-letter.png" alt="">
+                        <span>Youtube</span>
+                    </a></h1>
+                </div>
+
+                <div class="nav-center flex-start">
+                    <div class="search-wrap flex-start">
+                        <input type="text" placeholder="검색">
+                        <button type="button" class="btn-search"></button>
+                    </div>
+                    <!-- 클릭 시 이벤트 발생 = button
+                    링크로 이동 = a -->
+                    <button type="button" class="btn-voice"></button>
+                </div>
+
+                <div class="nav-right flex-end">
+                    <button type="button" class="btn-menu btn-menu-1"></button>
+                    <button type="button" class="btn-menu btn-menu-2"></button>
+                    <a class="btn-login" href="#">로그인</a>
+                </div>
+            </div>
+
+        </nav>
+
+
+        <nav id="youtube-left-nav">
+            <!-- 스크롤 크기까지 생각해서 content로 감싸주기 -->
+            <div id="youtube-left-content">
+
+                <div class="nav-section">
+                    <div class="nav-body">
+                        <ul>
+                            <li>
+                                <a class="flex-start" href="index.html">
+                                    <i class="icon icon-1"></i>
+                                    <span>홈</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="explore.html">
+                                    <i class="icon icon-2"></i>
+                                    <span>탐색</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-3"></i>
+                                    <span>구독</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-body">
+                        <ul>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-4"></i>
+                                    <span>보관함</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-5"></i>
+                                    <span>시청기록</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div class="nav-section">
+                    <div class="nav-body">
+                        <!-- footer의 텍스트 작성 시 같은 padding값 적용하기 위해
+                        txt-wrap으로 감싸줌 -->
+                        <div class="txt-wrap">
+                            <p>로그인하면 동영상에 좋아요를 표시하고 
+                                댓글을 달거나 구독할 수 있습니다.</p>
+                            <a class="btn-login" href="#">로그인</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="nav-section">
+                    <div class="nav-title-wrap">
+                        <h2>인기 YOUTUBE</h2>
+                    </div>
+
+                    <div class="nav-body">
+                        <ul>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-6"></i>
+                                    <span>음악</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-7"></i>
+                                    <span>스포츠</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-8"></i>
+                                    <span>게임</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-9"></i>
+                                    <span>영화</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-10"></i>
+                                    <span>뉴스</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-11"></i>
+                                    <span>실시간</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-12"></i>
+                                    <span>학습</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-13"></i>
+                                    <!-- html 특수문자 검색해서 사용 -->
+                                    <span>360&#176; 동영상</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+                <div class="nav-section">
+                    <div class="nav-body">
+                        <ul>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-14"></i>
+                                    <span>채널탐색</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="nav-section">
+                    <div class="nav-title-wrap">
+                        <h2>YOUTUBE 더보기</h2>
+                    </div>
+                    <div class="nav-body">
+                        <ul>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-15"></i>
+                                    <span>YouTube Premium</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-16"></i>
+                                    <span>실시간</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="nav-section">
+
+                    <div class="nav-body">
+                        <ul>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-17"></i>
+                                    <span>설정</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-18"></i>
+                                    <span>신고 기록</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-19"></i>
+                                    <span>고객센터</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex-start" href="#">
+                                    <i class="icon icon-20"></i>
+                                    <span>의견 보내기</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <footer id="youtube-footer">
+                    <div class="txt-wrap">
+                        <a href="#">정보</a>
+                        <a href="#">보도자료</a>
+                        <a href="#">저작권</a>
+                        <a href="#">문의하기</a>
+                        <a href="#">크리에이터</a>
+                        <a href="#">광고</a>
+                        <a href="#">개발자</a>
+                    </div>
+
+                    <div class="txt-wrap">
+                        <a href="#">약관</a>
+                        <a href="#">개인정보처리방침</a>
+                        <a href="#">정책 및 안전</a>
+                        <a href="#">YouTube 작동의 원리</a>
+                        <a href="#">새로은 기능 테스트하기</a>
+                    </div>
+
+                    <div class="txt-wrap">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    
+                </footer>
+
+                
+                
+            </div>
+        </nav>
+
+
+        <main id="youtube-main" role="main">
+            <div class="youtube-explore-content">
+                <div class="explore-container">
+
+                    <nav id="explore-nav">
+                        <ul class="flex-between">
+                            <li>
+                                <a href="#">
+                                    <i class="icon"></i>
+                                    <span>인기</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon"></i>
+                                    <span>음악</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon"></i>
+                                    <span>게임</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon"></i>
+                                    <span>영화</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon"></i>
+                                    <span>학습</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon"></i>
+                                    <span>스포츠</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+
+                    <div id="popular-section">
+                        <h2>인기 급상승 동영상</h2>
+
+                        <ul>
+                            <li>
+                                <a href="#" class="flex-start">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/246x148" alt="">
+                                        <span class="time">3:10</span>
+                                    </div>
+
+                                    <div class="txt-wrap">
+                                        <h3>Red Velvet 레드벨벳 'Queendom' MV 최초공개</h3>
+
+                                        <span class="channel">SMTOWN</span>
+                                        <span class="count">조회수 1141만회</span>
+                                        <span class="date">18시간 전</span>
+
+                                        <p class="description">Red Velvet's 6th Mini Album "Queendom" is out!
+                                            Listen and download on your favorite platform: </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="flex-start">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/246x148" alt="">
+                                        <span class="time">3:10</span>
+                                    </div>
+
+                                    <div class="txt-wrap">
+                                        <h3>Red Velvet 레드벨벳 'Queendom' MV 최초공개</h3>
+
+                                        <span class="channel">SMTOWN</span>
+                                        <span class="count">조회수 1141만회</span>
+                                        <span class="date">18시간 전</span>
+
+                                        <p class="description">Red Velvet's 6th Mini Album "Queendom" is out!
+                                            Listen and download on your favorite platform: </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="flex-start">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/246x148" alt="">
+                                        <span class="time">3:10</span>
+                                    </div>
+
+                                    <div class="txt-wrap">
+                                        <h3>Red Velvet 레드벨벳 'Queendom' MV 최초공개</h3>
+
+                                        <span class="channel">SMTOWN</span>
+                                        <span class="count">조회수 1141만회</span>
+                                        <span class="date">18시간 전</span>
+
+                                        <p class="description">Red Velvet's 6th Mini Album "Queendom" is out!
+                                            Listen and download on your favorite platform: </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="flex-start">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/246x148" alt="">
+                                        <span class="time">3:10</span>
+                                    </div>
+
+                                    <div class="txt-wrap">
+                                        <h3>Red Velvet 레드벨벳 'Queendom' MV 최초공개</h3>
+
+                                        <span class="channel">SMTOWN</span>
+                                        <span class="count">조회수 1141만회</span>
+                                        <span class="date">18시간 전</span>
+
+                                        <p class="description">Red Velvet's 6th Mini Album "Queendom" is out!
+                                            Listen and download on your favorite platform: </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="flex-start">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/246x148" alt="">
+                                        <span class="time">3:10</span>
+                                    </div>
+
+                                    <div class="txt-wrap">
+                                        <h3>Red Velvet 레드벨벳 'Queendom' MV 최초공개</h3>
+
+                                        <span class="channel">SMTOWN</span>
+                                        <span class="count">조회수 1141만회</span>
+                                        <span class="date">18시간 전</span>
+
+                                        <p class="description">Red Velvet's 6th Mini Album "Queendom" is out!
+                                            Listen and download on your favorite platform: </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="flex-start">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/246x148" alt="">
+                                        <span class="time">3:10</span>
+                                    </div>
+
+                                    <div class="txt-wrap">
+                                        <h3>Red Velvet 레드벨벳 'Queendom' MV 최초공개</h3>
+
+                                        <span class="channel">SMTOWN</span>
+                                        <span class="count">조회수 1141만회</span>
+                                        <span class="date">18시간 전</span>
+
+                                        <p class="description">Red Velvet's 6th Mini Album "Queendom" is out!
+                                            Listen and download on your favorite platform: </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="flex-start">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/246x148" alt="">
+                                        <span class="time">3:10</span>
+                                    </div>
+
+                                    <div class="txt-wrap">
+                                        <h3>Red Velvet 레드벨벳 'Queendom' MV 최초공개</h3>
+
+                                        <span class="channel">SMTOWN</span>
+                                        <span class="count">조회수 1141만회</span>
+                                        <span class="date">18시간 전</span>
+
+                                        <p class="description">Red Velvet's 6th Mini Album "Queendom" is out!
+                                            Listen and download on your favorite platform: </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="flex-start">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/246x148" alt="">
+                                        <span class="time">3:10</span>
+                                    </div>
+
+                                    <div class="txt-wrap">
+                                        <h3>Red Velvet 레드벨벳 'Queendom' MV 최초공개</h3>
+
+                                        <span class="channel">SMTOWN</span>
+                                        <span class="count">조회수 1141만회</span>
+                                        <span class="date">18시간 전</span>
+
+                                        <p class="description">Red Velvet's 6th Mini Album "Queendom" is out!
+                                            Listen and download on your favorite platform: </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="flex-start">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/246x148" alt="">
+                                        <span class="time">3:10</span>
+                                    </div>
+
+                                    <div class="txt-wrap">
+                                        <h3>Red Velvet 레드벨벳 'Queendom' MV 최초공개</h3>
+
+                                        <span class="channel">SMTOWN</span>
+                                        <span class="count">조회수 1141만회</span>
+                                        <span class="date">18시간 전</span>
+
+                                        <p class="description">Red Velvet's 6th Mini Album "Queendom" is out!
+                                            Listen and download on your favorite platform: </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="flex-start">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/246x148" alt="">
+                                        <span class="time">3:10</span>
+                                    </div>
+
+                                    <div class="txt-wrap">
+                                        <h3>Red Velvet 레드벨벳 'Queendom' MV 최초공개</h3>
+
+                                        <span class="channel">SMTOWN</span>
+                                        <span class="count">조회수 1141만회</span>
+                                        <span class="date">18시간 전</span>
+
+                                        <p class="description">Red Velvet's 6th Mini Album "Queendom" is out!
+                                            Listen and download on your favorite platform: </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="flex-start">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/246x148" alt="">
+                                        <span class="time">3:10</span>
+                                    </div>
+
+                                    <div class="txt-wrap">
+                                        <h3>Red Velvet 레드벨벳 'Queendom' MV 최초공개</h3>
+
+                                        <span class="channel">SMTOWN</span>
+                                        <span class="count">조회수 1141만회</span>
+                                        <span class="date">18시간 전</span>
+
+                                        <p class="description">Red Velvet's 6th Mini Album "Queendom" is out!
+                                            Listen and download on your favorite platform: </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="flex-start">
+                                    <div class="img-wrap">
+                                        <img src="https://via.placeholder.com/246x148" alt="">
+                                        <span class="time">3:10</span>
+                                    </div>
+
+                                    <div class="txt-wrap">
+                                        <h3>Red Velvet 레드벨벳 'Queendom' MV 최초공개</h3>
+
+                                        <span class="channel">SMTOWN</span>
+                                        <span class="count">조회수 1141만회</span>
+                                        <span class="date">18시간 전</span>
+
+                                        <p class="description">Red Velvet's 6th Mini Album "Queendom" is out!
+                                            Listen and download on your favorite platform: </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+    <!-- https://via.placeholder.com/150 -->
+
+
+
+
+
+
+    
+</body>
+</html>
