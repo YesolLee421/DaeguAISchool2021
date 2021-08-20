@@ -3635,7 +3635,7 @@ background-size: 이미지 크기 임의조정 가능
     border-bottom: solid 2px #ffffff;
     padding-bottom: 2px;
 }
-#ent-header .ent-header-center ul li.on a {
+#ent-header .ent-header-center ul li a.on {
     border-bottom: 2px solid #e2458f;
     color: #e2458f;
 }
