@@ -187,30 +187,30 @@
 
 // var str21 = new String('AAA');
 
-// // 생성자 함수의 프로토타입 = Functioin.prototype
+// // 생성자 함수의 프로토타입 = Function.prototype
 // console.log(String.__proto__);
 
 // Functioin.prototype의 프로토타입 = Object.prototype
 
 
 
-function Person (firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-}
+// function Person (firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+// }
 
-var lee = new Person('Yesol', 'Lee');
-console.log(lee);
+// var lee = new Person('Yesol', 'Lee');
+// console.log(lee);
 
-console.log(lee.__proto__ === Person.prototype); // true
-console.log(Person.prototype.__proto__ === Object.prototype); // true
-console.log(lee.__proto__ === Object.prototype); // false 중간단계 뛰어넘기 불가능
+// console.log(lee.__proto__ === Person.prototype); // true
+// console.log(Person.prototype.__proto__ === Object.prototype); // true
+// console.log(lee.__proto__ === Object.prototype); // false 중간단계 뛰어넘기 불가능
 
-console.log(Person.__proto__ == Function.prototype);
-console.log(Function.prototype.__proto__ === Object.prototype);
+// console.log(Person.__proto__ == Function.prototype);
+// console.log(Function.prototype.__proto__ === Object.prototype);
 
-console.log(lee.constructor === Person);
-console.log(Person.prototype.constructor === Person);
+// console.log(lee.constructor === Person);
+// console.log(Person.prototype.constructor === Person);
 
 
 
