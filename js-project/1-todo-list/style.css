@@ -1,0 +1,174 @@
+/* reset.css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* custom css */
+* {
+    box-sizing: border-box;
+}
+body {
+    padding-top: 80px;
+}
+body, input, button {
+    background-color: white;
+}
+#wrapper {
+    overflow: hidden;
+    width: 500px;
+    margin: 0 auto;
+    background-color: thistle;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
+header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: teal;
+
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+header input {
+    float: left;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255,255,255,.3);
+    border: 0;
+    outline: none;
+
+    color: #fff;
+    font-size: 15px;
+
+    /* text-indent: 들여쓰기(양수), 내어쓰기(음수), 기본값 0 */
+    text-indent: 18px;
+}
+/* input placeholder 글자색 바꾸기
+일부 브라우저에서만 지원함
+*/
+header input::-webkit-input-placeholder {
+    color: #fff;
+}
+header #add {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: none;
+
+    font-size: 20px;
+
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+.container {
+    float: left;
+    width: 100%;
+    padding: 15px;
+}
+
+ul.list {
+    width: 100%;
+    float: left;
+}
+/* paddinig-right: 100px = buttons 공간 */
+ul.list li {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 50px;
+    background-color: #fff;
+    margin: 0 0 10px 0;
+    padding: 14px 100px 14px 14px;
+
+    font-size: 14px;
+    color: #444444;
+    line-height: 22px;
+}
+
+ul.list li .buttons {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 0;
+    right: 0;
+}
+
+ul.list li .buttons button {
+    float: left;
+    position: relative;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    cursor: pointer;
+}
+ul.list li .buttons button.remove {
+    background-color: cadetblue;
+}
+ul.list li .buttons button.complete {
+    background-color: mediumpurple;
+}
+
+/* padding-top: 100px은 위 아래 리스트 구분하기 위함 */
+ul.list#completed {
+    position: relative;
+    padding: 100px 0 0 0;
+}
+/* 디자인 다 한 후 js로 넣어줄 li태그들 주석처리 */

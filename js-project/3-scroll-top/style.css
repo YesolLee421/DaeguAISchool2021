@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ol, ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+nav {
+    position: fixed;
+    width: 100%;
+    
+    background-color: #000000;
+    border-bottom: solid 1px rgba(0, 0, 0, .1);
+
+    padding: 22px 100px;
+    /* 자연스러운 class 효과 변화 */
+    transition: all 0.5s;
+}
+/* 미리 nav.active 클래스 만들기 */
+nav.active {
+    background-color: white;
+}
+nav.active a {
+    color: black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    font-size: 14px;
+    margin-left: 25px;
+}
+
+.section1 {
+    padding-top: 70px;
+}

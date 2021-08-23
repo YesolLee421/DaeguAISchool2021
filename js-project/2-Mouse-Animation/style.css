@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+/* 자식의 크기가 부모보다 더 크다 */
+.page-back {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+
+    background: url(bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    left: -10%;
+    top: -10%;
+}
