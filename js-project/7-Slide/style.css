@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#slider {
+    position: relative;
+    width: 100%;
+}
+
+/* 일부러 다 겹쳐준듯 */
+#slider .item {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 500px;
+
+    text-align: center;
+
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    /* ease-in-out */
+    transition: all 0.5s ease-in-out;
+    transform: scale(0.9);
+
+    z-index: 0;
+}
+#slider .item.show {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1);
+}
+.item-1 {
+    background-color: yellow;
+}
+.item-2 {
+    background-color: turquoise;
+}
+.item-3 {
+    background-color: steelblue;
+}
+.item-4 {
+    background-color: skyblue;
+}
+.item-5 {
+    background-color: palegreen;
+}
