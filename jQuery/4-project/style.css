@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol {
+    list-style: none;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 15px;
+    color: #666666;
+}
+p {
+    color: #666666;
+    font-size: 14px;
+}
+span {
+    display: inline-block;
+    width: 100px;
+    background: yellow;
+    border: solid 1px #dbdbdb;
+
+    padding: 5px;
+
+    text-align: center;
+    font-size: 15px;
+    color: #666;
+}
+
+.list-title-wrap {
+    background: #ccc;
+    padding: 10px;
+    text-align: center;
+}
+.list-article-wrap {
+    background-color: pink;
+    padding: 30px;
+}
+
+.open-text, .hide {
+    display: none;
+}

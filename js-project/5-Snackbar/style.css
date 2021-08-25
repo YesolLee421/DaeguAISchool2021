@@ -56,7 +56,7 @@ button {
     opacity: 1;
     /* fadeIn 끝나면 fadeOut 시작. fadeOut은 딜레이로 인해 늦게 실행 */
     /* 애니메이션 동작 완료 후 마지막 to 유지하기: animation-fill-mode:forwards */
-    animation: fadeIn 0.5s , fadeOut 0.5s 2.5s forwards;
+    animation: fadeIn 0.5s , bg-color 0.5s forwards;
 }
 @keyframes fadeIn {
     from {
@@ -75,5 +75,13 @@ button {
     } to {
         bottom: 0;
         opacity: 0;
+    }
+}
+@keyframes bg-color {
+    from {
+        background-color: #fff;
+    }
+    to {
+        background-color: purple;
     }
 }
