@@ -1,0 +1,38 @@
+/* select 디자인 */
+
+/* select 화살표는 커스텀 불가능 */
+select {
+    width: 300px;
+    height: 50px;
+
+    background-color: yellow;
+    border: solid 2px black;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    color: red;
+}
+/* option 일부 속성 잘 적용안됨 근데 multiple은 되네 */
+/* option {
+    width: 100px;
+    height: 20px;
+    background-color: pink;
+    border: solid 2px blue; 
+} */
+
+.div1 {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.bg-pink {
+    background-color: pink;
+}
+
+button {
+    display: block;
+    width: 100%;
+}

@@ -1,0 +1,6 @@
+/* width값이 브라우저 크기에 따라 가변적임 */
+.item {
+    height: 200px;
+    background-color: pink;
+
+}

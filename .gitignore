@@ -9,7 +9,11 @@ egoing/
 **/js-bootstrap/assets
 **/js-bootstrap/js/scripts.js
 
-**/jquery-3.6.0.js
+**/jquery**
+
+**/animate**
+**/owl**
+**/select2**
 
 
 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>select2</title>
+    <link rel="stylesheet" href="select2.css">
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+
+    <div style="width: 600px; background-color: yellow;">
+      <!-- <label for="single-select">
+        Single Element
+        <select id="single-select" class="single-select" disabled name="fruits">
+          <option value="apple">apple</option>
+          <option value="banana">banana</option>
+          <option value="grape">grape</option>
+        </select>
+      </label> -->
+
+    </div>
+
+    <div class="div1">
+
+      <div style='width :60%;'>
+        <select style="width: 100%;" id="single-select" class="single-select" name="fruits">
+          <option value="apple">apple</option>
+          <option value="banana">banana</option>
+          <option value="grape">grape</option>
+        </select>
+    
+        <select style="width: 100%;" multiple = 'multiple' class="multiple-select" name="vegetable" id="multipel-select">
+          <option value="tomato" >tomato</option>
+          <option value="cucumber">cucumber</option>
+          <option value="carrot">carrot</option>
+        </select>
+      </div>
+
+
+  
+
+      <div class="buttons">
+        <button class="set2 bg-pink">set: tomato, carrot</button>
+        <button class="clear bg-pink">clear</button>
+    
+        <button class="set">set: grape</button>
+        <button class="on">On</button>
+        <button class="off">Off</button>
+        <button class="destroy">Destroy</button>
+        <button class="re">Re-initialize</button>
+      </div>
+
+    </div>
+
+    
+
+
+
+
+    
+
+    <!-- select2 js 적용 -->
+    <script src="jquery-3.6.0.js"></script>
+    <script src="select2.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
