@@ -30,57 +30,190 @@ img {
 .clearfix {
     clear: both;
 }
+.main-container {
+    width: 1056px;
+    margin: 0 auto;
+}
 
 #header {
     position: relative;
     width: 100%;
-    height: 134px;
 }
 #header .top {
-    width: 100%;
-    background-color: #ededed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    width: 100%;
+    background-color: #ededed;
     padding: 5px 30px 5px 30px;
-    box-sizing: border-box;
 }
 #header .top .nav-register li{
     display: inline-block;
     vertical-align: middle;
-    box-sizing: border-box;
     padding-left: 10px;
 }
 #header .middle {
-    width: 1000px;
-    box-sizing: border-box;
-    padding: 10px 30px 10px 30px;
-    overflow: hidden;
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 0;
+}
+#header .middle .middle-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 100%;
 }
 #header .middle a .logo {
-    height: 29px;
-    float: left;
-    padding: 5px 0 5px 0;
+    height: 30px;
+    margin-right:20px;
 }
 #header .middle nav {
-    float: left;
-    margin: 10px 20px 0 20px;
+    margin-right:20px;
     font-size:20px;
-    box-sizing: border-box;
+
 }
 #header .middle nav .to-art{
     margin-right:20px;
     color: #ff7b30;
 }
-#header .middle .search-input {
-    float: left;
+#header .middle .search-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
     width: 285px;
-    height: 30px;
+    height: 40px;
+    margin-right:20px;
     border: #ff7b30 1px solid;
     border-radius: 5px;
-    margin-top: 10px;
+    padding: 3px 10px;
 }
+#header .middle .search-wrap .search-input {
+    width: calc(100% - 35px);
+    height: 100%;
+    border: none;
+    outline: none;
+
+    font-size: 14px;
+}
+#header .middle .search-wrap .btn-search {
+    width: 35px;
+    height: 100%;
+    background: url(../../naver-ex/img/search.png) no-repeat;
+    background-size: 24px;
+    background-position: center;
+}
+/* 실시간 검색어 부분 */
+#header .middle .popular-now {
+    position: relative;
+}
+#header .middle .popular-now .popular-slider {
+
+    color: #666666;
+    font-size: 13px;
+}
+#header .middle .popular-now .popular-component {
+    display: none;
+    position: absolute;
+    width: 308px;
+    padding: 12px 16px;
+    margin-top: -33px;
+    color: #666666;
+    border-radius: 4px;
+    background: #ffffff;
+    border: solid 1px #d9d9d9;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%);
+}
+#header .middle .popular-component .popular-header {
+    padding-bottom: 16px;
+}
+#header .middle .popular-component .popular-header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+#header .middle .popular-component .popular-header ul li {
+    width: 50%;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    font-size: 12px;
+    line-height: 30px;
+}
+#header .middle .popular-component .popular-header ul li:last-child {
+    border-left: none;
+}
+#header .middle .popular-component .popular-header ul li.active a{
+    background: #ffffff;
+    color: #333;
+}
+#header .middle .popular-component .popular-header ul li a {
+    display: block;
+    color: #acacac;
+    background: #f2f2f2;
+}
+
+#header .middle .popular-component .popular-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+#header .middle .popular-component .popular-body ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#header .middle .popular-component .popular-body ul li {
+    width: 50%;
+    padding: 7px 0;
+}
+#header .middle .popular-component .popular-body ul li:nth-child(odd) {
+    padding-right: 12px;
+    border-right: solid 1px gray;
+}
+#header .middle .popular-component .popular-body ul li:nth-child(even) {
+    padding-left: 12px;
+}
+#header .middle .popular-component .popular-body ul li a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #666666;
+    cursor: pointer;
+}
+#header .middle .popular-component .popular-body ul li a:hover .keyword {
+    color: #ff7b30;
+}
+#header .middle .popular-component .popular-body ul li a .rank {
+    vertical-align: middle;
+}
+#header .middle .popular-component .popular-body ul li a .keyword {
+    vertical-align: middle;
+    width: 86px;
+    height: 100%;
+    margin-left: 5px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#header .middle .popular-component .popular-body ul li a .icon-state {
+    width: 16px;
+    height: 16px;
+    background-color: gray;
+}
+
+
+
 #header .middle .mypage {
     float: right;
 }
@@ -99,31 +232,72 @@ img {
     font-size: 10px;
 }
 #header .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 100%;
     border-top: 1px solid #d9d9d9;
-    padding: 10px 30px 10px 30px;
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);    
 }
 #header .bottom .nav-main ul {
-    width: 600px;
+    /* width: 600px; */
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 #header .bottom .nav-main ul li {
     font-size: 13px;
+    padding: 10px 11px;
+    border-bottom: solid 3px transparent;
+}
+#header .bottom .nav-main ul li a {
+    color: #666;
+}
+#header .bottom .nav-main ul li:hover a,
+#header .bottom .nav-main ul li.active a {
+    color: #ff7b30;
+}
+#header .bottom .nav-main ul li.active {
+    border-bottom: solid 3px #ff7b30;
 }
 
-#main-image {
+#main-banner {
+    position: relative;
     width: 100%;
     height: 480px;
-    background-image: url(../img/product1.jpg);
-    margin-top: 13px;
+}
+#main-banner .owl-carousel {
+    /* display: block; */
+    width: 100%;
+    height: 480px;
+}
+#main-banner .owl-carousel .item {
+    width: 100%;
+    height: 480px;
+    background-image: url(../img/banner/product1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#main-banner .btn-wrap {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#main-banner .btn-wrap .btn {
+    width: 40px;
+    height: 40px;
+    background-color: gray;
 }
 
 #today-art {
-    width: 1000px;
     padding: 20px;
     margin: 0 auto;
 }
@@ -145,7 +319,7 @@ img {
 
 #today-art .today-frame ul .card {
     position: relative;
-    width: 180px;
+    width: 200px;
     height: 350px;
     font-size: 12px;
     border: 1px solid #d9d9d9;
@@ -162,23 +336,22 @@ img {
     cursor: pointer;
     z-index: 10;
 }
-/* 아직 토글버튼 만드는 법을 모르겠다. */
-#today-art .today-frame ul .card .btn-like:focus {
+/* 토글 버튼 checked */
+#today-art .today-frame ul .card .btn-like.checked {
     background-image: url(../img/love.png);
 }
 #today-art .today-frame ul .card .product-img {
     height: 180px;
-    width: 180px;
+    width: 100%;
     overflow: hidden;
 }
-
 #today-art .today-frame ul .card .product-img img {
-    height: 180px;
+    height: 100%;
     background-image: url(../img/peach.jpg);
 }
 #today-art .today-frame ul .card .product-img:hover img {
     transform: scale(1.1);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s;
 }
 #today-art .today-frame ul .card .product-info {
     padding: 10px 10px 30px 10px;
@@ -186,8 +359,10 @@ img {
     box-sizing: border-box;
 }
 #today-art .today-frame ul .card .product-info .brand-name {
+    display: inline-block;
     color: gray;
     font-size: 10px;
+    margin-bottom: 5px;
 }
 #today-art .today-frame ul .card .product-rating {
     margin: 10px;
@@ -199,7 +374,7 @@ img {
     height: 16px;
 }
 #today-art .today-frame ul .card .product-rating p {
-    padding-top: 20px;
+    padding-top: 15px;
 }
 #today-art .btn-more {
     position: relative;
@@ -209,6 +384,7 @@ img {
     border-radius: 5px;
     left: 50%;
     margin-left: -150px;
+    cursor: pointer;
 }
 
 
