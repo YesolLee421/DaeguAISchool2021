@@ -81,7 +81,23 @@ $('.owl-carousel').owlCarousel({
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true
-})
+});
+
+
+
+// 맨 위로 가는 버튼 스크롤 위치에 따라 display:none 처리 하기
+var $btnTop = $('#btn-top');
+
+window.addEventListener('scroll', function() {
+    var top = window.scrollY
+    || window.pageYOffset 
+    || document.documentElement.scrollTop
+    || document.body.scrollTop;
+
+    (top > 100) 
+        ? $btnTop.show()
+        : $btnTop.hide();
+});
 
 
 
