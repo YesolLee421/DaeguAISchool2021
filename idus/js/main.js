@@ -61,11 +61,17 @@ function setBanner(number) {
         bannerList.push(`../idus/img/banner/product${i}.jpg`);
     }
     var carousel = document.querySelector('#main-banner .owl-carousel');
-    for (i in bannerList) {
-        var item = document.createElement('div');
-        item.classList.add('item');
-        item.style.backgroundImage = `url(${bannerList[i]})`;
-        carousel.appendChild(item);
+    
+    // 아티스트 정보 페이지도 같은 js 파일 사용하니 발생한 문제점.
+    // carousel 객체 삭제했는데 함수 호출해서 없는 객체에 붙이려 해서 오류
+    // carousel 객체가 존재하는지 여부를 체크해서 실행되도록 변경
+    if(carousel) {
+        for (i in bannerList) {
+            var item = document.createElement('div');
+            item.classList.add('item');
+            item.style.backgroundImage = `url(${bannerList[i]})`;
+            carousel.appendChild(item);
+        }
     }
 }
 // 현재 이미지 3개 넣어둠
@@ -97,6 +103,15 @@ window.addEventListener('scroll', function() {
     (top > 100) 
         ? $btnTop.show()
         : $btnTop.hide();
+});
+
+
+
+// 작가페이지 프로필 설명문 더 보기 버튼 만들기
+var $iconMore = $('#quick-profile .profile-wrap .txt-wrap .btn-more');
+
+$iconMore.click(function() {
+    $iconMore.prev().toggleClass('ellipsis-2');
 });
 
 
